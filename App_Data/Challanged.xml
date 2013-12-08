@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <Challanged>
+    <Key>1</Key>
+    <Value>None</Value>
+  </Challanged>
+  <Challanged>
+    <Key>2</Key>
+    <Value>Physically Handicapped From Birth</Value>
+  </Challanged>
+  <Challanged>
+    <Key>3</Key>
+    <Value>Physically Handicapped due to Accident</Value>
+  </Challanged>
+  <Challanged>
+    <Key>4</Key>
+    <Value>Mentally Challanged From Birth</Value>
+  </Challanged>
+  <Challanged>
+    <Key>5</Key>
+    <Value>Mentally Challanged due to Accident</Value>
+  </Challanged>
+</DataSet>

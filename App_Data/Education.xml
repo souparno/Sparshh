@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+<Education>
+  <Key>1</Key>
+  <Value>Arts/Science</Value>
+</Education>
+<Education>
+  <Key>2</Key>
+  <Value>Computers</Value>
+</Education>
+<Education>
+  <Key>3</Key>
+  <Value>Doctorate</Value>
+</Education>
+<Education>
+  <Key>4</Key>
+  <Value>Engineering</Value>
+</Education>
+<Education>
+  <Key>5</Key>
+  <Value>Finance/Comerce</Value>
+</Education>
+<Education>
+  <Key>6</Key>
+  <Value>Law</Value>
+</Education>
+<Education>
+  <Key>7</Key>
+  <Value>Management</Value>
+</Education>
+<Education>
+  <Key>8</Key>
+  <Value>Medicine</Value>
+</Education>
+<Education>
+  <Key>9</Key>
+  <Value>Non-Graduate</Value>
+</Education>
+<Education>
+  <Key>10</Key>
+  <Value>Others</Value>
+</Education>
+</DataSet>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <Occupation>
+    <Key>1</Key>
+    <Value>Administration</Value>
+  </Occupation>
+  <Occupation>
+    <Key>2</Key>
+    <Value>Businessmen</Value>
+  </Occupation>
+  <Occupation>
+    <Key>3</Key>
+    <Value>Defence</Value>
+  </Occupation>
+  <Occupation>
+    <Key>4</Key>
+    <Value>Finance</Value>
+  </Occupation>
+  <Occupation>
+    <Key>5</Key>
+    <Value>Government</Value>
+  </Occupation>
+  <Occupation>
+    <Key>6</Key>
+    <Value>Marketing/Sales/Adv</Value>
+  </Occupation>
+  <Occupation>
+    <Key>7</Key>
+    <Value>Medical Professional</Value>
+  </Occupation>
+  <Occupation>
+    <Key>8</Key>
+    <Value>Production/Miantanence</Value>
+  </Occupation>
+  <Occupation>
+    <Key>9</Key>
+    <Value>Software</Value>
+  </Occupation>
+  <Occupation>
+    <Key>10</Key>
+    <Value>Teaching</Value>
+  </Occupation>
+  <Occupation>
+    <Key>11</Key>
+    <Value>Others</Value>
+  </Occupation>
+</DataSet>

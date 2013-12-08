@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <Mangalik>
+    <Key>1</Key>
+    <Value>Non Mangalik</Value>
+  </Mangalik>
+  <Mangalik>
+    <Key>2</Key>
+    <Value>Mangalik</Value>
+  </Mangalik>
+  <Mangalik>
+    <Key>3</Key>
+    <Value>Dont Know</Value>
+  </Mangalik>
+  <Mangalik>
+    <Key>4</Key>
+    <Value>Angshik</Value>
+  </Mangalik>
+</DataSet>

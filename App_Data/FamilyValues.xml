@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <FamilyValues>
+    <Key>1</Key>
+    <Value>Orthodox</Value>
+  </FamilyValues>
+  <FamilyValues>
+    <Key>2</Key>
+    <Value>Traditional</Value>
+  </FamilyValues>
+  <FamilyValues>
+    <Key>3</Key>
+    <Value>Moderate</Value>
+  </FamilyValues>
+  <FamilyValues>
+    <Key>4</Key>
+    <Value>Liberal</Value>
+  </FamilyValues>
+</DataSet>

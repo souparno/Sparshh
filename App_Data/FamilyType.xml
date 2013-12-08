@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <FamilyType>
+    <Key>1</Key>
+    <Value>Joint</Value>
+  </FamilyType>
+  <FamilyType>
+    <Key>2</Key>
+    <Value>Nuclear</Value>
+  </FamilyType>
+  <FamilyType>
+    <Key>3</Key>
+    <Value>Others</Value>
+  </FamilyType>
+</DataSet>

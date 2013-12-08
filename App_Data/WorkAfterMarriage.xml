@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchKey>
+  <WorkAfterMarriage>
+    <Key>1</Key>
+    <Value>Yes</Value>
+  </WorkAfterMarriage>
+  <WorkAfterMarriage>
+    <Key>2</Key>
+    <Value>No</Value>
+  </WorkAfterMarriage>
+  <WorkAfterMarriage>
+    <Key>3</Key>
+    <Value>Undecided</Value>
+  </WorkAfterMarriage>
+</SearchKey>

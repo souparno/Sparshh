@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <Nakshatra>
+    <Key>1</Key>
+    <Value>Don't Know</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>2</Key>
+    <Value>Anuradha/ Anusham/ Anizham</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>3</Key>
+    <Value>Ardra/ Thiruvathira</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>4</Key>
+    <Value>Ashlesha/ Ayilyam</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>5</Key>
+    <Value>Ashwini/ Ashwathi</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>6</Key>
+    <Value>Bharani</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>7</Key>
+    <Value>Chitra/ Chitha</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>8</Key>
+    <Value>Dhanista/ Avittam</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>9</Key>
+    <Value>Hastha/ Atham</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>10</Key>
+    <Value>Jyesta/ Kettai</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>11</Key>
+    <Value>Krithika/ Karthika</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>12</Key>
+    <Value>Makha/ Magam</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>13</Key>
+    <Value>Moolam/ Moola</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>14</Key>
+    <Value>Mrigasira/ Makayiram</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>15</Key>
+    <Value>Poorvabadrapada/ Puratathi</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>16</Key>
+    <Value>Poorvashada/ Pooradam</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>17</Key>
+    <Value>Poorvapalguni/ Puram/ Pubbhe</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>18</Key>
+    <Value>Punarvasu/ Punarpusam</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>19</Key>
+    <Value>Pushya/ Poosam/ Pooyam</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>20</Key>
+    <Value>Revathi</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>21</Key>
+    <Value>Rohini</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>22</Key>
+    <Value>Shatataraka/ Sadayam/ Sadabist</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>23</Key>
+    <Value>Shravan/ Thiruvonam</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>24</Key>
+    <Value>Swati/ Chothi</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>25</Key>
+    <Value>Uttrabadrapada/ Uthratadhi</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>26</Key>
+    <Value>Uttarapalguni/ Uthram</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>27</Key>
+    <Value>Uttarashada/ Uthradam</Value>
+  </Nakshatra>
+  <Nakshatra>
+    <Key>28</Key>
+    <Value>Vishaka/ Vishakam</Value>
+  </Nakshatra>
+</DataSet>

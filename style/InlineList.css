@@ -1,0 +1,15 @@
+﻿.inline-list {
+    list-style: none outside none;
+    overflow: hidden;
+    margin:0px;
+    padding:0px;
+}
+
+.inline-list li {
+    display: block;
+    float: left;
+    list-style: none outside none;
+}
+
+
+

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>1</Key>
+    <Value>Looking for a job</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>2</Key>
+    <Value>Not working</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>3</Key>
+    <Value>Actor/Model</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>4</Key>
+    <Value>Advertising Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>1</Occupation-Key>
+    <Key>5</Key>
+    <Value>Agent</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>6</Key>
+    <Value>Agriculture/Dairy</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>7</Key>
+    <Value>Air Hostess</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>8</Key>
+    <Value>Architect</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>4</Occupation-Key>
+    <Key>9</Key>
+    <Value>Banking Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>10</Key>
+    <Value>Beautician</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>11</Key>
+    <Value>BPO/ITES</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>2</Occupation-Key>
+    <Key>12</Key>
+    <Value>Businessperson</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>5</Occupation-Key>
+    <Key>13</Key>
+    <Value>Civil Services (IAS/ IFS/ IPS/ IRS)</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>14</Key>
+    <Value>Consultant</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>15</Key>
+    <Value>Corporate Communication</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>16</Key>
+    <Value>Corporate Planning Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>1</Occupation-Key>
+    <Key>17</Key>
+    <Value>Customer Services</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>3</Occupation-Key>
+    <Key>18</Key>
+    <Value>Defence</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>7</Occupation-Key>
+    <Key>19</Key>
+    <Value>Doctor</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>10</Occupation-Key>
+    <Key>20</Key>
+    <Value>Education Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>8</Occupation-Key>
+    <Key>21</Key>
+    <Value>Engineer - Non IT</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>22</Key>
+    <Value>Export/Import</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>23</Key>
+    <Value>Fashion Designer</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>4</Occupation-Key>
+    <Key>24</Key>
+    <Value>Financial Services/Accounting</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>25</Key>
+    <Value>Fitness Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>5</Occupation-Key>
+    <Key>26</Key>
+    <Value>Govt. Services</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>9</Occupation-Key>
+    <Key>27</Key>
+    <Value>Hardware/Telecom</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>7</Occupation-Key>
+    <Key>28</Key>
+    <Value>Healthcare Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>29</Key>
+    <Value>Hotels/Hospitality Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>1</Occupation-Key>
+    <Key>30</Key>
+    <Value>HR Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>31</Key>
+    <Value>Interior Designer</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>32</Key>
+    <Value>Journalist</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>1</Occupation-Key>
+    <Key>33</Key>
+    <Value>Lawyer/Legal Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>1</Occupation-Key>
+    <Key>34</Key>
+    <Value>Logistics/SCM Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>35</Key>
+    <Value>Marketing Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>36</Key>
+    <Value>Media Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>37</Key>
+    <Value>Merchant Navy</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>38</Key>
+    <Value>NGO/Social Services</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>7</Occupation-Key>
+    <Key>39</Key>
+    <Value>Nurse</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>40</Key>
+    <Value>Pilot</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>1</Occupation-Key>
+    <Key>41</Key>
+    <Value>Police</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>8</Occupation-Key>
+    <Key>42</Key>
+    <Value>Printing/Packaging</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>10</Occupation-Key>
+    <Key>43</Key>
+    <Value>Professor/Lecturer</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>9</Occupation-Key>
+    <Key>44</Key>
+    <Value>Project Manager - IT</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>9</Occupation-Key>
+    <Key>45</Key>
+    <Value>Project Manager - Non IT</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>8</Occupation-Key>
+    <Key>46</Key>
+    <Value>Research Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>47</Key>
+    <Value>Restaurateur</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>48</Key>
+    <Value>Retired</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>49</Key>
+    <Value>Sales Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>8</Occupation-Key>
+    <Key>50</Key>
+    <Value>Scientist</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>1</Occupation-Key>
+    <Key>51</Key>
+    <Value>Secretary/Front Office</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>1</Occupation-Key>
+    <Key>52</Key>
+    <Value>Security Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>2</Occupation-Key>
+    <Key>53</Key>
+    <Value>Self Employed</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>8</Occupation-Key>
+    <Key>54</Key>
+    <Value>Service Engineering</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>9</Occupation-Key>
+    <Key>55</Key>
+    <Value>Software Professional</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>56</Key>
+    <Value>Sportsperson</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>57</Key>
+    <Value>Student</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>10</Occupation-Key>
+    <Key>58</Key>
+    <Value>Teacher</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>59</Key>
+    <Value>Top Management (CXO, M.D. etc.)</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>6</Occupation-Key>
+    <Key>60</Key>
+    <Value>Travel/Ticketing</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>9</Occupation-Key>
+    <Key>61</Key>
+    <Value>Web/Graphic Design</Value>
+  </OccupationDetails>
+  <OccupationDetails>
+    <Occupation-Key>11</Occupation-Key>
+    <Key>62</Key>
+    <Value>Others</Value>
+  </OccupationDetails>
+</DataSet>

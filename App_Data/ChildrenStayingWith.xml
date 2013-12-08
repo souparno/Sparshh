@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <ChildrenStayingWith>
+    <Key>1</Key>
+    <Value>Not Applicable</Value>
+  </ChildrenStayingWith>
+  <ChildrenStayingWith>
+    <Key>2</Key>
+    <Value>Me</Value>
+  </ChildrenStayingWith>
+  <ChildrenStayingWith>
+    <Key>3</Key>
+    <Value>Not With Me</Value>
+  </ChildrenStayingWith>
+</DataSet>

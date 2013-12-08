@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchKey>
+  <MaritalStatus>
+    <Key>1</Key>
+    <Value>Never Married</Value>
+  </MaritalStatus>
+  <MaritalStatus>
+    <Key>2</Key>
+    <Value>Divorced</Value>
+  </MaritalStatus>
+  <MaritalStatus>
+    <Key>3</Key>
+    <Value>Awaiting Divorce</Value>
+  </MaritalStatus>
+  <MaritalStatus>
+    <Key>4</Key>
+    <Value>Widowed</Value>
+  </MaritalStatus>
+  <MaritalStatus>
+    <Key>5</Key>
+    <Value>Annuled</Value>
+  </MaritalStatus>
+</SearchKey>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchKey>
+  <Diet>
+    <Key>1</Key>
+    <Value>Vegetarian</Value>
+  </Diet>
+  <Diet>
+    <Key>2</Key>
+    <Value>Non-Vegetarian</Value>
+  </Diet>
+  <Diet>
+    <Key>3</Key>
+    <Value>Eggetarian</Value>
+  </Diet>
+  <Diet>
+    <Key>4</Key>
+    <Value>Jain</Value>
+  </Diet>
+</SearchKey>

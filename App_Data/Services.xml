@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <Services>
+    <Key>1</Key>
+    <Value>Sparshh Premium 1 Month</Value>
+    <MonthsAvailable>1</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>991</Amount>
+  </Services>
+  <Services>
+    <Key>2</Key>
+    <Value>Sparshh Premium 3 Months</Value>
+    <MonthsAvailable>3</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>2755</Amount>
+  </Services>
+  <Services>
+    <Key>3</Key>
+    <Value>Sparshh Premium 6 Months</Value>
+    <MonthsAvailable>6</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>4380</Amount>
+  </Services>
+  <Services>
+    <Key>4</Key>
+    <Value>Sparshh Premium 9 Months</Value>
+    <MonthsAvailable>9</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>5694</Amount>
+  </Services>
+  <Services>
+    <Key>5</Key>
+    <Value>Sparshh Premium Plus 1 Month</Value>
+    <MonthsAvailable>1</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>1191</Amount>
+  </Services>
+  <Services>
+    <Key>6</Key>
+    <Value>Sparshh Premium Plus 3 Months</Value>
+    <MonthsAvailable>3</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>3275</Amount>
+  </Services>
+  <Services>
+    <Key>7</Key>
+    <Value>Sparshh Premium Plus 6 Months</Value>
+    <MonthsAvailable>6</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>5568</Amount>
+  </Services>
+  <Services>
+    <Key>8</Key>
+    <Value>Sparshh Premium Plus 9 Months</Value>
+    <MonthsAvailable>9</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>7238</Amount>
+  </Services>
+  <Services>
+    <Key>9</Key>
+    <Value>Sparshh Premium Super 1 Month</Value>
+    <MonthsAvailable>1</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>1291</Amount>
+  </Services>
+  <Services>
+    <Key>10</Key>
+    <Value>Sparshh Premium Super 3 Months</Value>
+    <MonthsAvailable>3</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>3744</Amount>
+  </Services>
+  <Services>
+    <Key>11</Key>
+    <Value>Sparshh Premium Super 6 Months</Value>
+    <MonthsAvailable>6</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>6365</Amount>
+  </Services>
+  <Services>
+    <Key>12</Key>
+    <Value>Sparshh Premium Super 9 Months</Value>
+    <MonthsAvailable>9</MonthsAvailable>
+    <ProfilesAvailable>12</ProfilesAvailable>
+    <Amount>8274</Amount>
+  </Services>
+</DataSet>

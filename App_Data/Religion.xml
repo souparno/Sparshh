@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <Religion>
+    <Key>1</Key>
+    <Value>Hindu</Value>
+  </Religion>
+  <Religion>
+    <Key>2</Key>
+    <Value>Muslim</Value>
+  </Religion>
+  <Religion>
+    <Key>3</Key>
+    <Value>Sikh</Value>
+  </Religion>
+  <Religion>
+    <Key>4</Key>
+    <Value>Christian</Value>
+  </Religion>
+  <Religion>
+    <Key>5</Key>
+    <Value>Buddhist</Value>
+  </Religion>
+  <Religion>
+    <Key>6</Key>
+    <Value>Jain</Value>
+  </Religion>
+  <Religion>
+    <Key>7</Key>
+    <Value>Parsi</Value>
+  </Religion>
+  <Religion>
+    <Key>8</Key>
+    <Value>Jewish</Value>
+  </Religion>
+  <Religion>
+    <Key>9</Key>
+    <Value>Bahai</Value>
+  </Religion>
+  <Religion>
+    <Key>10</Key>
+    <Value>Others</Value>
+  </Religion>
+</DataSet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

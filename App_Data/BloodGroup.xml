@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <BloodGroup>
+    <Key>1</Key>
+    <Value>A+</Value>
+  </BloodGroup>
+  <BloodGroup>
+    <Key>2</Key>
+    <Value>A-</Value>
+  </BloodGroup>
+  <BloodGroup>
+    <Key>3</Key>
+    <Value>B+</Value>
+  </BloodGroup>
+  <BloodGroup>
+    <Key>4</Key>
+    <Value>B-</Value>
+  </BloodGroup>
+  <BloodGroup>
+    <Key>5</Key>
+    <Value>AB+</Value>
+  </BloodGroup>
+  <BloodGroup>
+    <Key>6</Key>
+    <Value>AB-</Value>
+  </BloodGroup>
+  <BloodGroup>
+    <Key>7</Key>
+    <Value>0+</Value>
+  </BloodGroup>
+  <BloodGroup>
+    <Key>8</Key>
+    <Value>0-</Value>
+  </BloodGroup>
+</DataSet>

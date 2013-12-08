@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <Country>
+    <Key>1</Key>
+    <Value>India</Value>
+  </Country>
+  <Country>
+    <Key>2</Key>
+    <Value>USA</Value>
+  </Country>
+  <Country>
+    <Key>3</Key>
+    <Value>Australia</Value>
+  </Country>
+  <Country>
+    <Key>4</Key>
+    <Value>Canada</Value>
+  </Country>
+  <Country>
+    <Key>5</Key>
+    <Value>UAE</Value>
+  </Country>
+</DataSet>
