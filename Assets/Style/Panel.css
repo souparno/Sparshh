@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.panel-white{
+ border-bottom: 1px solid #EEEEEE;
+ padding: 0 25px 25px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.panel-active-tab{
+ font-family: Oxygen,sans-serif;
+ font-weight: 700;
+ font-size:15px;
+ border-radius: 5px 5px 0 0;
+ background: none repeat scroll 0 0 #FFFFFF;
+ color:#834DAB;
+}
+
+.panel-inactive-tab{
+ font-family: Oxygen,sans-serif;
+ font-weight: 700;
+ font-size:15px;
+ border-radius: 5px 5px 0 0;
+ background: none repeat scroll 0 0 #834DAB;
+ color:#FFFFFF;
+}
+
+.reg_frm_wrap {
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
+    margin: -31px 0 19px;
+    
+}
+
+.form_inner_wrap {
+    background: #FFFFFF;
+    border-radius: 0 0 5px 5px;
+	min-height: 459px;
+	width: 388px;
+    padding: 0 18px 20px;
+}

@@ -1,0 +1,161 @@
+button, .btn {
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out 0s;
+}
+button.green, .btn.green {
+    background-color: #81B638;
+    background-image: linear-gradient(rgba(88, 148, 39, 0), #589427);
+    border: 1px solid #538823;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 0 rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px 8px 16px;
+    text-shadow: 0 -1px 0 #4F7C20;
+}
+button.green img, button.green span, .btn.green img, .btn.green span {
+    display: inline-block;
+}
+button.green img, .btn.green img {
+    margin: -3px 8px 0 0;
+}
+button.green:hover, .btn.green:hover {
+    background-color: #8EC542;
+    background-image: linear-gradient(rgba(88, 148, 39, 0), #589427);
+    border-color: #47741E;
+}
+button.green:active, .btn.green:active {
+    background-color: #629C2B;
+    background-image: linear-gradient(rgba(90, 143, 40, 0), #558825);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) inset;
+    transition: all 0.05s ease-in-out 0s;
+}
+button.green[disabled], .btn.green[disabled] {
+    background: none repeat scroll 0 0 #B9C4AA;
+    border-color: rgba(0, 0, 0, 0);
+    box-shadow: none !important;
+    color: #EFF2EC;
+    cursor: not-allowed;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+button.green[disabled] img, .btn.green[disabled] img {
+    opacity: 0.75;
+}
+button.silver, .btn.silver {
+    background-color: #E4E4E4;
+    background-image: linear-gradient(#F8F8F8, rgba(248, 248, 248, 0));
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.1);
+    color: #999999;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px 8px 16px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+button.silver img, button.silver span, .btn.silver img, .btn.silver span {
+    display: inline-block;
+    vertical-align: middle;
+}
+button.silver img, .btn.silver img {
+    margin-right: 8px;
+    margin-top: 1px;
+}
+button.silver:hover, .btn.silver:hover {
+    background-color: #DDDDDD;
+    border-color: #AAAAAA;
+}
+button.silver:active, .btn.silver:active {
+    background-color: #DADADA;
+    background-image: linear-gradient(rgba(224, 224, 224, 0), #E0E0E0);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) inset;
+    transition: all 0.05s ease-in-out 0s;
+}
+button.silver[disabled], .btn.silver[disabled] {
+    background: none repeat scroll 0 0 #D9D9D9;
+    border-color: rgba(0, 0, 0, 0);
+    box-shadow: none !important;
+    color: #A8A8A8;
+    cursor: not-allowed;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+button.silver[disabled] img, .btn.silver[disabled] img {
+    opacity: 0.75;
+}
+button.purple, .btn.purple {
+    background-color: #9A58BA;
+    background-image: linear-gradient(rgba(107, 64, 155, 0), #6B409B);
+    border: 1px solid #56349E;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px 8px 16px;
+    text-shadow: 0 -1px 0 #633791;
+}
+button.purple img, button.purple span, .btn.purple img, .btn.purple span {
+    display: inline-block;
+    vertical-align: middle;
+}
+button.purple img, .btn.purple img {
+    margin-right: 8px;
+    margin-top: 1px;
+}
+button.purple:hover, .btn.purple:hover {
+    background-color: #AC67C6;
+}
+button.purple:active, .btn.purple:active {
+    background-color: #7B49A5;
+    background-image: linear-gradient(rgba(141, 83, 177, 0), #8D53B1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) inset;
+    transition: all 0.05s ease-in-out 0s;
+}
+button.purple[disabled], .btn.purple[disabled] {
+    background: none repeat scroll 0 0 #D8D2DB;
+    border-color: rgba(0, 0, 0, 0);
+    box-shadow: none !important;
+    color: #FFFFFF;
+    cursor: not-allowed;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+button.purple[disabled] img, .btn.purple[disabled] img {
+    opacity: 0.75;
+}
+button.orange, .btn.orange {
+    background-color: #FD8524;
+    background-image: linear-gradient(rgba(252, 91, 32, 0), #FC5B20);
+    border: 1px solid #C3531E;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px 8px 16px;
+    text-shadow: 0 -1px 0 #F06B20;
+}
+button.orange img, button.orange span, .btn.orange img, .btn.orange span {
+    display: inline-block;
+    vertical-align: middle;
+}
+button.orange img, .btn.orange img {
+    margin-right: 8px;
+    margin-top: 1px;
+}
+button.orange:hover, .btn.orange:hover {
+    background-color: #FD9F28;
+}
+button.orange:active, .btn.orange:active {
+    background-color: #DA5A1B;
+    background-image: linear-gradient(rgba(224, 106, 30, 0), #E06A1E);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
+    transition: all 0.05s ease-in-out 0s;
+}
+button.orange[disabled], .btn.orange[disabled] {
+    background: none repeat scroll 0 0 #EECDB3;
+    border-color: rgba(0, 0, 0, 0);
+    box-shadow: none !important;
+    color: #FFFFFF;
+    cursor: not-allowed;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+button.orange[disabled] img, .btn.orange[disabled] img {
+    opacity: 0.75;
+}

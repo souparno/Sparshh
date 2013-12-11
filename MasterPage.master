@@ -3,32 +3,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    
+<script type="text/javascript">
+    function tab1_display() {
+        document.getElementById("register").style.display = "block";
+        document.getElementById("login").style.display = "none";
+
+    }
+    function tab2_display() {
+        document.getElementById("register").style.display = "none";
+        document.getElementById("login").style.display = "block";
+
+    }
+    function lightbox_display_on() {
+        document.getElementById("black_overlay").style.display = "block";
+        document.getElementById("loader").style.display = "block";
+    }
+   </script>
+   
+       
     <link href="style/style.css" rel="stylesheet" type="text/css" />
     <link href="style/Grid.css" rel="Stylesheet" type="text/css" />
     <link href="style/InlineList.css" rel="Stylesheet" type="text/css" />
     <link href="style/Panel.css" rel="Stylesheet" type="text/css" />
     <link href="style/Text.css" rel="Stylesheet" type="text/css" />
-
-    <script type="text/javascript">
-        function tab1_display() {
-            document.getElementById("register").style.display = "block";
-            document.getElementById("login").style.display = "none";
-
-        }
-        function tab2_display() {
-            document.getElementById("register").style.display = "none";
-            document.getElementById("login").style.display = "block";
-
-        }
-        function lightbox_display_on() {
-            document.getElementById("black_overlay").style.display = "block";
-            document.getElementById("loader").style.display = "block";
-        }
-   </script>
-
-
     <style type="text/css">
+        *
+        {
+            margin:0px;
+            padding:0px;
+        }
+        
      .logo
      {
          width:100%;
@@ -98,23 +102,140 @@
        margin:0 auto;
        display:none;
    }
-   
-   
-    
-    </style>
-
-
-
-    <asp:ContentPlaceHolder id="head" runat="server">
-    </asp:ContentPlaceHolder>
+</style>
 
 
 
 
+<%--The next version strats from here--%>
+<link href="Assets/Style/Grid.css" rel="stylesheet" type="text/css" />
+<link href="Assets/Style/Navigation.css" rel="stylesheet" type="text/css" />
+<link href="Assets/Style/Panel.css" rel="stylesheet" type="text/css" />
+<link href="Assets/Style/Button.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+*{
+	margin:0px;
+	padding:0px;
+}
+ .right{
+   float:right; 
+  }
+.left{
+ float:left;
+}
+
+label {
+    color: #666666;
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+    width: 150px;
+}
+
+.reg_input_txt {
+    border: 1px solid #834DAB;
+    border-radius: 3px;
+    color: #666666;
+    height: 24px;
+    line-height: 24px;
+    padding: 2px 3px;
+    width: 217px;
+}
+ 
+.reg_select_box {
+    border: 1px solid #834DAB;
+    border-radius: 3px;
+    color: #666666;
+    height: 30px;
+    line-height: 24px;
+    padding: 4px 3px 3px 0;
+    width: 225px;
+} 
+
+.visual-div{
+  min-height: 560px;
+  width: 960px;
+  background:#FFF;
+  padding-right:20px;
+  margin-top:35px;
+  background-image:url(Assets/images/fb_bg_in2.jpg);
+  background-repeat:no-repeat;
+  background-size:2000px auto;
+  background-position:-150px 0px;
+  background-color:#5B3777;
+}
+
+.frm-divider{
+	clear:both;
+	padding:4px;
+}
+  
+</style>
+
+
+
+
+
+
+
+
+
+
+<asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
 
 <form id="form1" runat="server">
+<asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+<%--The next version of header--%>
+<div class="row size-12" style="background-color:#834DAB;margin-bottom:0px;margin-top:0px;">
+  <div class="column size-12">
+   <h1 class="left" style="font-size:30px;font-family: Oxygen,sans-serif;font-weight:bolder;color:#FFF;margin-top:15px;margin-left:5px;">Sparshh.Com</h1>
+   <button class="purple right" style="margin-top:32px;">LogIn</button>
+   <table class="right" style="margin-bottom:5px;">
+    <tr>
+     <td><center><label style="color:#FFF;">Email Id</label></center></td>
+     <td><center><label style="color:#FFF;">Password</label></center></td>
+    </tr>
+    <tr>
+     <td><input type="text" class="reg_input_txt" /></td>
+     <td><input type="text" class="reg_input_txt" /></td>
+    </tr>
+   </table>
+
+  </div>
+ </div>
+<%--End Of the next version of header--%>
+<%--Top Navigation--%>
+<div class="row size-12" style="background-color:#EEEEEE;border-bottom: 1px solid #CCCCCC;">
+ <div class="row" style="margin-bottom:0px;width:1250px;">
+ <ul class="nav inline-nav" style="font-family:none;">
+   <li style="border-bottom: 3px solid #FD7022;"><a href="" style="color:#666666;"><strong>Home</strong></a></li>
+   <li class="seperator"/>
+   <li><a href="Home.aspx" style="color:#666666;"><strong>About Us</strong></a></li>
+   <li class="seperator"/>
+   <li><a href="Mission_n_Vission.aspx" style="color:#666666;"><strong>Mission N Vision</strong></a></li>
+   <li class="seperator"/>
+   <li><a href="Packages.aspx" style="color:#666666;"><strong>Packages</strong></a></li>
+   <li class="seperator"/>
+   <li><a href="Process.aspx" style="color:#666666;"><strong>Processes</strong></a></li>
+   <li class="seperator"/>
+   <li><a href="Clients_n_Delights.aspx" style="color:#666666;"><strong>Client Delights</strong></a></li>
+   <li class="seperator"/>
+   <li><a href="FAQ.aspx" style="color:#666666;"><strong>FAQ</strong></a></li>
+   <li class="seperator"/>
+   <li><a href="BusinessEnquiry.aspx" style="color:#666666;"><strong>Business Enquiry</strong></a></li>
+   <li class="seperator"/>
+   <li><a href="AdvertiseWithUs.aspx" style="color:#666666;"><strong>Advertise With Us</strong></a></li>
+   <li class="seperator"/>
+   <li><a href="" style="color:#666666;"><strong>Career</strong></a></li>
+   <li class="seperator"/>
+   <li><a href="ContactUs.aspx" style="color:#666666;"><strong>Contact Us</strong></a></li>
+  </ul> 
+ </div>
+</div>
+<%--End Of top Navigation--%>
+
 
 <div class="master-black-overlay" id="master-black-overlay">
 <div class="row size-4">
@@ -126,10 +247,22 @@
      </div>
 </div>
 </div>
-
-<asp:ScriptManager runat="server" EnablePageMethods="true"></asp:ScriptManager>
 <asp:ContentPlaceHolder id="BlackOverLay" runat="server">
 </asp:ContentPlaceHolder>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="row size-12 background">
  
