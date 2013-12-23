@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="RegisterPersonalDetails.aspx.cs" Inherits="RegisterPersonalDetails" %>
-<%@ Register Src="~/Navigation.ascx" TagPrefix="UC" TagName="Navigation" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 
 
@@ -31,9 +31,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BlackOverLay" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
- <UC:Navigation runat="server" />
-</asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
 
 <div class="row size-8">

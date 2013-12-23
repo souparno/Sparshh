@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" %>
-<%@ Register Src="~/Navigation.ascx" TagPrefix="UC" TagName="Navigation" %>
 <script runat="server">
 
 </script>
@@ -56,12 +55,70 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BlackOverLay" Runat="Server">
 </asp:Content>
+
+
 <asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
-<UC:Navigation runat="server" />
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
-<div class="row size-11">
+<%--Top Navigation--%>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
  <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Home.aspx">Home</a></li>
+           <li><a href="AboutUs.aspx">About Us</a></li>
+           <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+           <li><a href="Packages.aspx" class="active">Packages</a></li>
+           <li><a href="Process.aspx">Process</a></li>
+           <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
+           <li><a href="FAQ.aspx">FAQ</a></li>
+           <li><a href="BusinessEnquiry.aspx">Business Enquiry</a></li>
+           <li><a href="AdvertiseWithUs.aspx">Advertise With Us</a></li>
+           <li><a href="/">Career</a></li>
+           <li><a href="ContactUs.aspx">Contact Us</a></li>
+          </ul>
+  </div>
+</div>
+<%--End Of top Navigation--%>
+</asp:Content>
+
+
+
+
+
+<asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
+
+
+<div class="row size-12" style="background-image:url(Assets/images/backgroung-image.jpg);background-position:0px 0px;background-size:100% auto;background-repeat:repeat-x;margin-bottom:0px;">
+   <%--The new Content Form--%>
+  <div class="reg_frm_wrap right" style="margin-top:40px;margin-right:20px;margin-bottom:15px;">
+    <div style="background-color:#834DAB;padding-top:2px;">
+     <ul class="nav inline-nav" style="padding-bottom:0px;">
+      <li><a href="" class="panel-active-tab" >Sparshh Packages</a></li>
+      <li><a href="" class="panel-inactive-tab">Sparshh Privilage</a></li>
+      <li><a href="" class="panel-inactive-tab">Sparshh Elite</a></li>
+      <li><a href="" class="panel-inactive-tab">Sparshh Club</a></li>  
+     </ul>
+    <div style="clear:both"></div>
+    </div>
+   <div class="form_inner_wrap" style="width:598px;">
+        <div class="frm-divider"></div>
+        <div class="frm-divider"></div>
+        <p style="color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">1.Express your interest.</p>
+        <p style="color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">2.Send direct messages and initiate chats.</p>
+        <p style="color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">3.Member can opt for Audio-Video exclusive chat option as per their choice.</p>
+        <p style="color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">4.Access verified contact numbers.</p>
+        <p style="color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">5.Enhanced privacy setting.</p>
+        <p style="color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">6.Access horoscope of matches.</p>
+        <p style="color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">7.View recent profile visitors.</p>
+        <p style="color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">To know many more and upgrade please visit SPARSHH ONLINE</p>
+        <div class="frm-divider"></div>
+        <div style="border-radius: 0 0 5px 5px;background-color:#834DAB;margin-left:-18px;margin-right:-18px;margin-bottom:-20px;padding:10px;height:20px;">
+       </div>
+   </div>
+  </div>
+   <%--The End of new Content Form--%>
+</div>
+
+<%--<div class="row size-11">
+ <div class="column size-12" style="margin-top:50px;">
   <h4>Packages </h4>
   <hr />
   <p>At “sparshh.com” we have carefully prepared our various attractive packages to address several needs of the clients as per their search and convenience.</p>
@@ -136,7 +193,7 @@
 <p >19.	Exclusive Photo session by eminent studio at the time of wedding ceremony as per your choice and necessity.</p>
 <p >20.	Entitlement for “sparshh.com” special post-wedding celebrations.</p>
  </div>
-</div>
+</div>--%>
 </asp:Content>
 
 

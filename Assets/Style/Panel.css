@@ -28,14 +28,10 @@
 .reg_frm_wrap {
     border-radius: 0 0 5px 5px;
     box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
-    margin: -31px 0 19px;
-    
 }
 
 .form_inner_wrap {
     background: #FFFFFF;
     border-radius: 0 0 5px 5px;
-	min-height: 459px;
-	width: 388px;
-    padding: 0 18px 20px;
+	padding: 0 18px 20px;
 }

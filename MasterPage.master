@@ -2,137 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-<script type="text/javascript">
-    function tab1_display() {
-        document.getElementById("register").style.display = "block";
-        document.getElementById("login").style.display = "none";
-
-    }
-    function tab2_display() {
-        document.getElementById("register").style.display = "none";
-        document.getElementById("login").style.display = "block";
-
-    }
-    function lightbox_display_on() {
-        document.getElementById("black_overlay").style.display = "block";
-        document.getElementById("loader").style.display = "block";
-    }
-   </script>
-   
-       
-    <link href="style/style.css" rel="stylesheet" type="text/css" />
-    <link href="style/Grid.css" rel="Stylesheet" type="text/css" />
-    <link href="style/InlineList.css" rel="Stylesheet" type="text/css" />
-    <link href="style/Panel.css" rel="Stylesheet" type="text/css" />
-    <link href="style/Text.css" rel="Stylesheet" type="text/css" />
-    <style type="text/css">
-        *
-        {
-            margin:0px;
-            padding:0px;
-        }
-        
-     .logo
-     {
-         width:100%;
-         height:auto;
-     }
-
-     .footer-img
-     {
-         width:100%;
-         height:auto;
-         border-style:solid;
-         border-color:#ebcc00;
-         border-width:2px;
-     }
-     .plus
-     {
-         background-image:url('image/glyphicons-halflings-white.png');
-         background-position: -408px -96px;
-         height: 14px;
-         width: 14px;
-         display: inline-block;
-     }
-     .minus
-     {
-         background-image:url('image/glyphicons-halflings-white.png');
-         background-position: -433px -96px;
-         height: 14px;
-         width: 14px;
-         display: inline-block;
-     }
-     .remove
-     {
-         background-image:url('image/glyphicons-halflings-white.png');  
-         background-position: -312px 0;
-         height: 14px;
-         width: 14px;
-         display: inline-block;
-     }
-     .recentprofileimg
-     {
-         width:100%;
-         height:auto;
-         
-     }
-     
-     .master-black-overlay
-     {
-            display:none;
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            -moz-opacity: 0.8;
-            opacity:.80;
-            filter: alpha(opacity=80);
-        }
-        
-   .master-light-content
-   {
-       top:100px; 
-       position:fixed;
-       border:1px solid Orange;
-       background-color:White;
-       padding:10px; 
-       margin:0 auto;
-       display:none;
-   }
-</style>
+    <title>SparshhMatrimony.com</title>
 
 
-
-
-<%--The next version strats from here--%>
 <link href="Assets/Style/Grid.css" rel="stylesheet" type="text/css" />
 <link href="Assets/Style/Navigation.css" rel="stylesheet" type="text/css" />
 <link href="Assets/Style/Panel.css" rel="stylesheet" type="text/css" />
+<link href="Assets/Style/Default.css" rel="stylesheet" type="text/css" />
 <link href="Assets/Style/Button.css" rel="stylesheet" type="text/css" />
+
 <style type="text/css">
-*{
-	margin:0px;
-	padding:0px;
-}
- .right{
-   float:right; 
-  }
-.left{
- float:left;
-}
-
-label {
-    color: #666666;
-    float: left;
-    font-size: 14px;
-    line-height: 30px;
-    width: 150px;
-}
-
-.reg_input_txt {
+ .reg_input_txt {
     border: 1px solid #834DAB;
     border-radius: 3px;
     color: #666666;
@@ -151,26 +31,27 @@ label {
     padding: 4px 3px 3px 0;
     width: 225px;
 } 
-
-.visual-div{
-  min-height: 560px;
-  width: 960px;
-  background:#FFF;
-  padding-right:20px;
-  margin-top:35px;
-  background-image:url(Assets/images/fb_bg_in2.jpg);
-  background-repeat:no-repeat;
-  background-size:2000px auto;
-  background-position:-150px 0px;
-  background-color:#5B3777;
-}
-
 .frm-divider{
 	clear:both;
 	padding:4px;
 }
-  
+label {
+    color: #666666;
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+    width: 150px;
+}
+     .footer-img
+     {
+         width:100%;
+         height:auto;
+         border-style:solid;
+         border-color:#ebcc00;
+         border-width:2px;
+     }
 </style>
+
 
 
 
@@ -185,59 +66,7 @@ label {
 </head>
 <body>
 
-<form id="form1" runat="server">
-<asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
-<%--The next version of header--%>
-<div class="row size-12" style="background-color:#834DAB;margin-bottom:0px;margin-top:0px;">
-  <div class="column size-12">
-   <h1 class="left" style="font-size:30px;font-family: Oxygen,sans-serif;font-weight:bolder;color:#FFF;margin-top:15px;margin-left:5px;">Sparshh.Com</h1>
-   <button class="purple right" style="margin-top:32px;">LogIn</button>
-   <table class="right" style="margin-bottom:5px;">
-    <tr>
-     <td><center><label style="color:#FFF;">Email Id</label></center></td>
-     <td><center><label style="color:#FFF;">Password</label></center></td>
-    </tr>
-    <tr>
-     <td><input type="text" class="reg_input_txt" /></td>
-     <td><input type="text" class="reg_input_txt" /></td>
-    </tr>
-   </table>
-
-  </div>
- </div>
-<%--End Of the next version of header--%>
-<%--Top Navigation--%>
-<div class="row size-12" style="background-color:#EEEEEE;border-bottom: 1px solid #CCCCCC;">
- <div class="row" style="margin-bottom:0px;width:1250px;">
- <ul class="nav inline-nav" style="font-family:none;">
-   <li style="border-bottom: 3px solid #FD7022;"><a href="" style="color:#666666;"><strong>Home</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="Home.aspx" style="color:#666666;"><strong>About Us</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="Mission_n_Vission.aspx" style="color:#666666;"><strong>Mission N Vision</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="Packages.aspx" style="color:#666666;"><strong>Packages</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="Process.aspx" style="color:#666666;"><strong>Processes</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="Clients_n_Delights.aspx" style="color:#666666;"><strong>Client Delights</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="FAQ.aspx" style="color:#666666;"><strong>FAQ</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="BusinessEnquiry.aspx" style="color:#666666;"><strong>Business Enquiry</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="AdvertiseWithUs.aspx" style="color:#666666;"><strong>Advertise With Us</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="" style="color:#666666;"><strong>Career</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="ContactUs.aspx" style="color:#666666;"><strong>Contact Us</strong></a></li>
-  </ul> 
- </div>
-</div>
-<%--End Of top Navigation--%>
-
-
-<div class="master-black-overlay" id="master-black-overlay">
+<%--<div class="master-black-overlay" id="master-black-overlay">
 <div class="row size-4">
      <div class="master-light-content column size-5" id="master-light-content" >
       <p>Tel : +91-33-2581-0016 / +91-98748 57993 (Sunday-Friday, 10.00 AM-8 PM) </p>
@@ -246,33 +75,46 @@ label {
       <button type="button" class="panel-7" onclick="document.getElementById('master-black-overlay').style.display='none';document.getElementById('master-light-content').style.display='none';">Close</button>
      </div>
 </div>
-</div>
-<asp:ContentPlaceHolder id="BlackOverLay" runat="server">
-</asp:ContentPlaceHolder>
+</div>--%>
 
 
 
 
+<form id="form1" runat="server">
+<asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+<asp:ContentPlaceHolder id="BlackOverLay" runat="server"></asp:ContentPlaceHolder>
 
+<%--The next version of header--%>
+<div class="row size-12" style="position:fixed;margin-bottom:0px;z-index:4000;">
+<div class="row size-12" style="background-color:#FAFAFC;border-bottom: 1px solid #CCCCCC !important;box-shadow: 0 0 9px 0 #490F76 !important;margin-bottom:0px;margin-top:0px;padding-bottom:5px;">
+  <div class="column size-12">
+   <img src="Assets/images/Logo.png" class="left" style="width:220px;height:auto;" alt="" />
+   
+   <table class="right" style="margin-bottom:5px;">
+    <tr>
+     <td><center><label>Email Id</label></center></td>
+     <td><center><label>Password</label></center></td>
+    </tr>
+    <tr>
+     <td><input type="text" class="reg_input_txt" /></td>
+     <td><input type="text" class="reg_input_txt" /></td>
+     <td><button class="purple right">LogIn</button></td>
+    </tr>
+   </table>
 
+  </div>
+ </div>
 
+ <asp:ContentPlaceHolder id="Navigation" runat="server"></asp:ContentPlaceHolder>
+ </div>
+<%--End Of the next version of header--%>
 
-
-
-
-
-
-
-
-<div class="row size-12 background">
  
  <!--START OF HEADER-->
- <div class="row size-12">
-  <div class="size-3 left" >
-    <asp:Image ID="Image1" runat="server" CssClass="left logo" ImageUrl="~/image/Logo.png"  />
-  </div>
+ <%--<div class="row size-12">
 
-  <div class="size-9 right">
+
+  <div class="column size-12">
    
    <div class="row" style="width:485px;" id="top_list">
     <ul class="inline-list text-1" style="margin-top:10px;">
@@ -293,39 +135,22 @@ label {
    
    </div>
    
- </div>
+ </div>--%>
 <!--END OF HEADEDR--> 
 
 <!--START OF CONTENT-->
-<div class="row size-12" id="client_content">
- <div class="column size-3 side-nav" id="left_bar_navigation">
-    <asp:ContentPlaceHolder id="Navigation" runat="server">
-    </asp:ContentPlaceHolder>
+ <div class="row size-12" style="margin-bottom:0px;">
+  <div class="column size-12" style="margin-top:112px;padding:0px;">
+    <asp:ContentPlaceHolder id="content" runat="server"></asp:ContentPlaceHolder>
+  </div>
  </div>
-  
- 
- <div class="column size-9" style="padding-right:0px;padding-left:0px;">
-  
-  
-    
-
- 
- <div class="row size-12">
-  <asp:ContentPlaceHolder id="content" runat="server">
-  </asp:ContentPlaceHolder>
- </div>
-
-  
- </div>
-
-</div>
  <!--END OF CONTENT-->
  
  
  <!--START OF FOOTER-->
- <div class="master-black-overlay" id="WelcomeReadMore"></div>
+ <%--<div class="master-black-overlay" id="WelcomeReadMore"></div>--%>
 
-  <div class="row size-4">
+<%--  <div class="row size-4">
      <div class="master-light-content column size-5" id="WelcomeReadMoreContent" style="top:20px; " >
       <p>Marriage is the eternal solemn life journey of two loving souls within which hides the wooing of the God and Goddess. This is the glimpse of life where the practical meets the mythical. For many people the experience of this romantic phase is their first acquaintance of spirituality without knowing it. It’s the intense infatuation between not only two people, but, also two families which elevates them beyond ordinary perception of harmony where the world becomes enchanted. It’s the finest ecstatic platform to exchange and express true divine love among humans. Certainly to make a match, there are many aspects that have to be kept in mind like cultural attributes, religious versatilities, socio-economic stands and many more in between two families.</p>
       <p>With this essence of understanding “SPARSHHh.com” has been registered and developed which is already getting patronized by many diversified class of people not only in India but also across the world through our corporate website www.SPARSHHhmatrimony.com.</p>
@@ -334,16 +159,14 @@ label {
       <button type="button" class="panel-7" onclick="document.getElementById('WelcomeReadMore').style.display='none';document.getElementById('WelcomeReadMoreContent').style.display='none';">Close</button>
      </div>
    </div>
-
-     <div class="row size-4">
+  <div class="row size-4">
      <div class="master-light-content column size-5" id="Accolates" style="top:20px; " >
       <p>We claim our self as the true service providers in the matrimonial world which is further certified by Just Dial.com as the best service provider among all matrimonial ventures and we are privileged with the Service with Excellence Certificate from Mr. Amitabh Bacchan, brand ambassador of Just Dial.com</p>
       <p>We claim our self anchored and secured service provider for you as we undertake thorough verifications of the final matches by renowned detective agency only because we value your life which is imperial for us and each decision related to it counts on seriously.</p>
       <button type="button" class="panel-7" onclick="document.getElementById('WelcomeReadMore').style.display='none';document.getElementById('Accolates').style.display='none';">Close</button>
      </div>
    </div>
-
-    <div class="row size-4">
+  <div class="row size-4">
      <div class="master-light-content column size-5" id="SparshhYdBest" style="top:20px; " >
       <p>We have created sparshh.com after a thorough analytical survey of other matrimonial ventures. Some where we found, most of them are lacking many significant areas. We have skillfully developed those areas so that sparshh.com can reciprocate long lasting faith and togetherness. This is why sparshh.com is committed to celebrate the future days of its clients who have found their soul-mates.</p>
       <h3>Our Service Snap</h3>
@@ -392,10 +215,11 @@ label {
 
       <button type="button" class="panel-7" onclick="document.getElementById('WelcomeReadMore').style.display='none';document.getElementById('SparshhYdBest').style.display='none';">Close</button>
      </div>
-   </div>
+   </div>--%>
 
 
-   <div class="row size-12" style="background-color:#CCCCCC">
+
+  <div class="row size-12" style="margin-bottom:0px;">
 
 
 
@@ -461,7 +285,12 @@ We have created sparshh.com after a thorough analytical survey of other matrimon
     
         
    </div>
-   <div class="row size-12" style="background-color:#CCCCCC">
+
+   <hr />
+
+
+
+  <div class="row size-12" style="margin-bottom:0px;">
     
     <div class="column size-6">
        <h3>
@@ -472,7 +301,7 @@ We have created sparshh.com after a thorough analytical survey of other matrimon
             <div class="column size-4">
                 <asp:Image ID="Image10" runat="server"  CssClass="footer-img" ImageUrl="~/image/lower-1.jpg"/>
             </div>
-            <div class="column size-8">Hi I found my soulmate Milan on sparshhmatrimony.com. Initially I send expression of interest as i found his profile as per my requirement and se responded back. We started chatting through SPARSHHhmatrimony.com.Than we started talking over the phone and video chatting on skype/Viber . . . . .
+            <div class="column size-8">Hi I found my soulmate Milan on sparshhmatrimony.com. Initially I send expression of interest as i found his profile as per my requirement and se responded back. We started chatting through sparshhmatrimony.com.Than we started talking over the phone and video chatting on skype/Viber . . . . .
 <span>Thanks &amp; Regards, Heen</span>
             </div>
           </div>
@@ -498,7 +327,7 @@ We have created sparshh.com after a thorough analytical survey of other matrimon
 Dist : 24 Parganas (N),West Bengal,Pin - 743 165
 Tel :  +91-33-2581-0016 /  +91-98748 57993 (Sunday-Friday, 10.00 AM-8 PM)
 Fax : +91-33-2581-0016 (EXT.)
-E-mail : info@SPARSHHhmatrimony.com
+E-mail : info@sparshhhmatrimony.com
             </div>
           </div>
        </div>
@@ -506,31 +335,9 @@ E-mail : info@SPARSHHhmatrimony.com
     
    
    </div>
-   <div class="row size-12" style="background-color:Black;height:24px;"></div>
-
-
-
-
-
-    <div id="chat_window" style="width:200px;position:fixed;bottom:0%;display:none;" class="right">
-    <div id="hide_show_control" class="row size-12" style="background-color:#000000;border:1px solid Gray;padding:2px;cursor:pointer;" onclick="hide_chat()">
-     <span id="show_chat_user_id" style="color:White" class="left"></span>
-     <a href="javascript:void(0)" class="remove right" onclick="close_chat()"></a>
-     <a id="hide_show_flag" href="javascript:void(0)" class="minus right"></a>
-    </div>
-    <div id="show_chat" class="row size-12" style="background-color:White;border:1px solid Gray;height:350px;overflow:auto;padding:4px;">
-    </div>
-    <textarea id="chat_txt" class="row size-12" style="height:50px;border:1px solid Gray;" rows="10" cols="10" onkeypress="Chat_Send(event, this)" ></textarea>
-    </div>
-
-    <div class="clear"></div>
-
- 
-
-
+   <div class="row size-12" style="background-color:Black;height:24px;margin-bottom:0px;"></div>
  <!--END OF FOOTER-->
- 
-</div>
+
     </form>
 </body>
 </html>

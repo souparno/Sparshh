@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" %>
-<%@ Register Src="~/Navigation.ascx" TagPrefix="UC" TagName="Navigation" %>
 <script runat="server">
 
 </script>
@@ -57,12 +56,35 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BlackOverLay" Runat="Server">
 </asp:Content>
+
+
 <asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
-<UC:Navigation runat="server" />
+<%--Top Navigation--%>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Home.aspx">Home</a></li>
+           <li><a href="AboutUs.aspx">About Us</a></li>
+           <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+           <li><a href="Packages.aspx">Packages</a></li>
+           <li><a href="Process.aspx">Process</a></li>
+           <li><a href="Clients_n_Delights.aspx" class="active">Client Delights</a></li>
+           <li><a href="FAQ.aspx">FAQ</a></li>
+           <li><a href="BusinessEnquiry.aspx">Business Enquiry</a></li>
+           <li><a href="AdvertiseWithUs.aspx">Advertise With Us</a></li>
+           <li><a href="/">Career</a></li>
+           <li><a href="ContactUs.aspx">Contact Us</a></li>
+          </ul>
+  </div>
+</div>
+<%--End Of top Navigation--%>
 </asp:Content>
+
+
+
 <asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
 <div class="row size-11">
- <div class="column size-12">
+ <div class="column size-12" style="margin-top:50px;">
   <h4>Client Delights / Credential </h4>
   <hr />
   <p>Welcome delegates to “sparshh.com” success world. This is where we take pride to enlist client endorsements. This section is attributed to the innumerable “sparshh.com” members who have discovered their dream-mates. We wish them all the very best to their eternal married journey – </p>

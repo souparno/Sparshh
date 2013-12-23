@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" %>
-<%@ Register Src="~/Navigation.ascx" TagPrefix="UC" TagName="Navigation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-<style type="text/css">
+<%--<style type="text/css">
                   .black-overlay{
             display:none;
             position: absolute;
@@ -49,17 +48,42 @@
          padding-bottom:5px;
      }
      
-    </style>
+    </style>--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BlackOverLay" Runat="Server">
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
-<UC:Navigation runat="server" />
+<%--Top Navigation--%>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Home.aspx">Home</a></li>
+           <li><a href="AboutUs.aspx" class="active">About Us</a></li>
+           <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+           <li><a href="Packages.aspx">Packages</a></li>
+           <li><a href="Process.aspx">Process</a></li>
+           <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
+           <li><a href="FAQ.aspx">FAQ</a></li>
+           <li><a href="BusinessEnquiry.aspx">Business Enquiry</a></li>
+           <li><a href="AdvertiseWithUs.aspx">Advertise With Us</a></li>
+           <li><a href="/">Career</a></li>
+           <li><a href="ContactUs.aspx">Contact Us</a></li>
+          </ul>
+  </div>
+</div>
+<%--End Of top Navigation--%>
 </asp:Content>
+
+
+
+
+
+
 <asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
 
-<div class="row size-12">
- <div class="column size-12">
+<%--<div class="row size-12">
+ <div class="column size-12" style="margin-top:50px;">
    <h4 >sparshh.com Profile</h4>
 <hr />
 <p >Marriage is the eternal solemn life journey of two loving souls within which hides the wooing of the God and Goddess. This is the glimpse of life where the practical meets the mythical. For many people the experience of this romantic phase is their first acquaintance of spirituality without knowing it. It’s the intense infatuation between not only two people, but, also two families which elevates them beyond ordinary perception of harmony where the world becomes enchanted. It’s the finest ecstatic platform to exchange and express true divine love among humans. Certainly to make a match, there are many aspects that have to be kept in mind like cultural attributes, religious versatilities, socio-economic stands and many more in between two families.</p>
@@ -89,8 +113,44 @@
 
  </div>
  
+</div>--%>
+
+
+
+<div class="row size-12" style="background-image:url(Assets/images/backgroung-image.jpg);background-position:0px 0px;background-size:100% auto;background-repeat:repeat-x;margin-bottom:0px;">
+   <%--The new Content Form--%>
+  <div class="reg_frm_wrap right" style="margin-top:40px;margin-right:20px;margin-bottom:15px;">
+    <div style="background-color:#834DAB;padding-top:2px;">
+     <ul class="nav inline-nav" style="padding-bottom:0px;">
+      <li><a href="" class="panel-active-tab" >Sparshh Profile</a></li>
+      <li><a href="" class="panel-inactive-tab">Sparshh Accolades</a></li>
+      <li><a href="" class="panel-inactive-tab">Sparshh Team</a></li>  
+     </ul>
+    <div style="clear:both"></div>
+    </div>
+   <div class="form_inner_wrap" style="width:488px;">
+        <div class="frm-divider"></div>
+        <div class="frm-divider"></div>
+        <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">&nbsp;&nbsp;Marriage is the eternal solemn life journey of two loving souls within which hides the wooing of the God and Goddess. This is the glimpse of life where the practical meets the mythical. For many people the experience of this romantic phase is their first acquaintance of spirituality without knowing it. It’s the intense infatuation between not only two people, but, also two families which elevates them beyond ordinary perception of harmony where the world becomes enchanted. It’s the finest ecstatic platform to exchange and express true divine love among humans. Certainly to make a match, there are many aspects that have to be kept in mind like cultural attributes, religious versatilities, socio-economic stands and many more in between two families.</p>
+        <div class="frm-divider"></div>
+<p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align: left;font-weight:bold;">&nbsp;&nbsp;With this essence of understanding “sparshh.com” has been registered and developed which is already getting patronized by many diversified class of people not only in India but also across the world through our corporate website www.sparshhmatrimony.com.</p>
+<div class="frm-divider"></div>
+<p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align: left;font-weight:bold;">&nbsp;&nbsp;Established in the year of 2011-12 “sparshh.com” already has developed the privileged market constituted by thorough analysis of Indian culture and requirements of people looking to get married which also determines the prolific health of communal relationship. </p>
+<div class="frm-divider"></div>
+<p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align: left;font-weight:bold;" >&nbsp;&nbsp;Starting from a small venture and limited workforce it is still growing and expanding by creating rich and enormous database of elite class of clients in India and across the world through our several value added unique services. We have dedicated team that persevere hard to cater the needs of the clients from more than fourteen religions such as Bengali, Gujrati, Hindi Marwari, Punjabi, Urdu and many more.</p>
+<div class="frm-divider"></div>
+<center><a href="" style="color:#834DAB;font-family: Georgia,serif;text-align: left;font-weight:bold;text-decoration:none;padding:10px;" >&nbsp;&nbsp;Click here to upgrade and unfold our detailed packages.</a></center>
+
+        <div class="frm-divider"></div>
+
+        <div class="frm-divider"></div>
+        <div style="border-radius: 0 0 5px 5px;background-color:#834DAB;margin-left:-18px;margin-right:-18px;margin-bottom:-20px;padding:10px;height:20px;">
+        
+        </div>
+
+   </div>
+  </div>
+   <%--The End of new Content Form--%>
 </div>
-
-
 </asp:Content>
 

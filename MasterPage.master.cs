@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
-    string _connection;
+    //string _connection;
     protected void Page_Load(object sender, EventArgs e)
     {
         /*_connection = System.Configuration.ConfigurationManager.ConnectionStrings["constring"].ConnectionString;

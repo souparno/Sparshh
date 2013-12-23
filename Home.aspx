@@ -1,14 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" %>
-<%@ Register Src="~/Navigation.ascx" TagPrefix="UC" TagName="Navigation" %>
 <%@ Import Namespace="System.Data"  %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
+
+<%--    <style type="text/css">
      .background
      {
-      background-image:url(image/pic-1.jpg);
-      background-color:#FDFDFD;
+     background-image:url(Assets/images/backgroung-image.jpg);
+     background-position:-200px 120px;
+     background-size:100% auto;
+     background-repeat:repeat-x;
        
      }
         .black-overlay{
@@ -79,15 +81,15 @@
         document.getElementById("black_overlay").style.display = "block";
         document.getElementById("loader").style.display = "block";
     }
-</script>
+</script>--%>
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="BlackOverLay" runat="server">
-    <div class="black-overlay" id="black_overlay">
+<%--    <div class="black-overlay" id="black_overlay">
     
     
     </div>
-    <div class=" row size-1">
+    <div class="row size-1" style="margin-bottom:0px;">
   <div class=" column size-12">
    <div class="light-content" id="loader">
     <img src="image/Request_loader.gif" alt=""  />
@@ -95,7 +97,7 @@
 
   </div>
  </div>
-    <div class="row size-4">
+    <div class="row size-4" style="margin-bottom:0px;">
         <div class="column size-4 light-content-2" id="light_trems_conditions" style="height:500px;overflow:scroll;">
     <a href="javascript:void(0);" onclick="document.getElementById('black_overlay').style.display = 'none';document.getElementById('light_trems_conditions').style.display = 'none';" class="panel-7">close</a>
     <p>Welcome to sparshh matrimony (herein referred as "SM").
@@ -232,15 +234,140 @@ Register Free
 </p>
 
   </div>
- </div>
+ </div>--%>
 </asp:Content>
+
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Navigation" Runat="Server">
-    <UC:Navigation runat="server" />
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Home.aspx" class="active" >Home</a></li>
+           <li><a href="AboutUs.aspx">About Us</a></li>
+           <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+           <li><a href="Packages.aspx">Packages</a></li>
+           <li><a href="Process.aspx">Process</a></li>
+           <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
+           <li><a href="FAQ.aspx">FAQ</a></li>
+           <li><a href="BusinessEnquiry.aspx">Business Enquiry</a></li>
+           <li><a href="AdvertiseWithUs.aspx">Advertise With Us</a></li>
+           <li><a href="/">Career</a></li>
+           <li><a href="ContactUs.aspx">Contact Us</a></li>
+          </ul>
+  </div>
+</div>
 </asp:Content>
+
+
 <asp:Content ID="Content3" ContentPlaceHolderID="content" Runat="Server">
 
-   <div class="row size-12" style="z-index:200;margin-bottom:-10px;">
+<div class="row size-12" style="background-image:url(Assets/images/backgroung-image.jpg);background-position:0px 0px;background-size:100% auto;background-repeat:repeat-x;margin-bottom:0px;">
+   <%--The new registration Form--%>
+  <div class="reg_frm_wrap right" style="margin-top:40px;margin-right:50px;margin-bottom:15px;">
+    <div style="background-color:#834DAB;padding-top:2px;text-align:left;">
+     <ul class="nav inline-nav" style="padding-bottom:0px;">
+      <li><a href="" class="panel-active-tab" >Register</a></li>
+      <li><a href="" class="panel-inactive-tab">Search</a></li>  
+     </ul>
+    <div style="clear:both"></div>
+    </div>
+   <div class="form_inner_wrap">
+        <div style="clear:both;padding:6px;"></div>
+        <strong><label>Profile Posted By</label></strong>
+        <select id="ddl_profile_posted_by" name="ddl_profile_posted_by" class="reg_select_box" runat="server"></select>
+        <span style="color:Red;">*</span>    
+        <div class="frm-divider"></div>
+        <strong><label>Full Name</label></strong> 
+        <input type="text" id="txt_name" name="txt_name" class="reg_input_txt" runat="server"/>
+        <span style="color:Red;">*</span> 
+        <div class="frm-divider"></div>
+        <strong><label>Gender</label></strong> 
+           <input type="radio" value="Male"    id="Gender_Male"  name="radio_gender" runat="server" /><label style="float:none;">Male</label>
+           <input type="radio" value="Fe-Male" id="Gender_Female" name="radio_gender" runat="server" /><label style="float:none;">Female</label>
+          <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Date Of Birth</label></strong> 
+        <select class="reg_select_box" style="width:60px;" id="ddl_dob_day" name="ddl_dob_day" runat="server"></select>
+        <select class="reg_select_box" style="width:60px;" id="ddl_dob_month" name="ddl_dob_month" runat="server"></select>
+        <select class="reg_select_box" style="width:80px;" id="ddl_dob_year" name="ddl_dob_year" runat="server"></select>
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Religion</label></strong> 
+        <select id="ddl_religion" name="ddl_religion" onchange="form1.submit();lightbox_display_on();" onserverchange="ddlReligionChange" class="reg_select_box" runat="server"></select> 
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Mother Tongue</label></strong> 
+        <select class="reg_select_box" id="ddl_mother_tongue" name="ddl_mother_tongue" runat="server"></select>
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Caste</label></strong> 
+        <select id="ddl_Caste" name="ddl_Caste" class="reg_select_box" runat="server">
+            <option value='0'>--Select Caste</option>
+        </select>
+        <div class="frm-divider"></div>
+        <strong><label>Country Living In</label></strong> 
+        <select id="ddl_country" name="ddl_country" class="reg_select_box" runat="server"></select>
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Marial Status</label></strong> 
+        <select class="reg_select_box" runat="server" id="ddl_marital_status"></select>
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>No. Of Children</label></strong> 
+        <select id="ddl_no_of_children" runat="server" class="reg_select_box"></select>
+        <div class="frm-divider"></div>
+        <strong><label>Children Staying With</label></strong> 
+        <select id="ddl_children_staying_with" runat="server" class="reg_select_box"></select>
+        <div class="frm-divider"></div>
+        <strong><label>Mobile Number</label></strong> 
+        <input type="text" name="txt_mobile_no" id="txt_mobile_no" maxlength="10" class="reg_input_txt" runat="server" />
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Email</label></strong> 
+        <input type="text" id="txt_email" name="txt_email" class="reg_input_txt" runat="server" />
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Password</label></strong> 
+        <input type="password" class="reg_input_txt" id="txt_password" name="txt_password" runat="server"/>
+        <span style="color:Red;">*</span> 
+        <div class="frm-divider"></div>
+        <strong><label>Confirm Password</label></strong> 
+        <input type="text" class="reg_input_txt"/> 
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <center>
+        <input type="checkbox" name="term_cndtn_acpt" id="term_cndtn_acpt" runat="server" /><strong><label style="float:none;"> I agree to the <a href="javascript:void(0);" onclick="document.getElementById('black_overlay').style.display = 'block';document.getElementById('light_trems_conditions').style.display = 'block';" style="color:#834DAB;text-decoration:none;">Privacy Policy</a> and <a href="javascript:void(0);" onclick="document.getElementById('black_overlay').style.display = 'block';document.getElementById('light_trems_conditions').style.display = 'block';" style="color:#834DAB;text-decoration:none;">T&C </a> </label></strong>
+        </center>
+        <div class="frm-divider"></div>
+        <center>
+        <a href="#" style="text-decoration:none;">
+         <img src="Assets/images/hp-secure-icon-small.gif" alt="" style="border:none;" />
+         <label style="float:none;">Profile Security Assured</label>
+         </a>
+        </center>
+        <div class="frm-divider"></div>
+        <div style="border-radius: 0 0 5px 5px;background-color:#834DAB;margin-left:-18px;margin-right:-18px;margin-bottom:-20px;padding:10px;">
+        
+        <center><button class="silver" style="color:#834DAB">Register</button></center>
+        
+        </div>
+
+   </div>
+  </div>
+   <%--The End of new Registration Form--%>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+   <%--<div class="row size-12" style="z-index:200;margin-bottom:-10px;">
    <div class="left" style="width:500px;margin-left:220px;">
         <ul class="inline-list" style="z-index:200;margin-bottom:-10px;">
      <li class="panel-7" style="margin-left:25px;margin-bottom:0px;"><a href="javascript:void(0)" onclick="tab1_display()">REGISTER</a></li>
@@ -248,9 +375,8 @@ Register Free
     </ul>
    </div>
 
-   </div>
-
-  <div class="row size-12">
+   </div>--%>
+   <%--<div class="row size-12">
 
    <div class="column size-6 panel-2" style="margin-left:200px;" >
       <table id="register" style="color:White;">
@@ -263,105 +389,86 @@ Register Free
        <tr>
         <td>Profile Posted By</td>
         <td class="pad">
-            <select id="ddl_profile_posted_by" name="ddl_profile_posted_by" class="text-select" runat="server"></select>
-            <span style="color:Red;">*</span>
+            
         </td>
        </tr>
        <tr>
         <td>Full Name</td>
         <td class="pad">
-             <input type="text" id="txt_name" name="txt_name" class="text-select" runat="server"/>
-           <span style="color:Red;">*</span> 
+
          </td>
        </tr>
        <tr>
         <td>Gender</td>
         <td class=" pad">
-          <div style="height:30px;width:210px;" class="left">
-           <input type="radio" value="Male"    id="Gender_Male"  name="radio_gender" runat="server" />Male
-           <input type="radio" value="Fe-Male" id="Gender_Female" name="radio_gender" runat="server" />Female
-          </div>
-          <span style="color:Red;">*</span>
+
          </td>
        </tr>
        <tr>
          <td>Date Of Birth</td>
          <td class="pad">
            
-           <select class="text-select" style="width:60px;" id="ddl_dob_day" name="ddl_dob_day" runat="server"></select>
-           <select class="text-select" style="width:60px;" id="ddl_dob_month" name="ddl_dob_month" runat="server"></select>
-           <select class="text-select" style="width:80px;" id="ddl_dob_year" name="ddl_dob_year" runat="server"></select>
-           <span style="color:Red;">*</span>
+           
          </td>
         </tr>
         <tr>
          <td>Religion</td>
          <td class="pad">
-           <select id="ddl_religion" name="ddl_religion" onchange="form1.submit();lightbox_display_on();" onserverchange="ddlReligionChange" class="text-select" runat="server"></select> 
-           <span style="color:Red;">*</span>
+           
          </td>
         </tr>
         <tr>
          <td>Mother Tongue</td>
          <td class=" pad">
-           <select class="text-select" id="ddl_mother_tongue" name="ddl_mother_tongue" runat="server"></select>
-           <span style="color:Red;">*</span>
+
          </td>
         </tr>
         <tr>
          <td>Caste</td>
          <td class="pad">
-           <select id="ddl_Caste" name="ddl_Caste" class="text-select" runat="server">
-            <option value='0'>--Select Caste</option>
-           </select>
+
          </td>
         </tr>
         <tr>
          <td>Country Living In</td>
          <td class=" pad">
-          <select id="ddl_country" name="ddl_country" class="text-select" runat="server"></select>
-          <span style="color:Red;">*</span>
+
          </td>
         </tr>
         <tr>
          <td>Marital Status</td>
          <td class="pad">
-          <select class="text-select" runat="server" id="ddl_marital_status"></select>
-          <span style="color:Red;">*</span>
+
           </td>
         </tr>
         <tr>
          <td>No. Of Children</td>
          <td class="pad">
-          <select id="ddl_no_of_children" runat="server" class="text-select">
-          </select>
+
          </td>
         </tr>
         <tr>
          <td>ChilDren Staying With</td>
          <td class="pad">
-          <select id="ddl_children_staying_with" runat="server" class="text-select"></select>
+          
          </td>
         </tr>
         <tr>
          <td>Mobile Number</td>
          <td class="pad">
-         <input type="text" name="txt_mobile_no" id="txt_mobile_no" maxlength="10" class="text-select" runat="server" />
-         <span style="color:Red;">*</span>
+
          </td>
         </tr>
         <tr>
          <td>Email</td>
          <td class=" pad">
-         <input type="text" id="txt_email" name="txt_email" class="text-select" runat="server" />
-                <span style="color:Red;">*</span>
+
          </td>
         </tr>
         <tr>
          <td>Password</td>
          <td class="pad">
-          <input type="password" class="text-select" id="txt_password" name="txt_password" runat="server"/>
-          <span style="color:Red;">*</span>
+
          </td>
         </tr>
        <tr>
@@ -402,7 +509,7 @@ Register Free
 
 
    </div>
-  </div>
+  </div>--%>
 
 
 
