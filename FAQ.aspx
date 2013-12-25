@@ -61,32 +61,22 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
 <%--Top Navigation--%>
-<div class="row size-12" style="background-color:#EEEEEE;border-bottom: 1px solid #CCCCCC;margin-bottom:0px;">
- <div class="row" style="margin-bottom:0px;width:1250px;">
- <ul class="nav inline-nav" style="font-family:none;">
-   <li><a href="Home.aspx" style="color:#666666;"><strong>Home</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="AboutUs.aspx" style="color:#666666;"><strong>About Us</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="Mission_n_Vission.aspx" style="color:#666666;"><strong>Mission & Vision</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="Packages.aspx" style="color:#666666;"><strong>Packages</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="Process.aspx" style="color:#666666;"><strong>Processes</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="Clients_n_Delights.aspx" style="color:#666666;"><strong>Client Delights</strong></a></li>
-   <li class="seperator"/>
-   <li style="border-bottom: 3px solid #FD7022;"><a href="FAQ.aspx" style="color:#666666;"><strong>FAQ</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="BusinessEnquiry.aspx" style="color:#666666;"><strong>Business Enquiry</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="AdvertiseWithUs.aspx" style="color:#666666;"><strong>Advertise With Us</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="" style="color:#666666;"><strong>Career</strong></a></li>
-   <li class="seperator"/>
-   <li><a href="ContactUs.aspx" style="color:#666666;"><strong>Contact Us</strong></a></li>
-  </ul> 
- </div>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Home.aspx"  >Home</a></li>
+           <li><a href="AboutUs.aspx">About Us</a></li>
+           <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+           <li><a href="Packages.aspx">Packages</a></li>
+           <li><a href="Process.aspx">Process</a></li>
+           <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
+           <li><a href="FAQ.aspx" class="active">FAQ</a></li>
+           <li><a href="BusinessEnquiry.aspx">Business Enquiry</a></li>
+           <li><a href="AdvertiseWithUs.aspx">Advertise With Us</a></li>
+           <li><a href="/">Career</a></li>
+           <li><a href="ContactUs.aspx">Contact Us</a></li>
+          </ul>
+  </div>
 </div>
 <%--End Of top Navigation--%>
 </asp:Content>

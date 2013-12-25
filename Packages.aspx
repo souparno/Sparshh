@@ -4,54 +4,7 @@
 </script>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-<style type="text/css">
-   .black-overlay{
-            display:none;
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            -moz-opacity: 0.8;
-            opacity:.80;
-            filter: alpha(opacity=80);
-        }
-        
-   .light-content
-   {
-       top:50%; 
-       position:fixed;
-       border:1px solid Orange;
-       background-color:White;
-       padding:10px; 
-       margin:0 auto;
-       display:none;
-   } 
-        .background
-     {
-      background-image:url(image/banner-preveledge.jpg);
-      background-color:#FDFDFD;
-       
-     }
-     
-     .text-select
-     {
-         height:30px;
-         width:210px;
-         border:solid 1px White;
-         -moz-border-radius: 5px;
-         -webkit-border-radius: 5px;
-         border-radius: 5px;
-     }
-     
-     .pad
-     {
-         padding-left:20px;
-         padding-bottom:5px;
-     }
-     
-    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BlackOverLay" Runat="Server">
 </asp:Content>
@@ -86,7 +39,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
 
 
-<div class="row size-12" style="background-image:url(Assets/images/backgroung-image.jpg);background-position:0px 0px;background-size:100% auto;background-repeat:repeat-x;margin-bottom:0px;">
+<div class="row size-12" style="background-image:url(Assets/images/backgroung-image.jpg);background-position:0px 0px;background-size:100% auto;background-repeat:repeat-x;margin-bottom:0px;min-height: 780px;">
    <%--The new Content Form--%>
   <div class="reg_frm_wrap right" style="margin-top:40px;margin-right:20px;margin-bottom:15px;">
     <div style="background-color:#834DAB;padding-top:2px;">

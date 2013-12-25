@@ -18,7 +18,7 @@
 .nav li{
     display:inline;
     position: relative;
-    margin: 0 12px;
+    margin: 0 8px;
 }
 .nav a{
     display:inline-block;

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Profile.aspx.cs" Inherits="Users_Profile" MaintainScrollPositionOnPostback="false" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users/MasterPage.master" AutoEventWireup="true" CodeFile="Profile.aspx.cs" Inherits="Users_Profile" MaintainScrollPositionOnPostback="false" %>
 <%@ Register Src="~/Users/SideNav.ascx" TagPrefix="UC" TagName="Navigation" %>
 <%@ Import Namespace="System.Data"  %>
 <%@ Import Namespace="System.Data.SqlClient"  %>
@@ -100,8 +100,22 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Navigation" Runat="Server">
-    <UC:Navigation runat="server" />
+    <%--Top Navigation--%>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Home.aspx" class="active" >My Profile</a></li>
+           <li><a href="AboutUs.aspx">My Matches</a></li>
+           <li><a href="Mission_n_Vission.aspx">My Contacts</a></li>
+           <li><a href="Packages.aspx">My Messages</a></li>
+           <li><a href="Process.aspx">Upgrade</a></li>
+          </ul>
+  </div>
+</div>
+<%--End Of top Navigation--%>
 </asp:Content>
+
+
 <asp:Content ID="Content3" ContentPlaceHolderID="content" Runat="Server">
 
 

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#"%>
+﻿<%@ Master Language="C#" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ Import Namespace="System"  %>
 <%@ Import Namespace="System.Linq"  %>
@@ -8,47 +8,25 @@
 <%@ Import Namespace="System.Data"  %>
 <%@ Import Namespace="System.Data.SqlClient"  %>
 
-
-
-
 <script runat="server">
-
-    string _connection = System.Configuration.ConfigurationManager.ConnectionStrings["constring"].ConnectionString;
-    
-    protected void LogIn_Click(object sender, EventArgs e)
+    protected void LogOut_Click(object sender, EventArgs e)
     {
-        string email = txt_email_login.Value;
-        string password = txt_password_login.Value;
-        SqlConnection con = new SqlConnection(_connection);
-        string sql = "select usr_id from usr_details where usr_email='" + email + "' and usr_password='" + password + "';";
-        SqlCommand cmd = new SqlCommand(sql, con);
-
-
-        con.Open();
-        string user_code = Convert.ToString(cmd.ExecuteScalar());
-        con.Close();
-
-
-        if (user_code != null && user_code != "")
-        {
-            Session["UserId"] = user_code;
-            Response.Redirect("~/Users/Profile.aspx");
-        }
-
+        Session.Clear();
+        Session.Abandon();
+        Response.Redirect("~/Home.aspx");
     }
 </script>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>SparshhMatrimony.com</title>
 
 
-<link href="Assets/Style/Grid.css" rel="stylesheet" type="text/css" />
-<link href="Assets/Style/Navigation.css" rel="stylesheet" type="text/css" />
-<link href="Assets/Style/Panel.css" rel="stylesheet" type="text/css" />
-<link href="Assets/Style/Default.css" rel="stylesheet" type="text/css" />
-<link href="Assets/Style/Button.css" rel="stylesheet" type="text/css" />
+<link href="../Assets/Style/Grid.css" rel="stylesheet" type="text/css" />
+<link href="../Assets/Style/Navigation.css" rel="stylesheet" type="text/css" />
+<link href="../Assets/Style/Panel.css" rel="stylesheet" type="text/css" />
+<link href="../Assets/Style/Default.css" rel="stylesheet" type="text/css" />
+<link href="../Assets/Style/Button.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
  .reg_input_txt {
@@ -127,20 +105,8 @@ label {
 <div class="row size-12" style="position:fixed;margin-bottom:0px;z-index:4000;">
 <div class="row size-12" style="background-color:#FAFAFC;border-bottom: 1px solid #CCCCCC !important;box-shadow: 0 0 9px 0 #490F76 !important;margin-bottom:0px;margin-top:0px;padding-bottom:5px;">
   <div class="column size-12">
-   <img src="Assets/images/Logo.png" class="left" style="width:220px;height:auto;" alt="" />
-   
-   <table class="right" style="margin-bottom:5px;">
-    <tr>
-     <td><center><label>Email Id</label></center></td>
-     <td><center><label>Password</label></center></td>
-    </tr>
-    <tr>
-     <td><input type="text" class="reg_input_txt" name="txt_email_login" id="txt_email_login" runat="server" /></td>
-     <td><input type="password" class="reg_input_txt" name="txt_password_login" id="txt_password_login" runat="server"/></td>
-     <td><button class="purple right" runat="server" onserverclick="LogIn_Click">LogIn</button></td>
-    </tr>
-   </table>
-
+   <img src="../Assets/images/Logo.png" class="left" style="width:220px;height:auto;" alt="" />
+   <button id="Button1" class="purple right" runat="server" onserverclick="LogOut_Click">Log Out</button>
   </div>
  </div>
 
