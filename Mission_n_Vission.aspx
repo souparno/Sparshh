@@ -41,18 +41,27 @@
    <%--The new Content Form--%>
   <div class="reg_frm_wrap right" style="margin-top:40px;margin-right:20px;margin-bottom:15px;">
     <div style="background-color:#834DAB;padding-top:2px;">
-     <ul class="nav inline-nav" style="padding-bottom:0px;">
-      <li><a href="" class="panel-active-tab" >Mission</a></li>
-      <li><a href="" class="panel-inactive-tab">Vision</a></li>
+     <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li><a href="javascript:void(0);" class="panel-active-tab"   id="mission_tab"   onclick="document.getElementById('mission').style.display = 'block';document.getElementById('vission').style.display = 'none';document.getElementById('mission_tab').className='panel-active-tab';document.getElementById('vission_tab').className='panel-inactive-tab';" >Mission</a></li>
+      <li><a href="javascript:void(0);" class="panel-inactive-tab" id="vission_tab"   onclick="document.getElementById('mission').style.display = 'none';document.getElementById('vission').style.display = 'block';document.getElementById('mission_tab').className='panel-inactive-tab';document.getElementById('vission_tab').className='panel-active-tab';">Vision</a></li>
      </ul>
     <div style="clear:both"></div>
     </div>
    <div class="form_inner_wrap" style="width:488px;">
         <div class="frm-divider"></div>
         <div class="frm-divider"></div>
-        <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">&nbsp;&nbsp;To make the world a heavenly paradise where all can find there dream match with quality and affordable services.</p>
-        <div class="frm-divider"></div>
-        <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align: left;font-weight:bold;">&nbsp;&nbsp;To become simple and humble solution in the matrimonial services that can spread smiles to the million hearts across the globe and enrich the livelihood to a new panacea.</p>
+
+        <div id="mission">
+         <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">&nbsp;&nbsp;To make the world a heavenly paradise where all can find there dream match with quality and affordable services.</p>
+        </div>
+        
+        <div id="vission" style="display:none;">
+         <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align: left;font-weight:bold;">&nbsp;&nbsp;To become simple and humble solution in the matrimonial services that can spread smiles to the million hearts across the globe and enrich the livelihood to a new panacea.</p>
+        </div>
+   
+        
+        
+        
         <div class="frm-divider"></div>
         <div style="border-radius: 0 0 5px 5px;background-color:#834DAB;margin-left:-18px;margin-right:-18px;margin-bottom:-20px;padding:10px;height:20px;">
         </div>

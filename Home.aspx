@@ -16,7 +16,18 @@
 <div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
  <div class="column size-12">
           <ul class="nav inline-nav">
-           <li><a href="Home.aspx" class="active" >Home</a></li>
+           <li class="dropdown">
+             <a href="Home.aspx" class="active" >Home</a>
+                  <ul class="dropdown-menu">
+      <li><a href="">Regular Search</a></li>
+      <li class="divider"/>
+      <li><a href="">Advanced Search</a></li>
+      <li class="divider"/>
+      <li><a href="">Search Online Users</a></li>
+      <li class="divider"/>
+      <li><a href="">Search By Id</a></li>
+     </ul>
+           </li>
            <li><a href="AboutUs.aspx">About Us</a></li>
            <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
            <li><a href="Packages.aspx">Packages</a></li>

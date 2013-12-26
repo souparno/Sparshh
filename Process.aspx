@@ -86,7 +86,7 @@
    <%--The new Content Form--%>
   <div class="reg_frm_wrap right" style="margin-top:40px;margin-right:20px;margin-bottom:15px;">
     <div style="background-color:#834DAB;padding-top:2px;">
-     <ul class="nav inline-nav" style="padding-bottom:0px;">
+     <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
       <li><a href="" class="panel-active-tab" >process</a></li>
      </ul>
     <div style="clear:both"></div>

@@ -42,7 +42,7 @@
    <%--The new registration Form--%>
   <div class="reg_frm_wrap right" style="margin-top:40px;margin-right:50px;margin-bottom:15px;width:520px">
     <div style="background-color:#834DAB;padding-top:2px;text-align:left;">
-     <ul class="nav inline-nav" style="padding-bottom:0px;">
+     <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
       <li><a href="" class="panel-active-tab" >Contact Us</a></li>
      </ul>
     <div style="clear:both"></div>
