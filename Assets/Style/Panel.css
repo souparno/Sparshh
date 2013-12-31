@@ -7,6 +7,17 @@
  background: none repeat scroll 0 0 #FFFFFF;
 }
 
+.panel-white-2 {
+    background: none repeat scroll 0 0 #FFF;
+    border-color: #D9D9D9;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 1.25em;
+	margin-top:1.25em;
+    padding:1.25em; 
+}
+
+
 .nav .panel-active-tab{
  font-family: Oxygen,sans-serif;
  font-weight: 700;
@@ -35,3 +46,4 @@
     border-radius: 0 0 5px 5px;
 	padding: 0 18px 20px;
 }
+
