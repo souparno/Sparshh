@@ -11,13 +11,18 @@
 <div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
  <div class="column size-12">
           <ul class="nav inline-nav">
-           <li><a href="Home.aspx"  >Home</a></li>
-           <li><a href="AboutUs.aspx">About Us</a></li>
-           <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+           <li><a href="Home.aspx">Home</a></li>
+           <li  class="dropdown">
+              <a href="AboutUs.aspx" >About Us</a>
+                 <ul class="dropdown-menu">
+                  <li><a href="AboutUs.aspx">About Us</a></li>
+                  <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+                  <li><a href="Process.aspx">Process</a></li>
+                 </ul>
+           </li>
            <li><a href="Packages.aspx">Packages</a></li>
-           <li><a href="Process.aspx">Process</a></li>
            <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
-           <li><a href="FAQ.aspx">FAQ</a></li>
+           <li><a href="FAQ.aspx" >FAQ</a></li>
            <li><a href="BusinessEnquiry.aspx" >Business Enquiry</a></li>
            <li><a href="AdvertiseWithUs.aspx" class="active">Advertise With Us</a></li>
            <li><a href="/">Career</a></li>
@@ -49,7 +54,7 @@
     </div>
    <div class="form_inner_wrap">
         <div class="frm-divider"></div>
-        <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">&nbsp;&nbsp;Sparshh matrimony is an inspiration for the individuals who want to get communed with its revolutionary processes. It has already received many accolades in the way of its continuous journey for a divine social purpose.The recession-proof wedding market in India is getting aggregated in degrees into the online space at a considerable rate thereby opening the floodgates of opportunities for the online matrimonial market towards growth. A tool for searching prospective customers, online matrimonial sites offer the comfort and choice of millions of prospects along with information about the same. Added features in the likes of allowing interaction along user interface that newspaper classifieds fail to provide have worked to facilitate higher adoption of such services.Therefore, sparshh matrimony is getting reviewed and leaving its impression in huge population across the globe each day and this can become the ideal platform for many relevant advertisements also who want to reach out at a large scale and in turn can get the desired benefit and mileage.Kindly fill the form bellow and let us know about your prospect.</p>
+        <p>&nbsp;&nbsp;Sparshh matrimony is an inspiration for the individuals who want to get communed with its revolutionary processes. It has already received many accolades in the way of its continuous journey for a divine social purpose.The recession-proof wedding market in India is getting aggregated in degrees into the online space at a considerable rate thereby opening the floodgates of opportunities for the online matrimonial market towards growth. A tool for searching prospective customers, online matrimonial sites offer the comfort and choice of millions of prospects along with information about the same. Added features in the likes of allowing interaction along user interface that newspaper classifieds fail to provide have worked to facilitate higher adoption of such services.Therefore, sparshh matrimony is getting reviewed and leaving its impression in huge population across the globe each day and this can become the ideal platform for many relevant advertisements also who want to reach out at a large scale and in turn can get the desired benefit and mileage.Kindly fill the form bellow and let us know about your prospect.</p>
         <div class="frm-divider"></div>
         <strong><label>Full Name</label></strong> 
         <input type="text" id="txt_name" name="txt_name" class="reg_input_txt" runat="server"/>

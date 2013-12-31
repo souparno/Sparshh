@@ -12,13 +12,18 @@
 <div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
  <div class="column size-12">
           <ul class="nav inline-nav">
-           <li><a href="Home.aspx"  >Home</a></li>
-           <li><a href="AboutUs.aspx">About Us</a></li>
-           <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+           <li><a href="Home.aspx">Home</a></li>
+           <li  class="dropdown">
+              <a href="AboutUs.aspx" >About Us</a>
+                 <ul class="dropdown-menu">
+                  <li><a href="AboutUs.aspx">About Us</a></li>
+                  <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+                  <li><a href="Process.aspx">Process</a></li>
+                 </ul>
+           </li>
            <li><a href="Packages.aspx">Packages</a></li>
-           <li><a href="Process.aspx">Process</a></li>
            <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
-           <li><a href="FAQ.aspx">FAQ</a></li>
+           <li><a href="FAQ.aspx" >FAQ</a></li>
            <li><a href="BusinessEnquiry.aspx" >Business Enquiry</a></li>
            <li><a href="AdvertiseWithUs.aspx" >Advertise With Us</a></li>
            <li><a href="/">Career</a></li>
@@ -38,7 +43,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
 
 
-<div class="row size-12" style="background-image:url(Assets/images/backgroung-image.jpg);background-position:0px 0px;background-size:100% auto;background-repeat:repeat-x;margin-bottom:0px;">
+<div class="row size-12" style="background-image:url(Assets/images/backgroung-image.jpg);background-position:0px 0px;background-size:100% auto;background-repeat:repeat-x;margin-bottom:0px;min-height: 780px;">
    <%--The new registration Form--%>
   <div class="reg_frm_wrap right" style="margin-top:40px;margin-right:50px;margin-bottom:15px;width:520px">
     <div style="background-color:#834DAB;padding-top:2px;text-align:left;">
@@ -49,11 +54,11 @@
     </div>
    <div class="form_inner_wrap">
         <div class="frm-divider"></div>
-        <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">96/1,Rishi Bankim Road,Ground floor,Ward No.-25,Block a ,Nandapally,PO.Naihati,Dist-24pgs(N),pin-743165,West Bengal,India(Near Naihati Anandabazar)</p>
-        <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">&nbsp;&nbsp;Contact Number: +91-33-6501 6001/2/3/4/5</p>
-        <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">&nbsp;&nbsp;Help Number: +91-33-2581 0061</p>
-        <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">&nbsp;&nbsp;Fax Number: +91-33-2581 0061</p>
-        <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">&nbsp;&nbsp;Email Id: enquiry@sparshhmatrimony.com</p>
+        <p>96/1,Rishi Bankim Road,Ground floor,Ward No.-25,Block a ,Nandapally,PO.Naihati,Dist-24pgs(N),pin-743165,West Bengal,India(Near Naihati Anandabazar)</p>
+        <p>&nbsp;&nbsp;Contact Number: +91-33-6501 6001/2/3/4/5</p>
+        <p>&nbsp;&nbsp;Help Number: +91-33-2581 0061</p>
+        <p>&nbsp;&nbsp;Fax Number: +91-33-2581 0061</p>
+        <p>&nbsp;&nbsp;Email Id: enquiry@sparshhmatrimony.com</p>
 
         <div class="frm-divider"></div>
         <strong><label>Full Name</label></strong> 

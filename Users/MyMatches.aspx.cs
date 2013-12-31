@@ -16,12 +16,7 @@ public partial class Users_MyMatches : System.Web.UI.Page
     static string _connection;
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["UserId"] == null)
-        {
-            Session.Clear();
-            Session.Abandon();
-            Response.Redirect("~/Home.aspx");
-        }
+
         DataSet ds = new DataSet();
         _connection = System.Configuration.ConfigurationManager.ConnectionStrings["constring"].ConnectionString;
         if (!IsPostBack)
@@ -310,54 +305,65 @@ public partial class Users_MyMatches : System.Web.UI.Page
         string age_to = ddl_age_to.Value;
 
 
-        string fetch_query = "";
+        string search_query = "";
+        string and = " and ";
         if (selected_mothertongue_key != "%" && selected_mothertongue_key != "")
         {
-            fetch_query = fetch_query + ",usr_mother_tongue="+selected_mothertongue_key;
+            search_query = search_query + "usr_mother_tongue=" + selected_mothertongue_key + and;
         }
         if (selected_religion_key != "%" && selected_religion_key!="")
         {
-            fetch_query = fetch_query + ",usr_religion=" + selected_religion_key;
+            search_query = search_query + "usr_religion=" + selected_religion_key + and;
         }
         if (selected_caste_key != "%" && selected_caste_key != "")
         {
-            fetch_query = fetch_query + ",usr_caste="+selected_caste_key;
+            search_query = search_query + "usr_caste=" + selected_caste_key + and;
         }
         if (selected_maritalstatus_key != "%" && selected_maritalstatus_key != "")
         {
-            fetch_query = fetch_query + ",usr_marital_status=" + selected_maritalstatus_key;
+            search_query = search_query + "usr_marital_status=" + selected_maritalstatus_key + and;
         }
         if (radio_male.Checked)
         {
-            fetch_query = fetch_query + ",usr_gender='Male'";
+            search_query = search_query + "usr_gender='Male'" + and;
         }
         if (radio_Female.Checked)
         {
-            fetch_query = fetch_query + ",usr_gender='Fe-Male'";
+            search_query = search_query + "usr_gender='Fe-Male'" + and;
         }
-        fetch_query = fetch_query + "," + System.DateTime.Now.Year + "-usr_dob_year>="+age_from+" and " + System.DateTime.Now.Year + "-usr_dob_year<="+age_to;
+        search_query = search_query + System.DateTime.Now.Year + "-usr_dob_year>=" + age_from + " and " + System.DateTime.Now.Year + "-usr_dob_year<=" + age_to + and;
 
-
-        string[] query = (from q in fetch_query.Split(',') where q!="" select q).ToArray();
-
-        string sql = "";
-        if (query.Length > 0)
+        if (search_query != "")
         {
-            fetch_query = "";
-            for (int i = 0; i <= query.Length - 2; i++)
-            {
-                fetch_query = fetch_query + query[i] + " and ";
-            }
-            fetch_query = fetch_query + query[query.Length - 1];
-            sql = "select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details where " + fetch_query;
+            search_query = search_query.Substring(0, search_query.Length - 5);
+            search_query = "select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details where " + search_query;
         }
         else
         {
-            sql = "select select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details";
+            search_query = "select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details";
         }
-        
+
+        //string[] query = (from q in fetch_query.Split(',') where q!="" select q).ToArray();
+
+        //string sql = "";
+        //if (query.Length > 0)
+        //{
+        //    fetch_query = "";
+        //    for (int i = 0; i <= query.Length - 2; i++)
+        //    {
+        //        fetch_query = fetch_query + query[i] + " and ";
+        //    }
+        //    fetch_query = fetch_query + query[query.Length - 1];
+        //    sql = "select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details where " + fetch_query;
+        //}
+        //else
+        //{
+        //    sql = "select select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details";
+        //}
+        //lbl_search.InnerText = search_query;
+
         SqlConnection con = new SqlConnection(_connection);
-        SqlDataAdapter da = new SqlDataAdapter(sql, con);
+        SqlDataAdapter da = new SqlDataAdapter(search_query, con);
         DataTable dt = new DataTable();
         da.Fill(dt);
         Fill_GridSearchResult(dt);

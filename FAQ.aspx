@@ -64,11 +64,16 @@
 <div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
  <div class="column size-12">
           <ul class="nav inline-nav">
-           <li><a href="Home.aspx"  >Home</a></li>
-           <li><a href="AboutUs.aspx">About Us</a></li>
-           <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+           <li><a href="Home.aspx">Home</a></li>
+           <li  class="dropdown">
+              <a href="AboutUs.aspx" >About Us</a>
+                 <ul class="dropdown-menu">
+                  <li><a href="AboutUs.aspx">About Us</a></li>
+                  <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+                  <li><a href="Process.aspx">Process</a></li>
+                 </ul>
+           </li>
            <li><a href="Packages.aspx">Packages</a></li>
-           <li><a href="Process.aspx">Process</a></li>
            <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
            <li><a href="FAQ.aspx" class="active">FAQ</a></li>
            <li><a href="BusinessEnquiry.aspx">Business Enquiry</a></li>

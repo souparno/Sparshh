@@ -100,15 +100,15 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Navigation" Runat="Server">
-    <%--Top Navigation--%>
+<%--Top Navigation--%>
 <div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
  <div class="column size-12">
           <ul class="nav inline-nav">
-           <li><a href="Home.aspx" class="active" >My Profile</a></li>
-           <li><a href="AboutUs.aspx">My Matches</a></li>
-           <li><a href="Mission_n_Vission.aspx">My Contacts</a></li>
-           <li><a href="Packages.aspx">My Messages</a></li>
-           <li><a href="Process.aspx">Upgrade</a></li>
+           <li><a href="Profile.aspx" class="active" >My Profile</a></li>
+           <li><a href="MyMatches.aspx">My Matches</a></li>
+           <li><a href="MyContacts.aspx">My Contacts</a></li>
+           <li><a href="MyMessages.aspx">My Messages</a></li>
+           <li><a href="Upgrade.aspx">Upgrade</a></li>
           </ul>
   </div>
 </div>
@@ -117,7 +117,6 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="content" Runat="Server">
-
 
 <div class="row size-12">
  <div class="column size-12">
@@ -155,7 +154,6 @@
  </div>
  </div>
 </div>
-
 <div class="row size-12">
 <div class="column size-12">
   <div class="panel-3">

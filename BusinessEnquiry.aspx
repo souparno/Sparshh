@@ -16,13 +16,18 @@
 <div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
  <div class="column size-12">
           <ul class="nav inline-nav">
-           <li><a href="Home.aspx"  >Home</a></li>
-           <li><a href="AboutUs.aspx">About Us</a></li>
-           <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+           <li><a href="Home.aspx">Home</a></li>
+           <li  class="dropdown">
+              <a href="AboutUs.aspx" >About Us</a>
+                 <ul class="dropdown-menu">
+                  <li><a href="AboutUs.aspx">About Us</a></li>
+                  <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+                  <li><a href="Process.aspx">Process</a></li>
+                 </ul>
+           </li>
            <li><a href="Packages.aspx">Packages</a></li>
-           <li><a href="Process.aspx">Process</a></li>
            <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
-           <li><a href="FAQ.aspx">FAQ</a></li>
+           <li><a href="FAQ.aspx" >FAQ</a></li>
            <li><a href="BusinessEnquiry.aspx" class="active">Business Enquiry</a></li>
            <li><a href="AdvertiseWithUs.aspx">Advertise With Us</a></li>
            <li><a href="/">Career</a></li>
@@ -51,7 +56,7 @@
     </div>
    <div class="form_inner_wrap">
         <div class="frm-divider"></div>
-        <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">&nbsp;&nbsp;Marriage is the eternal solemn life journey of two loving souls within which hides the wooing of the God and Goddess. This is the glimpse of life where the practical meets the mythical. For many people the experience of this romantic phase is their first acquaintance of spirituality without knowing it. It’s the intense infatuation between not only two people, but, also two families which elevates them beyond ordinary perception of harmony where the world becomes enchanted. It’s the finest ecstatic platform to exchange and express true divine love among humans. Certainly to make a match, there are many aspects that have to be kept in mind like cultural attributes, religious versatilities, socio-economic stands and many more in between two families.</p>
+        <p >&nbsp;&nbsp;Marriage is the eternal solemn life journey of two loving souls within which hides the wooing of the God and Goddess. This is the glimpse of life where the practical meets the mythical. For many people the experience of this romantic phase is their first acquaintance of spirituality without knowing it. It’s the intense infatuation between not only two people, but, also two families which elevates them beyond ordinary perception of harmony where the world becomes enchanted. It’s the finest ecstatic platform to exchange and express true divine love among humans. Certainly to make a match, there are many aspects that have to be kept in mind like cultural attributes, religious versatilities, socio-economic stands and many more in between two families.</p>
         <div class="frm-divider"></div>
         <strong><label>Full Name</label></strong> 
         <input type="text" id="txt_name" name="txt_name" class="reg_input_txt" runat="server"/>

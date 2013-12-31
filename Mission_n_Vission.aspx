@@ -16,10 +16,15 @@
  <div class="column size-12">
           <ul class="nav inline-nav">
            <li><a href="Home.aspx">Home</a></li>
-           <li><a href="AboutUs.aspx">About Us</a></li>
-           <li><a href="Mission_n_Vission.aspx" class="active">Mission & Vission</a></li>
+           <li  class="dropdown">
+              <a href="AboutUs.aspx" class="active">About Us</a>
+                 <ul class="dropdown-menu">
+                  <li><a href="AboutUs.aspx">About Us</a></li>
+                  <li><a href="Mission_n_Vission.aspx">Mission & Vission</a></li>
+                  <li><a href="Process.aspx">Process</a></li>
+                 </ul>
+           </li>
            <li><a href="Packages.aspx">Packages</a></li>
-           <li><a href="Process.aspx">Process</a></li>
            <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
            <li><a href="FAQ.aspx">FAQ</a></li>
            <li><a href="BusinessEnquiry.aspx">Business Enquiry</a></li>
@@ -52,11 +57,11 @@
         <div class="frm-divider"></div>
 
         <div id="mission">
-         <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align:left;font-weight:bold;">&nbsp;&nbsp;To make the world a heavenly paradise where all can find there dream match with quality and affordable services.</p>
+         <p>&nbsp;&nbsp;To make the world a heavenly paradise where all can find there dream match with quality and affordable services.</p>
         </div>
         
         <div id="vission" style="display:none;">
-         <p style="padding:10px;color:#555555;font-family: Georgia,serif;text-align: left;font-weight:bold;">&nbsp;&nbsp;To become simple and humble solution in the matrimonial services that can spread smiles to the million hearts across the globe and enrich the livelihood to a new panacea.</p>
+         <p>&nbsp;&nbsp;To become simple and humble solution in the matrimonial services that can spread smiles to the million hearts across the globe and enrich the livelihood to a new panacea.</p>
         </div>
    
         

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MyMatches.aspx.cs" Inherits="Users_MyMatches" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users/MasterPage.master" AutoEventWireup="true" CodeFile="MyMatches.aspx.cs" Inherits="Users_MyMatches" %>
 <%@ Register Src="~/Users/SideNav.ascx" TagPrefix="UC" TagName="SideNavigation" %>
 <%@ Import Namespace="System.Data"  %>
 <%@ Import Namespace="System.Linq"  %>
@@ -146,7 +146,7 @@
     }
 </script>
 </asp:Content>
-<asp:Content ContentPlaceHolderID="BlackOverLay" runat="server">
+<%--<asp:Content ContentPlaceHolderID="BlackOverLay" runat="server">
     <div class="black-overlay" id="black_overlay"></div>
 
  <div class="row size-4">
@@ -168,9 +168,22 @@
 
 
 
-</asp:Content>
+</asp:Content>--%>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="Navigation" Runat="Server">
-    <UC:SideNavigation runat="server" />
+    <%--Top Navigation--%>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Profile.aspx">My Profile</a></li>
+           <li><a href="MyMatches.aspx" class="active">My Matches</a></li>
+           <li><a href="MyContacts.aspx">My Contacts</a></li>
+           <li><a href="MyMessages.aspx">My Messages</a></li>
+           <li><a href="Upgrade.aspx">Upgrade</a></li>
+          </ul>
+  </div>
+</div>
+<%--End Of top Navigation--%>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="content" Runat="Server">
