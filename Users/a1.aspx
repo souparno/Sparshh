@@ -11,7 +11,7 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server" action="abc.php" method="get">
+    <form id="form1" runat="server" action="abc.php" method="post">
     <div>
      <input type="text" name="userid" />
      <button type="submit">Submit me</button>
@@ -19,3 +19,4 @@
     </form>
 </body>
 </html>
+

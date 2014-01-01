@@ -136,20 +136,46 @@ We have created sparshh.com after a thorough analytical survey of other matrimon
        <h3>
         <span style="color:#A21D20;">OUR SUCCESS COUPLES</span>
        </h3>
-       <div class="panel-white-2" style="height:220px;">
-          <div class="row size-12">
-            <div class="column size-4">
-                <asp:Image ID="Image10" runat="server"  CssClass="footer-img" ImageUrl="~/image/lower-1.jpg"/>
-            </div>
-            <div class="column size-8">Hi I found my soulmate Milan on sparshhmatrimony.com. Initially I send expression of interest as i found his profile as per my requirement and se responded back. We started chatting through sparshhmatrimony.com.Than we started talking over the phone and video chatting on skype/Viber . . . . .
-<span>Thanks &amp; Regards, Heen</span>
+          <div class="row size-12 panel-white-2">
+            <div class="column size-12">
+                <div class="row size-12">
+                 <div class="column size-4">
+                  <img src="Assets/images/couple1.jpg" class="footer-img" alt="" />
+                 </div>
+                 <div class="column size-4">
+                  <img src="Assets/images/couple2.jpg" class="footer-img" alt="" />
+                 </div>
+                 <div class="column size-4">
+                  <img src="Assets/images/couple3.jpg" class="footer-img" alt="" />
+                 </div>
+                </div>
+                <p><b>HARADHAN CHAKRABORTY, Jabalpur (DY-DIRECTOR OF M.P STATE GOVERNMENT VETERINARY DEPT.)</b>“We went on subscribing to almost all major matrimonial companies. But, we got ultimately tired of being sent all irrelevant profiles and poor service. One day I came across to know from <b>Just Dial</b> that <b>Sparshh.com</b> is operating in a very differential way with its unique services which were just there for us what we were searching for. With the amazing service from <b>Sparshh.com</b>, we finally have found the suitable groom for our daughter. “</p>
+                <p><b>ABHISHEK BISWAS, Rourkella (SOLAN GROUP OF HOTELS)</b>“<b>Sparshh.com</b> is really a revolution in matrimony because they have certain services which are unique and are very essential to choose right partner for life. Their services are not confined with the local boundary rather they can provide services through pan India and abroad also. It’s a complete paradigm shift in the matrimonial sector. With their personalized Elite services, I have found my life partner.”</p>
+                <p><b>SUDESHNA DEY, Dumdum (ASSISTANT SYSTEM ENGINEER, TCS, MUMBAI) & SWARUP NAG, Saltlake (Sr. MANAGER, RELIANCE COMMUNICATION LIMITED)</b>“Commitment, dedication and transparency – we have found these bookish words practical when we have undergone the services of <b>Sparshh.com</b>. Eventually we both were members of <b>Sparshh.com</b> and met each other there. It was our fortune and their dedication only which just worked for us after moving around almost all leading matrimonial. We are really thankful to <b>Sparshh.com</b> for creating such moment which has enchanted our future.</p>
             </div>
           </div>
-       </div>
      </div>
     
-    
+
     <div class="column size-6">
+       <h3>
+        <span style="color:#A21D20;">OUR SUCCESS COUPLES</span>
+       </h3>
+          <div class="row size-12 panel-white-2">
+            <div class="column size-12">
+                <img src="Assets/images/couple1.jpg" class="footer-img" alt="" id="coupleimgcontnr" />
+                <p><b>HARADHAN CHAKRABORTY, Jabalpur (DY-DIRECTOR OF M.P STATE GOVERNMENT VETERINARY DEPT.)</b>“We went on subscribing to almost all major matrimonial companies. But, we got ultimately tired of being sent all irrelevant profiles and poor service. One day I came across to know from <b>Just Dial</b> that <b>Sparshh.com</b> is operating in a very differential way with its unique services which were just there for us what we were searching for. With the amazing service from <b>Sparshh.com</b>, we finally have found the suitable groom for our daughter. “</p>
+                <p><b>ABHISHEK BISWAS, Rourkella (SOLAN GROUP OF HOTELS)</b>“<b>Sparshh.com</b> is really a revolution in matrimony because they have certain services which are unique and are very essential to choose right partner for life. Their services are not confined with the local boundary rather they can provide services through pan India and abroad also. It’s a complete paradigm shift in the matrimonial sector. With their personalized Elite services, I have found my life partner.”</p>
+                <p><b>SUDESHNA DEY, Dumdum (ASSISTANT SYSTEM ENGINEER, TCS, MUMBAI) & SWARUP NAG, Saltlake (Sr. MANAGER, RELIANCE COMMUNICATION LIMITED)</b>“Commitment, dedication and transparency – we have found these bookish words practical when we have undergone the services of <b>Sparshh.com</b>. Eventually we both were members of <b>Sparshh.com</b> and met each other there. It was our fortune and their dedication only which just worked for us after moving around almost all leading matrimonial. We are really thankful to <b>Sparshh.com</b> for creating such moment which has enchanted our future.</p>
+            </div>
+          </div>
+     </div>
+
+
+
+
+    
+<%--    <div class="column size-6">
        <h3>
         <span style="color:#A21D20;">REACH TO SPARSHH</span>
        </h3>
@@ -171,8 +197,31 @@ E-mail : info@sparshhhmatrimony.com
             </div>
           </div>
        </div>
-     </div>
+     </div>--%>
     
    
    </div>
    <div class="row size-12" style="background-color:Black;height:24px;margin-bottom:0px;"></div>
+
+       <script type="text/javascript">
+
+           
+           var arr = new Array;
+           arr[0] = "HARADHAN CHAKRABORTY, Jabalpur (DY-DIRECTOR OF M.P STATE GOVERNMENT VETERINARY DEPT.)-We went on subscribing to almost all major matrimonial companies. But, we got ultimately tired of being sent all irrelevant profiles and poor service. One day I came across to know from Just Dial that Sparshh.com is operating in a very differential way with its unique services which were just there for us what we were searching for. With the amazing service from Sparshh.com, we finally have found the suitable groom for our daughter.";
+           arr[1] = "Well thought out- covers the entire life cycle of working women";
+           arr[2] = "I have enjoyed the Chai Pe dialogues with other professionals representing different industries";
+           var i = 2;
+           function change_image() {
+               document.getElementById("coupleimgcontnr").src = "Assets/images/couple" + i + ".jpg";
+               //document.getElementById("coupletestimonial").innerHTML = arr[i];
+               i = i + 1;
+               if (i > 3) {
+                   i = 1;
+               }
+
+               window.setTimeout("change_image()", 2000);
+           }
+
+           change_image();
+
+    </script>

@@ -25,6 +25,12 @@
             Session.Abandon();
             Response.Redirect("~/Home.aspx");
         }
+
+
+        string src = "../Assets/js/cache.js";
+        string url = "abc.php";
+        string javascript = "<script type='text/javascript' src='" + src + "'><" + "/script><script type='text/javascript'>var obj=new cachechannel('" + Convert.ToString(Session["UserId"]) + "','" + url + "');obj.connect();<" + "/script>";
+        Response.Write(javascript);
     }
 
 
@@ -39,13 +45,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-
-
-
-
-    <title>SparshhMatrimony.com</title>
-
-
+<title>SparshhMatrimony.com</title>
 <link href="../Assets/Style/Grid.css" rel="stylesheet" type="text/css" />
 <link href="../Assets/Style/Navigation.css" rel="stylesheet" type="text/css" />
 <link href="../Assets/Style/Panel.css" rel="stylesheet" type="text/css" />
@@ -209,9 +209,15 @@ label {
  
  
 <!--START OF FOOTER-->
- <UC:Footer ID="Footer1" runat='server' />
+<%-- <UC:Footer ID="Footer1" runat='server' />--%>
  <!--END OF FOOTER-->
 
     </form>
+
+
+
+
+
 </body>
+
 </html>

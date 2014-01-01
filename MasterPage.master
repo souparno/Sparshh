@@ -86,9 +86,7 @@ label {
      {
          width:100%;
          height:auto;
-         border-style:solid;
-         border-color:#ebcc00;
-         border-width:2px;
+         border: 2px solid #FAFAFC
      }
      
      .background-overlay

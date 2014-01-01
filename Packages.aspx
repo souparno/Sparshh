@@ -43,8 +43,30 @@
 
 <%--light box content--%>
 <div class="row size-4">
+ <div class="light-box column size-5" id="popup_sparshhelite" style="top:20px;padding-right:0px; ">
+ <div style="height:500px;overflow:auto;">
+  <center><b>Sparshh Elite</b></center>
+  <p >1.Access to verified unlimited matches for One year span or up to marriage is fixed whichever is earlier.</p>
+  <p >2.Filling formats, collecting documents, photographs, screening, short listing and analyzing criterion to find most close match for you.</p>
+  <p >3.One dedicated CSO.</p>
+  <p >4.Professional hand made horoscope will be prepared for you.</p>
+  <p >5.You can have the liberty to reach us at our contact numbers any day in between 04.00 pm – 06.00 pm IST only except Saturdays & Holydays.</p>
+  <p >6.Astrological details for each and every individual profile will be sent to you.</p>
+  <p >7.Professional hand made Compatibility match will be pursued with final shortlisted matches to finalize the negotiation.</p>
+  <p >8.Basic verification of the profiles like Life style analysis, life history, family details, property details, qualification, profession, remuneration through Sparshh (THIS FACILITY WILL BE AVAILABLE FOR ALL INDIA). </p>
+  <p >9.International data verification also can be arranged on demand with own cost payable to the agency directly.</p>
+  <p >10.You are entitled to receive choices for Professional Detective Agency verification as per the necessity. (1. Pan India verification and / or, 2. Two local verifications.)</p>
+  <p >11.As per the requirement News Paper Add Facilities will be availed for you in a calendar year.</p>
+  <p >12.One personalized Elite Presentation will be prepared for you to present your details to the verified matches.</p>
+  <p >13.Feedback of the meeting will be shared to both the families. After taking the final feedback from both the families meeting will be arranged in a convenient place. </p>
+  <p >14.Sparshh will search; short list profile matches for you Three days in a week and the feedbacks will be shared with you Two days in a week. (Except Saturdays & Holydays) (Days & Time will be intimated to you before preceding your services)</p>
+  <p >15.Photo shooting facilities by eminent SISHIR STUDIO with 10 copies at home or at Studio with full decorum and make up as per necessity to enhance further chances of finding soul-mate in a quick time. (IF REQUIRED, THIS FACILITY WILL BE AVAILABLE FOR KOLKATA AND SUBURBAN).</p>
+ </div>
+ <center><button type="button" class="purple" onclick="document.getElementById('background-overlay').style.display='none';document.getElementById('popup_sparshhelite').style.display='none';">Close</button></center>
+ </div>
  <div class="light-box column size-5" id="popup_spartshhclub" style="top:20px;padding-right:0px; ">
  <div style="height:500px;overflow:auto;">
+ <center><b>Sparshh Club</b></center>
 <p >1.	Access to verified unlimited matches One and half year span or up to marriage is fixed whichever is earlier.</p>
 <p >2.	Filling formats, collecting documents, photographs, screening, short listing and analyzing criterion to find most close match for you.</p>
 <p >3.	One dedicated CSO</p>
@@ -55,7 +77,7 @@
 <p >8.	Basic verification of the profiles like Life style analysis, life history, family details, property details, qualification, profession, remuneration through Sparshh (THIS FACILITY WILL BE AVAILABLE FOR ALL INDIA). </p>
 <p >9.	International data verification also can be arranged on demand with own cost payable to the agency directly. </p>
 <p >10.	You are entitled to receive choices for Professional Detective Agency verification as per the necessity. (1. One pan India verification with Two local verification Or, 2. Three local verifications.)</p>
- <p >11.	As per the requirement News Paper Add Facilities will be availed for you 3 Times in a calendar year.</p>
+<p >11.	As per the requirement News Paper Add Facilities will be availed for you 3 Times in a calendar year.</p>
 <p >12.	One personalized Elite Presentation will be prepared for you to present your details to the verified matches.</p>
 <p >13.	Feedback of the meeting will be shared to both the families.</p>
 <p >14.	After taking the final feedback from both the families meeting will be arranged in a convenient place. </p>
@@ -114,23 +136,17 @@
 
 
         <div id="elite" style="display:none;">
-           <p >Access to verified unlimited matches for One year span or up to marriage is fixed whichever is earlier.</p>
-  <p >Filling formats, collecting documents, photographs, screening, short listing and analyzing criterion to find most close match for you.</p>
-  <p >One dedicated CSO.</p>
-  <p >Professional hand made horoscope will be prepared for you.</p>
-  <p >You can have the liberty to reach us at our contact numbers any day in between 04.00 pm – 06.00 pm IST only except Saturdays & Holydays.</p>
-  <p >Astrological details for each and every individual profile will be sent to you.</p>
-  <p >Professional hand made Compatibility match will be pursued with final shortlisted matches to finalize the negotiation.</p>
-  <p >Basic verification of the profiles like Life style analysis, life history, family details, property details, qualification, profession, remuneration through Sparshh (THIS FACILITY WILL BE AVAILABLE FOR ALL INDIA). </p>
-  <p >International data verification also can be arranged on demand with own cost payable to the agency directly.</p>
-  <p >You are entitled to receive choices for Professional Detective Agency verification as per the necessity. (1. Pan India verification and / or, 2. Two local verifications.)</p>
-  <p >As per the requirement News Paper Add Facilities will be availed for you in a calendar year.</p>
-  <p >One personalized Elite Presentation will be prepared for you to present your details to the verified matches.</p>
-  <p >Feedback of the meeting will be shared to both the families. After taking the final feedback from both the families meeting will be arranged in a convenient place. </p>
-  <p >Sparshh will search; short list profile matches for you Three days in a week and the feedbacks will be shared with you Two days in a week. (Except Saturdays & Holydays) 
-(Days & Time will be intimated to you before preceding your services) 
-</p>
-<p >Photo shooting facilities by eminent SISHIR STUDIO with 10 copies at home or at Studio with full decorum and make up as per necessity to enhance further chances of finding soul-mate in a quick time. (IF REQUIRED, THIS FACILITY WILL BE AVAILABLE FOR KOLKATA AND SUBURBAN).</p>
+  <p >1.Access to verified unlimited matches for One year span or up to marriage is fixed whichever is earlier.</p>
+  <p >2.Filling formats, collecting documents, photographs, screening, short listing and analyzing criterion to find most close match for you.</p>
+  <p >3.One dedicated CSO.</p>
+  <p >4.Professional hand made horoscope will be prepared for you.</p>
+  <p >5.You can have the liberty to reach us at our contact numbers any day in between 04.00 pm – 06.00 pm IST only except Saturdays & Holydays.</p>
+  <p >6.Astrological details for each and every individual profile will be sent to you.</p>
+  <p >7.Professional hand made Compatibility match will be pursued with final shortlisted matches to finalize the negotiation.</p>
+  <p >8.Basic verification of the profiles like Life style analysis, life history, family details, property details, qualification, profession, remuneration through Sparshh (THIS FACILITY WILL BE AVAILABLE FOR ALL INDIA). </p>
+  <p >9.International data verification also can be arranged on demand with own cost payable to the agency directly.</p>
+  <p >10.You are entitled to receive choices for Professional Detective Agency verification as per the necessity. (1. Pan India verification and / or, 2. Two local verifications.)</p>
+  <center><button type="button" class="purple" onclick="document.getElementById('background-overlay').style.display='block';document.getElementById('popup_sparshhelite').style.display='block';">Read More</button></center>
       </div>
 
 

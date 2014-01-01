@@ -1,40 +1,56 @@
 ﻿<%@ Page Language="C#"%>
+<%@ Import Namespace="System.IO"  %>
+<%@ Import Namespace="System.Data"  %>
+<%@ Import Namespace="System.Web"  %>
 <%@ Import Namespace="System.Web.Script.Serialization"  %>
+<%@ Import Namespace="System.Collections.Generic"  %>
 
 
 <script type="text/C#" runat="server">
 
-    public class user
-    {
-       public string userid;
-    }
-
-    
     protected void Page_Load(object sender, EventArgs e)
     {
-        user[] usr_obj = new user[3];
 
-        usr_obj[0] = new user();
-        usr_obj[0].userid = "user1";
 
-        usr_obj[1] = new user();
-        usr_obj[1].userid = "user2";
-
-        usr_obj[2] = new user();
-        usr_obj[2].userid = "user5";
-
+        string path = Server.MapPath("../Assets/UserLoginCache/");
+        string json = File.ReadAllText(path + "chat2.txt");
         JavaScriptSerializer js = new JavaScriptSerializer();
-        Response.Write(js.Serialize(usr_obj));
+        Dictionary<string, string> rateDict = js.Deserialize<Dictionary<string, string>>(json);
 
-        string str = "../Assets/js/cache.js";
-        string strValue = "../Assets/UserLoginCache/LoginCache.txt";
-        string strAll = "<script type='text/javascript' src='" + str + "'><" + "/script><script type='text/javascript'>var data = JSON.parse('" + js.Serialize(usr_obj) + "');var obj=new cachechannel('" + strValue + "');obj.connect();<" + "/script>"; 
-        Response.Write(strAll);
+
+        DataTable dt = new DataTable();
+        dt.Columns.Add("userid",typeof(string));
         
-        //ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "passJasonData", "alert('hello');var data = JSON.parse(RequestObj.responseText);", true);
-        //Page.ClientScript.RegisterStartupScript(typeof(Page), "Script", "alert('hello');", true);
-        //ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "call me", "alert('hello');", true);
-        //Page.ClientScript.RegisterStartupScript(typeof(Page), "kkk", "alert('hello');");
+        DataRow dr = dt.NewRow();
+        dr["userid"] = "user1";
+        dt.Rows.Add(dr);
+        dr = dt.NewRow();
+        dr["userid"] = "user3";
+        dt.Rows.Add(dr);
+        dr = dt.NewRow();
+        dr["userid"] = "user4";
+        dt.Rows.Add(dr);
+
+
+
+        var query2 = from t1 in dt.AsEnumerable()
+                     join t2 in rateDict.AsQueryable()
+                     on t1.Field<string>("userid") equals t2.Value into table
+                     from p in table.DefaultIfEmpty()
+                     select new
+                     {
+                         userid =t1.Field<string>("userid"),
+                         present=p.Key==null? "false":"true",
+                     };
+        
+        
+        
+        foreach (var p in query2)
+        {
+            Response.Write(p.userid +"---"+ p.present +"<br/>");
+        }
+        
+
     }
    
        
