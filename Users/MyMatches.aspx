@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users/MasterPage.master" AutoEventWireup="true" CodeFile="MyMatches.aspx.cs" Inherits="Users_MyMatches" %>
-<%@ Register Src="~/Users/SideNav.ascx" TagPrefix="UC" TagName="SideNavigation" %>
 <%@ Import Namespace="System.Data"  %>
 <%@ Import Namespace="System.Linq"  %>
 <%@ Import Namespace="System.Data.SqlClient" %>
@@ -7,6 +6,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
+   
           .background
   {
       background-color:#F2F2F2;
@@ -193,25 +193,22 @@
 <div class="row size-12">
 <div class="column size-12">
  <div class="panel-3">
-   <h3 style="padding:0px;margin:0px;">Search By Id</h3>
-   <hr />
-   <input type="text" class="text-select" id="txt_searchId" name="txt_searchId" runat="server" />
-   <a id="A3" href="javascript:void(0)" runat="server" class="panel-7" onserverclick="SearchByIdClick">Search</a>
+   <h3 style="padding:0px;margin:0px;" class="left">Search By Id</h3>
+   <input type="text" class="text-select left" id="txt_searchId" name="txt_searchId" runat="server" />
+   <a id="A3" href="javascript:void(0)" runat="server" class="left" onserverclick="SearchByIdClick">Search</a>
+   <div class="clear"></div>
   <hr />
   <h3 style="padding:0px;margin:0px;">Quick Search</h3>
   <hr />
     &nbsp;<select class="text-select" name="ddl_mother_tongue" id="ddl_mother_tongue" runat="server"></select>
     &nbsp;<select id="ddl_religion" name="ddl_religion" class="text-select" runat="server" onchange="form1.submit();lightbox_display_on();" onserverchange="QuickSearchReligion_OnChange"></select>
     &nbsp;<select id="ddl_Caste" name="ddl_Caste" class="text-select" runat="server"></select>
+    &nbsp;<select class="text-select" id="ddl_marital_status" runat="server" ></select>
+    &nbsp;Age From:<select class="text-select" style="width:54px;" runat="server" id="ddl_age_frm"></select>
+    &nbsp;Age To:<select class="text-select" style="width:54px;" runat="server" id="ddl_age_to"></select>
     <br />
-    <br />
-   Bride<input type="radio" name="Gender" runat="server" id="radio_Female"/>
-   Groom<input type="radio" name="Gender" runat="server" id="radio_male" />
-   &nbsp;<select class="text-select" id="ddl_marital_status" runat="server" ></select>
-   &nbsp;Age From:<select class="text-select" style="width:54px;" runat="server" id="ddl_age_frm"></select>
-   &nbsp;Age To:<select class="text-select" style="width:54px;" runat="server" id="ddl_age_to"></select>
-    <br />
-    <br />
+    &nbsp;Bride<input type="radio" name="Gender" runat="server" id="radio_Female"/>
+    &nbsp;Groom<input type="radio" name="Gender" runat="server" id="radio_male" />
     <a href="javascript:void(0)" runat="server" class="panel-7" onserverclick="QuickSearch_Click">Search</a>
  </div>
  
@@ -487,7 +484,7 @@ To:
                  <table style="width:100%;">
                   <tr>
                    <td colspan="2">
-                    <a href="javascript:void(0)" onclick="show_chat('<%# Eval("usr_id") %>');" style="color:Black;font-size:small"><i class="chat"></i>&nbsp;&nbsp;CHAT</a>
+                    <img src="../Assets/images/<%# Eval("attandance") %>" style="height:15px; width:auto;" alt="" />
                    </td>
                   </tr>
                   <tr>

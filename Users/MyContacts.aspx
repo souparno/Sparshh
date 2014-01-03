@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MyContacts.aspx.cs" Inherits="Users_MyContacts" %>
-<%@ Register Src="~/Users/SideNav.ascx" TagPrefix="UC" TagName="SideNav" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users/MasterPage.master" AutoEventWireup="true" CodeFile="MyContacts.aspx.cs" Inherits="Users_MyContacts" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 <style type="text/css">
   .background
@@ -66,11 +65,22 @@
     }
 </script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="BlackOverLay" Runat="Server">
-</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
- <UC:SideNav runat="server" />
+ <%--Top Navigation--%>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Profile.aspx"  >My Profile</a></li>
+           <li><a href="MyMatches.aspx">My Matches</a></li>
+           <li><a href="MyContacts.aspx" class="active">My Contacts</a></li>
+           <li><a href="MyMessages.aspx">My Messages</a></li>
+           <li><a href="Upgrade.aspx">Upgrade</a></li>
+          </ul>
+  </div>
+</div>
+<%--End Of top Navigation--%>
 </asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
 
 <div class="size-12">

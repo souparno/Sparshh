@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users/MasterPage.master" AutoEventWireup="true" CodeFile="Profile.aspx.cs" Inherits="Users_Profile" MaintainScrollPositionOnPostback="false" %>
-<%@ Register Src="~/Users/SideNav.ascx" TagPrefix="UC" TagName="Navigation" %>
 <%@ Import Namespace="System.Data"  %>
 <%@ Import Namespace="System.Data.SqlClient"  %>
 <%@ Import Namespace="System.Linq"  %>
@@ -8,15 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
  <style type="text/css">
      
-  .panel-3 {
-    background: none repeat scroll 0 0 #F2F2F2;
-    border-color: #D9D9D9;
-    border-style: solid;
-    border-width: 1px;
-    margin-bottom: 1.25em;
-	margin-top:1.25em;
-    padding:1.25em; 
-}   
+
      
      
      
@@ -95,9 +86,6 @@
     </script>
 </asp:Content>
 
-<asp:Content ID="Content_Overlay" ContentPlaceHolderID="BlackOverLay" runat="server">
-<div class="black-overlay" id="black_overlay"></div>
-</asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Navigation" Runat="Server">
 <%--Top Navigation--%>
@@ -137,7 +125,7 @@
      con.Close();
      
  %>
-  <img src='Pictures/<% Response.Write(profile_pic);  %>' style="width:100%;height:auto;border:1px solid black;" alt="" />
+  <img src='Pictures/<% Response.Write(profile_pic);  %>' style="width:auto;height:50%;border:1px solid black;" alt="" />
 
  </div>
  <div class="column size-9">
@@ -172,7 +160,7 @@
         </table>
 
         <%--Edit Region start for about user--%>
-        <div class="light-content size-7" id="Edit_About_Myself">
+        <div class="light-content size-7" id="Edit_About_Myself" style="z-index:10000;">
          <h4>
           About Me
           <a id="A2" href="javascript:void(0)" class="panel-7" runat="server" onserverclick="UpdateAboutMe_Click">Update</a>
@@ -187,7 +175,7 @@
         </table>
 
          </div>
-
+         <%--End of Edit Region for about user--%>
 
        </ItemTemplate>
       </asp:FormView>
@@ -239,7 +227,7 @@
           </table>
 
           <%--Start Of the Edit Region of the basic Info--%>
-          <div class="light-content size-7" id="Edit_Basic_Info">
+          <div class="light-content size-7" id="Edit_Basic_Info" style="z-index:10000;">
 
          <h4>
           BASIC INFORMATION
@@ -440,7 +428,7 @@
 
                    
            <%--Start of edit--%>
-           <div class="light-content size-7" id="Edit_Education_Occupation">
+           <div class="light-content size-7" id="Edit_Education_Occupation" style="z-index:10000;">
            <h4>
            Education And Occupation
            <a href="javascript:void(0)" class="panel-7" runat="server" onserverclick="UpdateEducationOccupation_Click" >Update</a>
@@ -576,7 +564,7 @@
 
 
            <%--Edit Religious Attribute Div--%>
-      <div class="size-7 light-content" id="edit_religious_attributes">
+      <div class="size-7 light-content" id="edit_religious_attributes" style="z-index:10000;">
         <h4>
            Religious Attributes
            <a id="A1" href="javascript:void(0)" class="panel-7" runat="server" onserverclick="Update_ReligiousArrribute_Click" >Update</a>
@@ -769,7 +757,7 @@
   <div class="panel-3">
 
 
-      <asp:FormView ID="Frm_Physical_Attributes" runat="server">
+      <asp:FormView ID="Frm_Physical_Attributes" runat="server" >
        <ItemTemplate>
          <h4>
            Physical Attributes
@@ -799,7 +787,7 @@
           </table>
 
           <%--Start of Edit Region Of Physical Attributes--%>
-           <div class="size-7 light-content" id="Edit_Physical_Attribute">
+           <div class="size-7 light-content" id="Edit_Physical_Attribute" style="z-index:10000;">
               <h4>
                Physical Attributes
                <a href="javascript:void(0)" class="panel-7" runat="server" onserverclick="Update_PhysicalArrribute_Click">Update</a>
@@ -945,7 +933,7 @@
 
 
           <%--Start of Edit Region Of Physical Attributes--%>
-           <div class="size-7 light-content" id="Edit_ContactInformation">
+           <div class="size-7 light-content" id="Edit_ContactInformation" style="z-index:10000;">
               <h4>
                Physical Attributes
                <a id="A3" href="javascript:void(0)" class="panel-7" runat="server" onserverclick="UpdateContactInformation_Click" >Update</a>
@@ -1058,7 +1046,7 @@
 
 
           <%--Start of Edit Region Of Physical Attributes--%>
-           <div class="size-7 light-content" id="Edit_FamilyDetails">
+           <div class="size-7 light-content" id="Edit_FamilyDetails" style="z-index:10000;">
               <h4>
                 Family Details
                <a id="A3" href="javascript:void(0)" class="panel-7" runat="server" onserverclick="UpdateFamilyDetails_Click">Update</a>

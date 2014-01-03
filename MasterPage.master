@@ -50,7 +50,6 @@
 <link href="Assets/Style/Panel.css" rel="stylesheet" type="text/css" />
 <link href="Assets/Style/Default.css" rel="stylesheet" type="text/css" />
 <link href="Assets/Style/Button.css" rel="stylesheet" type="text/css" />
-
 <style type="text/css">
  .reg_input_txt {
     border: 1px solid #834DAB;
@@ -73,7 +72,7 @@
 } 
 .frm-divider{
 	clear:both;
-	padding:4px;
+	padding:1px;
 }
 label {
     color: #666666;
@@ -149,7 +148,9 @@ label {
 <div class="row size-12" style="position:fixed;margin-bottom:0px;z-index:4000;">
 <div class="row size-12" style="background-color:#FAFAFC;border-bottom: 1px solid #CCCCCC !important;box-shadow: 0 0 9px 0 #490F76 !important;margin-bottom:0px;margin-top:0px;padding-bottom:5px;">
   <div class="column size-12">
-   <img src="Assets/images/Logo.png" class="left" style="width:220px;height:auto;margin-top:10px;" alt="" />
+  <a href="Home.aspx">
+   <img src="Assets/images/Logo.png" class="left" style="width:220px;height:auto;margin-top:10px;border:none;" alt="" />
+  </a>
    
    <table class="right" style="margin-bottom:5px;">
     <tr>
@@ -157,15 +158,14 @@ label {
      <td><center><label>Password</label></center></td>
     </tr>
     <tr>
-     <td><input type="text" class="reg_input_txt" name="txt_email_login" id="txt_email_login" runat="server" /></td>
-     <td><input type="password" class="reg_input_txt" name="txt_password_login" id="txt_password_login" runat="server"/></td>
+     <td><input type="text" style="box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;" class="reg_input_txt" name="txt_email_login" id="txt_email_login" runat="server" /></td>
+     <td><input type="password" style="box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;" class="reg_input_txt" name="txt_password_login" id="txt_password_login" runat="server"/></td>
      <td><button class="purple right" runat="server" onserverclick="LogIn_Click">LogIn</button></td>
     </tr>
    </table>
 
   </div>
  </div>
-
  <asp:ContentPlaceHolder id="Navigation" runat="server"></asp:ContentPlaceHolder>
  </div>
 <%--END OF HEADER--%>

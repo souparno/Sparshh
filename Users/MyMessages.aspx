@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MyMessages.aspx.cs" Inherits="Users_MyMessages" %>
-<%@ Register Src="~/Users/SideNav.ascx" TagPrefix="UC" TagName="Navigation" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users/MasterPage.master" AutoEventWireup="true" CodeFile="MyMessages.aspx.cs" Inherits="Users_MyMessages" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 <style type="text/css">
@@ -134,9 +134,26 @@
      }
  </script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="BlackOverLay" Runat="Server">
-<div class="black-overlay" id="black_overlay"></div>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
+     <%--Top Navigation--%>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Profile.aspx">My Profile</a></li>
+           <li><a href="MyMatches.aspx" >My Matches</a></li>
+           <li><a href="MyContacts.aspx">My Contacts</a></li>
+           <li><a href="MyMessages.aspx" class="active">My Messages</a></li>
+           <li><a href="Upgrade.aspx">Upgrade</a></li>
+          </ul>
+  </div>
+</div>
+<%--End Of top Navigation--%>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
+
+
+<%--Light Box Content--%>
  <div class="row size-5 light-content" id="msg_box">
      <input type="hidden" id="hdn_ToUser" />
      <textarea rows="10" cols="10" class="text-select" style="width:90%;height:30%" id="txt_msg"></textarea>
@@ -144,12 +161,9 @@
      <a id="A5" href="javascript:void(0)" runat="server" class="panel-7" onclick="SendMsg()">Send</a>
      <a href="javascript:void(0)" class="panel-7" onclick="document.getElementById('black_overlay').style.display ='none';document.getElementById('msg_box').style.display ='none'">Cancel</a>
  </div>
+<%--End of lIght box Content--%>
 
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
- <UC:Navigation runat="server" />
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
+
 
 <div class="row size-12">
  <div class="column size-12">

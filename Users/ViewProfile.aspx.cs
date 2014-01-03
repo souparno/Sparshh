@@ -17,12 +17,7 @@ public partial class Users_ViewProfile : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["UserId"] == null)
-        {
-            Session.Clear();
-            Session.Abandon();
-            Response.Redirect("~/Home.aspx");
-        }
+
         if (Request.QueryString["ProfileView"] == null)
         {
             Response.Redirect("~/Users/MyMatches.aspx");

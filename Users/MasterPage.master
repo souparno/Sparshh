@@ -27,9 +27,9 @@
         }
 
 
-        string src = "../Assets/js/cache.js";
-        string url = "abc.php";
-        string javascript = "<script type='text/javascript' src='" + src + "'><" + "/script><script type='text/javascript'>var obj=new cachechannel('" + Convert.ToString(Session["UserId"]) + "','" + url + "');obj.connect();<" + "/script>";
+        string src = "../Assets/cache/js/cache.js";
+        string url = "../Assets/cache/cache.php";
+        string javascript = "<script type='text/javascript' src='" + src + "'><" + "/script><script type='text/javascript'>initCacheCall('" + Convert.ToString(Session["UserId"]) + "','" + url + "');apelAjax();<" + "/script>";
         Response.Write(javascript);
     }
 
@@ -53,6 +53,38 @@
 <link href="../Assets/Style/Button.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
+    
+    a
+    {
+        text-decoration:none;
+    }
+    .panel-1 {
+    background: none repeat scroll 0 0 #F2F2F2;
+    border-color: #D9D9D9;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 1.25em;
+    padding:1.25em;
+    text-align:center;
+}
+          .panel-3 {
+    background: none repeat scroll 0 0 #FFF;
+    border-color: #D9D9D9;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 1.25em;
+	margin-top:1.25em;
+    padding:1.25em; 
+}
+    .panel-5
+{
+    background: none repeat scroll 0 0 #F2F2F2;
+    border-bottom: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    padding: 6px 0 6px 10px;
+    text-align:center;
+    font-weight:bold;
+}
  .reg_input_txt {
     border: 1px solid #834DAB;
     border-radius: 3px;
@@ -74,7 +106,7 @@
 } 
 .frm-divider{
 	clear:both;
-	padding:4px;
+	padding:1px;
 }
 label {
     color: #666666;
@@ -87,11 +119,10 @@ label {
      {
          width:100%;
          height:auto;
-         border-style:solid;
-         border-color:#ebcc00;
-         border-width:2px;
+         border: 2px solid #FAFAFC
      }
-          .background-overlay
+     
+     .background-overlay
      {
             display:none;
             position: fixed;
@@ -117,9 +148,9 @@ label {
        margin:0 auto;
        display:none;
        z-index:6000;
-   } 
+   }     
+     
 </style>
-
 
 
 
@@ -148,24 +179,22 @@ label {
 
 
 
-<form id="form1" runat="server">
+<form id="form1" runat="server" style="margin-bottom:0px;">
 
-<div class="background-overlay" id="background-overlay"></div>
+<div class="background-overlay" id="black_overlay"></div>
 
 <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
-<asp:ContentPlaceHolder id="BlackOverLay" runat="server"></asp:ContentPlaceHolder>
 
 <%--The next version of header--%>
 <div class="row size-12" style="position:fixed;margin-bottom:0px;z-index:4000;">
-<div class="row size-12" style="background-color:#FAFAFC;border-bottom: 1px solid #CCCCCC !important;box-shadow: 0 0 9px 0 #490F76 !important;margin-bottom:0px;margin-top:0px;padding-bottom:5px;">
+<div class="row size-12" style="background-color:#FAFAFC;border-bottom: 1px solid #CCCCCC !important;box-shadow: 0 0 9px 0 #490F76 !important;margin-bottom:0px;margin-top:0px;padding-bottom:5px;height:80px;">
   <div class="column size-12">
-
-
-   <img src="../Assets/images/Logo.png" class="left" style="width:220px;height:auto;" alt="" />
-   <button id="Button1" class="purple right" runat="server" onserverclick="LogOut_Click">Log Out</button>
+  <a href="Profile.aspx">
+   <img src="../Assets/images/Logo.png" class="left" style="width:220px;height:auto;margin-top:10px;border:none;" alt="" />
+  </a>
+   <button style="margin-top:10px;" class="purple right" runat="server" onserverclick="LogOut_Click">Log Out</button>
   </div>
  </div>
-
  <asp:ContentPlaceHolder id="Navigation" runat="server"></asp:ContentPlaceHolder>
  </div>
 <%--End Of the next version of header--%>
@@ -209,7 +238,7 @@ label {
  
  
 <!--START OF FOOTER-->
-<%-- <UC:Footer ID="Footer1" runat='server' />--%>
+ <UC:Footer ID="Footer1" runat='server' />
  <!--END OF FOOTER-->
 
     </form>

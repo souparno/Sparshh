@@ -86,7 +86,7 @@
 <p >17.	Photo shooting facilities by eminent SISHIR STUDIO with 15 copies at home or at Studio with full decorum and make up as per necessity to enhance further chances of finding soul-mate in a quick time. (IF REQUIRED, THIS FACILITY WILL BE AVAILABLE FOR KOLKATA AND SUBURBAN).</p>
 <p >18.	Facility to pay out the membership charges in part. Fifty percent needs to be cleared immediately on activation of the membership and the rest fifty percent needs to be cleared on final marriage fix but before verification proceedings. </p>
 <p >19.	Exclusive Photo session by eminent studio at the time of wedding ceremony as per your choice and necessity.</p>
-<p >20.	Entitlement for “sparshh.com” special post-wedding celebrations.</p>
+<p >20.	Entitlement for “Sparshh.com” special post-wedding celebrations.</p>
 </div>
   <center><button type="button" class="purple" onclick="document.getElementById('background-overlay').style.display='none';document.getElementById('popup_spartshhclub').style.display='none';">Close</button></center>
  </div>

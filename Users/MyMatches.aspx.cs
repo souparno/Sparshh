@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Web.Script.Serialization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -333,33 +335,8 @@ public partial class Users_MyMatches : System.Web.UI.Page
         }
         search_query = search_query + System.DateTime.Now.Year + "-usr_dob_year>=" + age_from + " and " + System.DateTime.Now.Year + "-usr_dob_year<=" + age_to + and;
 
-        if (search_query != "")
-        {
-            search_query = search_query.Substring(0, search_query.Length - 5);
-            search_query = "select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details where " + search_query;
-        }
-        else
-        {
-            search_query = "select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details";
-        }
-
-        //string[] query = (from q in fetch_query.Split(',') where q!="" select q).ToArray();
-
-        //string sql = "";
-        //if (query.Length > 0)
-        //{
-        //    fetch_query = "";
-        //    for (int i = 0; i <= query.Length - 2; i++)
-        //    {
-        //        fetch_query = fetch_query + query[i] + " and ";
-        //    }
-        //    fetch_query = fetch_query + query[query.Length - 1];
-        //    sql = "select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details where " + fetch_query;
-        //}
-        //else
-        //{
-        //    sql = "select select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details";
-        //}
+        if (search_query != "")  search_query = "select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details where " + search_query + "usr_id !='" + Session["UserId"]+"';";
+        else search_query = "select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_highest_education,usr_occupation,usr_income,usr_country,usr_profile_pic from usr_details where usr_id !=" + Session["UserId"] + "';";
         //lbl_search.InnerText = search_query;
 
         SqlConnection con = new SqlConnection(_connection);
@@ -1215,158 +1192,185 @@ public partial class Users_MyMatches : System.Web.UI.Page
         ds.ReadXml(path);
         DataTable Country = ds.Tables["Country"];
 
-        var query = from t15 in
-                        (
-                            from t13 in
-                                (
-                                    from t11 in
-                                        (
-                                            from t9 in
-                                                (
-                                                    from t7 in
-                                                        (
-                                                            from t5 in
-                                                                (
-                                                                    from t3 in
-                                                                        (
-                                                                            from t1 in dt.AsEnumerable()
-                                                                            join t2 in MotherTongue.AsEnumerable()
-                                                                            on t1.Field<string>("usr_mother_tongue") equals t2.Field<string>("Key") into table
-                                                                            from p in table.DefaultIfEmpty()
-                                                                            select new
-                                                                            {
-                                                                                usr_id = t1.Field<string>("usr_id"),
-                                                                                Name = t1.Field<string>("usr_name"),
-                                                                                MotherTongue = p == null ? "" : p.Field<string>("Value"),
-                                                                                Religion = t1.Field<string>("usr_religion"),
-                                                                                Height = t1.Field<string>("usr_height"),
-                                                                                Caste = t1.Field<string>("usr_caste"),
-                                                                                Education = t1.Field<string>("usr_highest_education"),
-                                                                                Occupation = t1.Field<string>("usr_occupation"),
-                                                                                Income = t1.Field<string>("usr_income"),
-                                                                                Country = t1.Field<string>("usr_country"),
-                                                                                ProfilePic=t1.Field<string>("usr_profile_pic"),
-                                                                            }).AsEnumerable()
-                                                                    join t4 in Religion.AsEnumerable()
-                                                                    on t3.Religion equals t4.Field<string>("Key") into table
-                                                                    from p in table.DefaultIfEmpty()
-                                                                    select new
-                                                                    {
-                                                                        usr_id = t3.usr_id,
-                                                                        Name=t3.Name,
-                                                                        MotherTongue = t3.MotherTongue,
-                                                                        Religion = p == null ? "" : p.Field<string>("Value"),
-                                                                        Height = t3.Height,
-                                                                        Caste = t3.Caste,
-                                                                        Education = t3.Education,
-                                                                        Occupation = t3.Occupation,
-                                                                        Income = t3.Income,
-                                                                        Country = t3.Country,
-                                                                        ProfilePic=t3.ProfilePic,
-                                                                    }).AsEnumerable()
-                                                            join t6 in Height.AsEnumerable()
-                                                            on t5.Height equals t6.Field<string>("Key") into table
-                                                            from p in table.DefaultIfEmpty()
-                                                            select new
-                                                            {
-                                                                usr_id = t5.usr_id,
-                                                                Name=t5.Name,
-                                                                MotherTongue = t5.MotherTongue,
-                                                                Religion = t5.Religion,
-                                                                Height = p == null ? "" : p.Field<string>("Value"),
-                                                                Caste = t5.Caste,
-                                                                Education = t5.Education,
-                                                                Occupation = t5.Occupation,
-                                                                Income = t5.Income,
-                                                                Country = t5.Country,
-                                                                ProfilePic=t5.ProfilePic,
-                                                            }).AsEnumerable()
-                                                    join t8 in Caste.AsEnumerable()
-                                                    on t7.Caste equals t8.Field<string>("Key") into table
-                                                    from p in table.DefaultIfEmpty()
-                                                    select new
-                                                    {
-                                                        usr_id = t7.usr_id,
-                                                        Name=t7.Name,
-                                                        MotherTongue = t7.MotherTongue,
-                                                        Religion = t7.Religion,
-                                                        Height = t7.Height,
-                                                        Caste = p == null ? "" : p.Field<string>("Value"),
-                                                        Education = t7.Education,
-                                                        Occupation = t7.Occupation,
-                                                        Income = t7.Income,
-                                                        Country = t7.Country,
-                                                        ProfilePic=t7.ProfilePic,
-                                                    }).AsEnumerable()
-                                            join t10 in Education.AsEnumerable()
-                                            on t9.Education equals t10.Field<string>("Key") into table
-                                            from p in table.DefaultIfEmpty()
-                                            select new
-                                            {
-                                                usr_id = t9.usr_id,
-                                                Name=t9.Name,
-                                                MotherTongue = t9.MotherTongue,
-                                                Religion = t9.Religion,
-                                                Height = t9.Height,
-                                                Caste = t9.Caste,
-                                                Education = p == null ? "" : p.Field<string>("Value"),
-                                                Occupation = t9.Occupation,
-                                                Income = t9.Income,
-                                                Country = t9.Country,
-                                                ProfilePic=t9.ProfilePic,
-                                            }).AsEnumerable()
-                                    join t12 in Occupation.AsEnumerable()
-                                    on t11.Occupation equals t12.Field<string>("Key") into table
-                                    from p in table.DefaultIfEmpty()
-                                    select new
-                                    {
-                                        usr_id = t11.usr_id,
-                                        Name=t11.Name,
-                                        MotherTongue = t11.MotherTongue,
-                                        Religion = t11.Religion,
-                                        Height = t11.Height,
-                                        Caste = t11.Caste,
-                                        Education = t11.Education,
-                                        Occupation = p == null ? "" : p.Field<string>("Value"),
-                                        Income = t11.Income,
-                                        Country = t11.Country,
-                                        ProfilePic=t11.ProfilePic,
-                                    }).AsEnumerable()
-                            join t14 in Income.AsEnumerable()
-                            on t13.Income equals t14.Field<string>("Key") into table
-                            from p in table.DefaultIfEmpty()
-                            select new
-                            {
-                                usr_id = t13.usr_id,
-                                Name=t13.Name,
-                                MotherTongue = t13.MotherTongue,
-                                Religion = t13.Religion,
-                                Height = t13.Height,
-                                Caste = t13.Caste,
-                                Education = t13.Education,
-                                Occupation = t13.Occupation,
-                                Income = p == null ? "" : p.Field<string>("Value"),
-                                Country = t13.Country,
-                                ProfilePic=t13.ProfilePic,
-                            }).AsEnumerable()
-                    join t16 in Country.AsEnumerable()
-                    on t15.Country equals t16.Field<string>("Key") into table
+        //getting the online users id from the cache
+        path = Server.MapPath("../Assets/cache/");
+        string json = File.ReadAllText(path + "cache.txt");
+        JavaScriptSerializer js = new JavaScriptSerializer();
+        Dictionary<string, string> onlineusers = js.Deserialize<Dictionary<string, string>>(json);
+
+
+        var query = from t17 in
+                        (from t15 in
+                             (
+                                 from t13 in
+                                     (
+                                         from t11 in
+                                             (
+                                                 from t9 in
+                                                     (
+                                                         from t7 in
+                                                             (
+                                                                 from t5 in
+                                                                     (
+                                                                         from t3 in
+                                                                             (
+                                                                                 from t1 in dt.AsEnumerable()
+                                                                                 join t2 in MotherTongue.AsEnumerable()
+                                                                                 on t1.Field<string>("usr_mother_tongue") equals t2.Field<string>("Key") into table
+                                                                                 from p in table.DefaultIfEmpty()
+                                                                                 select new
+                                                                                 {
+                                                                                     usr_id = t1.Field<string>("usr_id"),
+                                                                                     Name = t1.Field<string>("usr_name"),
+                                                                                     MotherTongue = p == null ? "" : p.Field<string>("Value"),
+                                                                                     Religion = t1.Field<string>("usr_religion"),
+                                                                                     Height = t1.Field<string>("usr_height"),
+                                                                                     Caste = t1.Field<string>("usr_caste"),
+                                                                                     Education = t1.Field<string>("usr_highest_education"),
+                                                                                     Occupation = t1.Field<string>("usr_occupation"),
+                                                                                     Income = t1.Field<string>("usr_income"),
+                                                                                     Country = t1.Field<string>("usr_country"),
+                                                                                     ProfilePic = t1.Field<string>("usr_profile_pic"),
+                                                                                 }).AsEnumerable()
+                                                                         join t4 in Religion.AsEnumerable()
+                                                                         on t3.Religion equals t4.Field<string>("Key") into table
+                                                                         from p in table.DefaultIfEmpty()
+                                                                         select new
+                                                                         {
+                                                                             usr_id = t3.usr_id,
+                                                                             Name = t3.Name,
+                                                                             MotherTongue = t3.MotherTongue,
+                                                                             Religion = p == null ? "" : p.Field<string>("Value"),
+                                                                             Height = t3.Height,
+                                                                             Caste = t3.Caste,
+                                                                             Education = t3.Education,
+                                                                             Occupation = t3.Occupation,
+                                                                             Income = t3.Income,
+                                                                             Country = t3.Country,
+                                                                             ProfilePic = t3.ProfilePic,
+                                                                         }).AsEnumerable()
+                                                                 join t6 in Height.AsEnumerable()
+                                                                 on t5.Height equals t6.Field<string>("Key") into table
+                                                                 from p in table.DefaultIfEmpty()
+                                                                 select new
+                                                                 {
+                                                                     usr_id = t5.usr_id,
+                                                                     Name = t5.Name,
+                                                                     MotherTongue = t5.MotherTongue,
+                                                                     Religion = t5.Religion,
+                                                                     Height = p == null ? "" : p.Field<string>("Value"),
+                                                                     Caste = t5.Caste,
+                                                                     Education = t5.Education,
+                                                                     Occupation = t5.Occupation,
+                                                                     Income = t5.Income,
+                                                                     Country = t5.Country,
+                                                                     ProfilePic = t5.ProfilePic,
+                                                                 }).AsEnumerable()
+                                                         join t8 in Caste.AsEnumerable()
+                                                         on t7.Caste equals t8.Field<string>("Key") into table
+                                                         from p in table.DefaultIfEmpty()
+                                                         select new
+                                                         {
+                                                             usr_id = t7.usr_id,
+                                                             Name = t7.Name,
+                                                             MotherTongue = t7.MotherTongue,
+                                                             Religion = t7.Religion,
+                                                             Height = t7.Height,
+                                                             Caste = p == null ? "" : p.Field<string>("Value"),
+                                                             Education = t7.Education,
+                                                             Occupation = t7.Occupation,
+                                                             Income = t7.Income,
+                                                             Country = t7.Country,
+                                                             ProfilePic = t7.ProfilePic,
+                                                         }).AsEnumerable()
+                                                 join t10 in Education.AsEnumerable()
+                                                 on t9.Education equals t10.Field<string>("Key") into table
+                                                 from p in table.DefaultIfEmpty()
+                                                 select new
+                                                 {
+                                                     usr_id = t9.usr_id,
+                                                     Name = t9.Name,
+                                                     MotherTongue = t9.MotherTongue,
+                                                     Religion = t9.Religion,
+                                                     Height = t9.Height,
+                                                     Caste = t9.Caste,
+                                                     Education = p == null ? "" : p.Field<string>("Value"),
+                                                     Occupation = t9.Occupation,
+                                                     Income = t9.Income,
+                                                     Country = t9.Country,
+                                                     ProfilePic = t9.ProfilePic,
+                                                 }).AsEnumerable()
+                                         join t12 in Occupation.AsEnumerable()
+                                         on t11.Occupation equals t12.Field<string>("Key") into table
+                                         from p in table.DefaultIfEmpty()
+                                         select new
+                                         {
+                                             usr_id = t11.usr_id,
+                                             Name = t11.Name,
+                                             MotherTongue = t11.MotherTongue,
+                                             Religion = t11.Religion,
+                                             Height = t11.Height,
+                                             Caste = t11.Caste,
+                                             Education = t11.Education,
+                                             Occupation = p == null ? "" : p.Field<string>("Value"),
+                                             Income = t11.Income,
+                                             Country = t11.Country,
+                                             ProfilePic = t11.ProfilePic,
+                                         }).AsEnumerable()
+                                 join t14 in Income.AsEnumerable()
+                                 on t13.Income equals t14.Field<string>("Key") into table
+                                 from p in table.DefaultIfEmpty()
+                                 select new
+                                 {
+                                     usr_id = t13.usr_id,
+                                     Name = t13.Name,
+                                     MotherTongue = t13.MotherTongue,
+                                     Religion = t13.Religion,
+                                     Height = t13.Height,
+                                     Caste = t13.Caste,
+                                     Education = t13.Education,
+                                     Occupation = t13.Occupation,
+                                     Income = p == null ? "" : p.Field<string>("Value"),
+                                     Country = t13.Country,
+                                     ProfilePic = t13.ProfilePic,
+                                 }).AsEnumerable()
+                         join t16 in Country.AsEnumerable()
+                         on t15.Country equals t16.Field<string>("Key") into table
+                         from p in table.DefaultIfEmpty()
+                         select new
+                         {
+                             usr_id = t15.usr_id,
+                             Name = t15.Name,
+                             MotherTongue = t15.MotherTongue,
+                             Religion = t15.Religion,
+                             Height = t15.Height,
+                             Caste = t15.Caste,
+                             Education = t15.Education,
+                             Occupation = t15.Occupation,
+                             Income = t15.Income,
+                             Country = p == null ? "" : p.Field<string>("Value"),
+                             ProfilePic = t15.ProfilePic,
+
+                         }).AsEnumerable()
+                    join t18 in onlineusers
+                    on t17.usr_id equals t18.Key into table
                     from p in table.DefaultIfEmpty()
                     select new
                     {
-                        usr_id=t15.usr_id,
-                        Name=t15.Name,
-                        MotherTongue=t15.MotherTongue,
-                        Religion=t15.Religion,
-                        Height=t15.Height,
-                        Caste=t15.Caste,
-                        Education=t15.Education,
-                        Occupation=t15.Occupation,
-                        Income=t15.Income,
-                        Country=p==null?"":p.Field<string>("Value"),
-                        ProfilePic=t15.ProfilePic,
-
+                        usr_id=t17.usr_id,
+                        Name=t17.Name,
+                        MotherTongue=t17.MotherTongue,
+                        Religion=t17.Religion,
+                        Height=t17.Height,
+                        Caste=t17.Caste,
+                        Education=t17.Education,
+                        Occupation=t17.Occupation,
+                        Income=t17.Income,
+                        Country=t17.Country,
+                        ProfilePic=t17.ProfilePic,
+                        attandance=p.Key!=null? "green.jpg":"",
                     };
+
 
         Grd_Search_Result.DataSource = query;
         Grd_Search_Result.DataBind();

@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MyPictures.aspx.cs" Inherits="Users_MyPictures" %>
-<%@ Register Src="~/Users/SideNav.ascx" TagPrefix="UC" TagName="Navigation" %>
 <%@ Import Namespace="System.Data"  %>
 <%@ Import Namespace="System.Data.SqlClient"  %>
 <%@ Import Namespace="System.Linq"  %>
@@ -70,10 +69,9 @@
      }
  </script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="BlackOverLay" Runat="Server">
-</asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
-  <UC:Navigation ID="Navigation1" runat="server" />
+
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
 

@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Upgrade.aspx.cs" Inherits="Users_Upgrade" %>
-<%@ Register Src="~/Users/SideNav.ascx" TagPrefix="UC" TagName="Navigation" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users/MasterPage.master" AutoEventWireup="true" CodeFile="Upgrade.aspx.cs" Inherits="Users_Upgrade" %>
+
 <%@ Import Namespace="System.Data"  %>
 <%@ Import Namespace="System.Data.SqlClient"  %>
 <%@ Import Namespace="System.Linq"  %>
@@ -25,7 +25,19 @@
 </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
- <UC:Navigation ID="Navigation1" runat="server" />
+     <%--Top Navigation--%>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Profile.aspx">My Profile</a></li>
+           <li><a href="MyMatches.aspx" >My Matches</a></li>
+           <li><a href="MyContacts.aspx">My Contacts</a></li>
+           <li><a href="MyMessages.aspx" >My Messages</a></li>
+           <li><a href="Upgrade.aspx" class="active">Upgrade</a></li>
+          </ul>
+  </div>
+</div>
+<%--End Of top Navigation--%>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="content" Runat="Server">
 
