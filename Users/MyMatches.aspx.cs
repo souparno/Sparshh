@@ -1368,7 +1368,7 @@ public partial class Users_MyMatches : System.Web.UI.Page
                         Income=t17.Income,
                         Country=t17.Country,
                         ProfilePic=t17.ProfilePic,
-                        attandance=p.Key!=null? "green.jpg":"",
+                        attandance=p.Key!=null? "green.gif":"",
                     };
 
 

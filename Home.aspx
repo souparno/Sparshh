@@ -114,7 +114,7 @@
         <span style="color:Red;">*</span> 
         <div class="frm-divider"></div>
         <strong><label>Confirm Password</label></strong> 
-        <input type="text" class="reg_input_txt"/> 
+        <input type="password" class="reg_input_txt" id="txt_confirm_password" name="txt_confirm_password" runat="server"/> 
         <span style="color:Red;">*</span>
         <div class="frm-divider"></div>
         <center>
@@ -129,7 +129,7 @@
         </center>
         <div class="frm-divider"></div>
         <div style="border-radius: 0 0 5px 5px;background-color:#834DAB;margin-left:-18px;margin-right:-18px;margin-bottom:-20px;padding:10px;">
-           <center><button class="silver" style="color:#834DAB">Register</button></center>
+           <center><button class="silver" style="color:#834DAB" runat="server" onserverclick="Register_Click">Register</button></center>
         </div>
    </div>
   </div>

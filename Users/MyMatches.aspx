@@ -484,7 +484,7 @@ To:
                  <table style="width:100%;">
                   <tr>
                    <td colspan="2">
-                    <img src="../Assets/images/<%# Eval("attandance") %>" style="height:15px; width:auto;" alt="" />
+                    <img src="../Assets/images/<%# Eval("attandance") %>" style="height:20px; width:auto;" alt="" />
                    </td>
                   </tr>
                   <tr>

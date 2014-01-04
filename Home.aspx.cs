@@ -441,6 +441,7 @@ public partial class Home : System.Web.UI.Page
         string mobile_number = txt_mobile_no.Value;
         string email = txt_email.Value;
         string password = txt_password.Value;
+        string password_confirm = txt_confirm_password.Value;
         string NoOfChilDren = ddl_no_of_children.Value;
         string maritalstatus = ddl_marital_status.Value;
         string ChildrenLivingWith = ddl_children_staying_with.Value;
@@ -448,9 +449,10 @@ public partial class Home : System.Web.UI.Page
         Boolean trms_condition_check = term_cndtn_acpt.Checked;
 
 
-        if (profile_posted_by == "0" || name == "" || gender == "" || dob_day == "0" || dob_month == "" || dob_year == "" || religion == "0" || mother_tongue == "0" || country == "0" || mobile_number == "" || email == "" || password == "" || maritalstatus == "0" || trms_condition_check == false || mobile_number.Length!=10)
+        if (profile_posted_by == "0" || name == "" || gender == "" || dob_day == "0" || dob_month == "" || dob_year == "" || religion == "0" || mother_tongue == "0" || country == "0" || mobile_number == "" || email == "" || password == "" || maritalstatus == "0" || trms_condition_check == false || mobile_number.Length!=10 || password_confirm == "")
         {
-            Page.ClientScript.RegisterStartupScript(typeof(Page), "MandatoryFields", "<script type='text/javascript'>alert('Fields Marked With * are Mandatory and mobile number should be 10 characters long and accept the terms n contion to proceed');</script>");
+            Response.Write("<script type='text/javascript'>alert('Fields Marked With * are Mandatory and mobile number should be 10 characters long and accept the terms n contion to proceed');</script>");
+
         }
         else
         {
@@ -468,17 +470,26 @@ public partial class Home : System.Web.UI.Page
             else
             {
 
-                string user_code = get_user_code();
-                sql = "insert into usr_details(usr_id,usr_name,usr_gender,usr_dob_day,usr_dob_month,usr_dob_year,usr_religion,usr_mother_tongue,usr_caste,usr_country,usr_mobile,usr_email,usr_password,usr_profile_posted_by,usr_marital_status,usr_profile_pic,usr_children_living_with) " +
-                    "values('" + user_code + "','" + name + "','" + gender + "','" + dob_day + "','" + dob_month + "','" + dob_year + "','" + religion + "','" + mother_tongue + "','" + caste + "','" + country + "','" + mobile_number + "','" + email + "','" + password + "','" + profile_posted_by + "','"+maritalstatus+"','"+profile_pic+"','"+ChildrenLivingWith+"');";
-                cmd = new SqlCommand(sql, con);
+                if (password_confirm == password)
+                {
+
+                    string user_code = get_user_code();
+                    sql = "insert into usr_details(usr_id,usr_name,usr_gender,usr_dob_day,usr_dob_month,usr_dob_year,usr_religion,usr_mother_tongue,usr_caste,usr_country,usr_mobile,usr_email,usr_password,usr_profile_posted_by,usr_marital_status,usr_profile_pic,usr_children_living_with) " +
+                        "values('" + user_code + "','" + name + "','" + gender + "','" + dob_day + "','" + dob_month + "','" + dob_year + "','" + religion + "','" + mother_tongue + "','" + caste + "','" + country + "','" + mobile_number + "','" + email + "','" + password + "','" + profile_posted_by + "','" + maritalstatus + "','" + profile_pic + "','" + ChildrenLivingWith + "');";
+                    cmd = new SqlCommand(sql, con);
 
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-                Session["UserId"] = user_code;
-                Response.Redirect("~/RegisterPersonalDetails.aspx");
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    Session["UserId"] = user_code;
+                    Response.Redirect("~/RegisterPersonalDetails.aspx");
+                }
+                else
+                {
+                    Response.Write("<script type='text/javascript'>alert('Password Mismatch..Plsease retype password');</script>");
+                }
+
             }
         }
 
