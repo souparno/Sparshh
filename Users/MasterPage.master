@@ -25,12 +25,6 @@
             Session.Abandon();
             Response.Redirect("~/Home.aspx");
         }
-
-
-        string src = "../Assets/cache/js/cache.js";
-        string url = "../Assets/cache/cache.php";
-        string javascript = "<script type='text/javascript' src='" + src + "'><" + "/script><script type='text/javascript'>initCacheCall('" + Convert.ToString(Session["UserId"]) + "','" + url + "');apelAjax();<" + "/script>";
-        Response.Write(javascript);
     }
 
 
@@ -165,19 +159,6 @@ label {
 </head>
 <body>
 
-<%--<div class="master-black-overlay" id="master-black-overlay">
-<div class="row size-4">
-     <div class="master-light-content column size-5" id="master-light-content" >
-      <p>Tel : +91-33-2581-0016 / +91-98748 57993 (Sunday-Friday, 10.00 AM-8 PM) </p>
-      <p>Fax : +91-33-2581-0016 (EXT.) </p>
-      <p>E-mail : info@SPARSHHhmatrimony.com</p>
-      <button type="button" class="panel-7" onclick="document.getElementById('master-black-overlay').style.display='none';document.getElementById('master-light-content').style.display='none';">Close</button>
-     </div>
-</div>
-</div>--%>
-
-
-
 
 <form id="form1" runat="server" style="margin-bottom:0px;">
 
@@ -199,33 +180,6 @@ label {
  </div>
 <%--End Of the next version of header--%>
 
- 
- <!--START OF HEADER-->
- <%--<div class="row size-12">
-
-
-  <div class="column size-12">
-   
-   <div class="row" style="width:485px;" id="top_list">
-    <ul class="inline-list text-1" style="margin-top:10px;">
-    <li class="panel-4" style="margin-left:5px;margin-top:12px;"><a href="Home.aspx">REGISTER<asp:Image ID="Image2" runat="server" ImageUrl="~/image/tri-green.png" BorderStyle="None"/></a></li>
-    <li class="panel-4" style="margin-left:5px;margin-top:12px;"><a href="javascript:void(0);" onclick="alert('please register to avail facility');">SEARCH<asp:Image ID="Image3" runat="server" ImageUrl="~/image/tri-green.png" BorderStyle="None"/></a></li>
-    <li class="panel-4" style="margin-left:5px;margin-top:12px;"><a href="javascript:void(0);">UPGRADE<asp:Image ID="Image4" runat="server" ImageUrl="~/image/tri-green.png" BorderStyle="None"/></a></li>
-    <li style="margin-left:5px;"><a href="javascript:void(0);"><asp:Image ID="Image12" runat="server"  ImageUrl="~/image/live-chat.png" BorderWidth="0px" /></a></li>
-    <li class="panel-4" style="margin-left:5px;margin-top:12px;"><a href="javascript:void(0);" onclick="document.getElementById('master-black-overlay').style.display='block';document.getElementById('master-light-content').style.display='block';">LOCAL NOs<asp:Image ID="Image5" runat="server" ImageUrl="~/image/tri-green.png" BorderStyle="None"/></a></li>
-   </ul>
-   </div>
-
-   <ul class='inline-list right' style='margin-right:5px;' id="logout">
-    <li class='panel-4' style='margin-left:10px;margin-top:12px;'>
-     <a href='javascript:void(0)' runat='server' onserverclick='LogOut_Click'>Logout<asp:Image  runat='server' ImageUrl='~/image/tri-green.png' BorderStyle="None"/></a>
-    </li>
-   </ul>
-   
-   
-   </div>
-   
- </div>--%>
 <!--END OF HEADEDR--> 
 
 <!--START OF CONTENT-->
@@ -241,12 +195,124 @@ label {
  <UC:Footer ID="Footer1" runat='server' />
  <!--END OF FOOTER-->
 
+ <%--Chat footer--%>
+<div style="background-color: #FFFFFF;border: 1px solid #999999;bottom: 30px;height:300px;position:fixed;right: 11px;width: 200px;">
+ <div style="background-color: #336699;color: #FFFFFF;font-weight: bold;font-size:10px;padding-bottom: 3px;padding-top: 3px;width: 100%;">&nbsp;&nbsp;Online Members</div>
+ <div id="online-buddies" style="overflow: auto;width:100%;padding-left:5px; word-wrap: break-word;">
+<%--  <a style='color: #336699;text-decoration: none;font-size:10px;font-weight:900;'>User 1</a><hr />
+    <a style="color: #336699;text-decoration: none;font-size:10px;font-weight:900;">User 2</a>
+  <hr />
+    <a style="color: #336699;text-decoration: none;font-size:10px;font-weight:900;">User 3</a>
+  <hr />--%>
+ </div>
+</div>
+<div style="background-color: #FFFFFF;border: 1px solid #999999;bottom: 30px;max-height: 500px;min-height: 150px;position:fixed;right: 220px; width: 200px;"></div>
+<div class="row size-12" style="background-color: #336699;border-top: 1px solid #CCCCCC;bottom: 0;height:30px;position:fixed;z-index:10000;margin-bottom:0px;"></div>
+ <%--End of the chat footer--%>
+
     </form>
-
-
-
-
-
 </body>
 
 </html>
+<script type="text/javascript" src="../Assets/cache/js/ajax.js"></script>
+<script type="text/javascript" src="../Assets/cache/js/chat.js"></script>
+<script type="text/javascript">
+
+
+
+
+
+    if (SupportsAjax) {// Checks to asee if the browser supports ajax
+
+        /***************************************************************
+          variable : RequestJobManager
+          Purpose : keeps track of the request to be performed
+
+          variable : AjaxBusy
+          Purpose : Checks to see if there are any ongoing ajax requests to the server
+        ****************************************************************/
+        var RequestJobManager = 0;
+        var AjaxBusy = 0;
+
+
+        function apelAjax() {
+            //Checks to see if there is any ongoing ajax request
+            //0 represents no requests are in process
+            if (AjaxBusy === 0) {
+                if (RequestJobManager == 2) {
+                    RequestJobManager = 0;
+                    new AJAX({
+                        RequestVerb: 'POST',
+                        RequestUrl: '../Assets/cache/cache.php',
+                        Parameters: "userid=" + '<%= Convert.ToString(Session["UserId"]) %>' + "&username=" + '<%= Convert.ToString(Session["UserName"]) %>',
+                        CallbackMethod: success,
+                        readystateCallBackMethod: statechange,
+                        TimeOut: '6'
+                    }).SendHTTPRequest();
+                }
+                else {
+                    new AJAX({
+                        RequestVerb: 'GET',
+                        RequestUrl: '../Assets/cache/cache.txt',
+                        CallbackMethod: onlineusers,
+                        readystateCallBackMethod: statechange,
+                        TimeOut: '6'
+                    }).SendHTTPRequest();
+                }
+            RequestJobManager++;
+            }
+            // Iterating the ajax request after every 2 seconds
+            setTimeout('apelAjax()', 1900);
+        };
+        apelAjax();
+    }
+    else alert("Browser Doesnot Support Ajax");
+
+    /******************************************************************************************* 
+     This function gets called on every successful registration of users to the cache
+    ********************************************************************************************/
+    function success(param) {
+                var response = JSON.parse(param);
+                for (var key in response) {
+                    if(key === "Error")  alert(key + "" + response[key]);
+                    }
+            }
+
+   /******************************************************************************************* 
+    This function gets called after every successful fetch of online users from the cache
+   ********************************************************************************************/
+    function onlineusers(param) {
+        var response = JSON.parse(param);
+        users = "";
+        for (var i = 0; i < response.length; i++) {
+            users = users + "<a style='color: #336699;text-decoration: none;font-size:10px;font-weight:900;'>" + response[i].UserName + "</a><hr />";
+        }
+        document.getElementById("online-buddies").innerHTML = users;
+    }
+
+    /*****************************************************************************************
+     This function checks to see if the ajax is buzy or not and hence declares the AjaxBusy 0/1
+     1 defines the ajax is buzy
+     0 defines the ajax is free
+    ******************************************************************************************/
+    function statechange(param) {
+        switch (param) {
+            case 0:
+                AjaxBusy = 1;
+                break;
+            case 1:
+                AjaxBusy = 1;
+                break;
+            case 2:
+                AjaxBusy = 1;
+                break;
+            case 3:
+                AjaxBusy = 1;
+                break;
+            case 4:
+                AjaxBusy = 0;
+                break;
+        }
+    }
+
+</script>
