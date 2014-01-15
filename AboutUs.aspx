@@ -63,10 +63,10 @@
 
    <div id="Accolades" style="display:none;">
         <p>&nbsp;&nbsp;“Sparshh.com” has grown with high pace in matchmaking arena. Our journey is crowned with many social accolades like –</p>
-        <p>&nbsp;&nbsp;a.The only matrimony which is dispensing superior lucrative services with comparable and affordable prices to serve all the socio-economic class of people.</p>
-        <p>&nbsp;&nbsp;b.Have been successful in establishing accomplished unions all over India and world since inception.</p>
-        <p>&nbsp;&nbsp;c.First matrimony in India to introduce one time registration charge valid till marriage.</p>
-        <p>&nbsp;&nbsp;d.First matrimony to Endeavour Post Wedding Celebration in members.</p>
+        <p>&nbsp;&nbsp;A.&nbsp;&nbsp;The only matrimony which is dispensing superior lucrative services with comparable and affordable prices to serve all the socio-economic class of people.</p>
+        <p>&nbsp;&nbsp;B.&nbsp;&nbsp;Have been successful in establishing accomplished unions all over India and world since inception.</p>
+        <p>&nbsp;&nbsp;C.&nbsp;&nbsp;First matrimony in India to introduce one time registration charge valid till marriage.</p>
+        <p>&nbsp;&nbsp;D.&nbsp;&nbsp;First matrimony to Endeavour Post Wedding Celebration in members.</p>
    </div>
         
    <div id="Team" style="display:none;">

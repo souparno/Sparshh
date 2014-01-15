@@ -21,18 +21,19 @@
         string email = txt_email_login.Value;
         string password = txt_password_login.Value;
         SqlConnection con = new SqlConnection(_connection);
-        string sql = "select usr_id from usr_details where usr_email='" + email + "' and usr_password='" + password + "';";
-        SqlCommand cmd = new SqlCommand(sql, con);
+        string sql = "select usr_id,usr_name from usr_details where usr_email='" + email + "' and usr_password='" + password + "';";
+        SqlDataAdapter da = new SqlDataAdapter(sql, con);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
 
-
-        con.Open();
-        string user_code = Convert.ToString(cmd.ExecuteScalar());
-        con.Close();
+        string user_code = Convert.ToString(dt.Rows[0]["usr_id"]);
+        string user_name = Convert.ToString(dt.Rows[0]["usr_name"]);
 
 
         if (user_code != null && user_code != "")
         {
             Session["UserId"] = user_code;
+            Session["UserName"] = user_name;
             Response.Redirect("~/Users/Profile.aspx");
         }
 
@@ -114,7 +115,25 @@ label {
        margin:0 auto;
        display:none;
        z-index:6000;
-   }     
+   }
+   
+   
+      .plus
+     {
+         background-image:url('Assets/images/glyphicons-halflings.png');
+         background-position: -408px -96px;
+         height: 14px;
+         width: 14px;
+         display: inline-block;
+     }
+     .minus
+     {
+         background-image:url('Assets/images/glyphicons-halflings.png');
+         background-position: -433px -96px;
+         height: 14px;
+         width: 14px;
+         display: inline-block;
+     }     
      
 </style>
 
@@ -185,6 +204,38 @@ label {
  <!--START OF FOOTER-->
  <UC:Footer runat='server' />
  <!--END OF FOOTER-->
+
+
+
+
+
+
+
+<%-- START OF THE NEW FOOTER--%>
+
+			<div class="row size-12" style="background: none repeat scroll 0 0 #F0F0F0;margin: 0 auto;padding: 0 8px;">
+             <div class="row" style="width:750px;">
+				<div class="left" style="color: #999999;font-size: 11px;margin: 0 0 0 10px;padding: 12px 0;text-align: left;"><span>1996-2014 Sparshh Matrimony - A Revolution in Matrimony&trade;</span></div>
+				<div class="right" style="color: #999999;font-size: 11px;margin: 0 0 0 10px;padding: 12px 0;text-align: left;">Passionately created by - Sparshh Team</div>
+             </div>
+		</div>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Home.aspx" class="active" >Home</a></li>
+           <li><a href="AboutUs.aspx">About Us</a></li>
+           <li><a href="Packages.aspx">Packages</a></li>
+           <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
+           <li><a href="FAQ.aspx">FAQ</a></li>
+           <li><a href="BusinessEnquiry.aspx">Business Enquiry</a></li>
+           <li><a href="AdvertiseWithUs.aspx">Advertise With Us</a></li>
+           <li><a href="/">Career</a></li>
+           <li><a href="ContactUs.aspx">Contact Us</a></li>
+          </ul>
+  </div>
+</div>
+<%--END OF THE NEW FOOTER--%>
+
 
     </form>
 </body>

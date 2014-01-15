@@ -54,14 +54,33 @@ Please go through our frequently asked questions. If you still can't find your a
   <hr />
 
    <center>
-    <h4 style="color:#0066FF">Registration</h4>
+   <script type="text/javascript">
+       function showregistration() {
+           document.getElementById('registration_content_div').style.display = 'block';
+           document.getElementById('i_registration').className = "minus";
+           document.getElementById('registration_control').onclick = function () { hideregistration(); };
+       };
+
+       function hideregistration() {
+           document.getElementById('registration_content_div').style.display = 'none';
+           document.getElementById('i_registration').className = "plus";
+           document.getElementById('registration_control').onclick = function () { showregistration(); };
+       };
+   
+   </script>
+
+
+    <h4><a id="registration_control" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showregistration();">Registration&nbsp;&nbsp;<i id="i_registration" class="plus"></i></a></h4>
    </center>
-   <p>
+
+<div id="registration_content_div" style="display:none;">
+
+  <p>
     <b>How to Register?</b>
     <br />
     Login to <span style="color:#0066FF">www.sparshhmatrimony.com</span>, You can choose to register either as a free member or as a paid member. 
    </p>
-   <p>
+  <p>
     <b>Free Registration</b>
     <br />
     Provide name, age, gender, e-mail ID.
@@ -134,15 +153,36 @@ My ideal partner will be someone who is intelligent, caring, broad-minded and ha
    <br />
    Free members can view all your details except e-mail ID and telephone number. Paid members can view all your details including email ID and telephone number. 
 </p>
+
+</div>
+
+
   <center>
-    <h4 style="color:#0066FF">Profile creation/modification</h4>
+     <script type="text/javascript">
+         function showprofilecontent() {
+             document.getElementById('profile_content_div').style.display = 'block';
+             document.getElementById('i1').className = "minus";
+             document.getElementById('A1').onclick = function () { hideprofilecontent(); };
+         };
+
+         function hideprofilecontent() {
+             document.getElementById('profile_content_div').style.display = 'none';
+             document.getElementById('i1').className = "plus";
+             document.getElementById('A1').onclick = function () { showprofilecontent(); };
+         };
+   
+   </script>
+    <h4><a id="A1" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showprofilecontent();">Profile creation/modification&nbsp;&nbsp;<i id="i1" class="plus"></i></a></h4>
    </center>
-   <p>
+   
+   
+   <div id="profile_content_div" style="display:none;">
+       <p>
    <b>How do I create a complete profile?</b>
    <br />
 A quick careful glance of the following topics will help you to include photos, horoscope, video, voice profile, references, etc.to make your profile complete.
   </p>
-  <p>
+   <p>
    <b>How many photos can I add?</b>
    <br />
 Login using your Matrimony ID/E-mail ID and Password.
@@ -164,13 +204,13 @@ E-mail your photo to <span style="color:#0066FF">profile@sparshhmatrimony.com </
 Post your photo to any of our offices across the world with your Matrimony ID and Password.
 We will upload your photo to your profile free of cost.
   </p>
-  <p>
+   <p>
    <b>What is photo validation process?</b>
    <br />
 Every photo posted on our website involves a manual screening. The turn around time for validation is 24 hours.
 Only after the photo gets validated, then only it will be available for all members to see.
   </p>
-  <p>
+   <p>
    <b>How do I protect my photo?</b>
    <br />
    This is an exclusive feature available only to paid members.
@@ -178,7 +218,7 @@ You can protect your photo with a Password and only those members with whom you 
 <p></p>
 Note:If you forget your Password, you can set a new Password but you cannot retrieve the old one.
   </p>
-  <p>
+   <p>
    <b>How do I unprotect my photo?</b>
    <br />
 This is an exclusive feature available only to paid members. Click on the Edit Profile section.
@@ -186,7 +226,7 @@ Click on the Edit Photo link under Enhance My Profile heading.
 In the Edit Photo page, click on the Unprotect Photo section.
 Click on the Unprotect Photo button to display your photo to all.
   </p>
-  <p>
+   <p>
    <b>How to delete photos?</b>
    <br />
 Log in using your Matrimony ID/E-mailID and Password.
@@ -194,20 +234,41 @@ Click on the Edit Profile section.
 Click on the Edit Photo link under Enhance My Profile heading.
 In the Edit Photo page, below the photo you want to delete is a delete link. Click on the delete link to delete the photo.
   </p>
-    <p>
+   <p>
    <b>What is photo security?</b>
    <br />
 This is a feature by which each photo will have a BharatMatrimony water mark image.
 This helps to protect the photo and hence the photo cannot be copied or tampered with.
   </p>
-    <p>
+   <p>
    <b>What is request photo?</b>
    <br />
 This feature helps you to send a request to a member to add his/her photo if he/she has not added one.
   </p>
+   
+   </div>
+
+
+
+
   <center>
-    <h4 style="color:#0066FF">Horoscopes</h4>
+       <script type="text/javascript">
+           function showhoroscopecontent() {
+               document.getElementById('hororscope_content').style.display = 'block';
+               document.getElementById('i2').className = "minus";
+               document.getElementById('A2').onclick = function () { hidehoroscopecontent(); };
+           };
+
+           function hidehoroscopecontent() {
+               document.getElementById('hororscope_content').style.display = 'none';
+               document.getElementById('i2').className = "plus";
+               document.getElementById('A2').onclick = function () { showhoroscopecontent(); };
+           };
+   
+   </script>
+    <h4><a id="A2" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showhoroscopecontent();">Horoscopes&nbsp;&nbsp;<i id="i2" class="plus"></i></a></h4>
    </center>
+<div id="hororscope_content" style="display:none;">
    <p>
    <b>How to add a horoscope?</b>
    <br />
@@ -216,7 +277,7 @@ Click on the Edit Profile section.
 Click on the Add Horoscope link under Enhance My Profile heading.
 Upload your horoscope if you already have a horoscope.
 If you're uploading a horoscope make sure the horoscope is in JPG/GIF format.Your horoscope will be validated before it is added to your profile.
-
+</p>
   <p>
    <b>What are the other ways to add horoscopes?</b>
    <br />
@@ -259,10 +320,27 @@ In the Edit horoscope page, click on delete button.
    <br />
 This feature helps you to send a request to a member to add his/her horoscope if he/she has not added one.
   </p>
-  
+ </div> 
   <center>
-    <h4 style="color:#0066FF">Matrimony Stamp</h4>
+
+       <script type="text/javascript">
+           function showstamp() {
+               document.getElementById('matrimony_stamp').style.display = 'block';
+               document.getElementById('i3').className = "minus";
+               document.getElementById('A3').onclick = function () { hidestamp(); };
+           };
+
+           function hidestamp() {
+               document.getElementById('matrimony_stamp').style.display = 'none';
+               document.getElementById('i3').className = "plus";
+               document.getElementById('A3').onclick = function () { showstamp(); };
+           };
+   
+   </script>
+    <h4><a id="A3" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showstamp();">Matrimony Stamp&nbsp;&nbsp;<i id="i3" class="plus"></i></a></h4>
    </center>
+
+<div id="matrimony_stamp" style="display:none;">
   <p>
    <b>What is a Matrimony Stamp?</b>
    <br />
@@ -350,42 +428,75 @@ In the Reference section, click on Reference Privacy Settings.
 We have provided you with various reference privacy settings by which you can protect your reference.
 </p>
 
-</p>
+</div>
+
+
 <center>
-    <h4 style="color:#0066FF">Astro Match</h4>
+       <script type="text/javascript">
+           function showastro() {
+               document.getElementById('astro').style.display = 'block';
+               document.getElementById('i4').className = "minus";
+               document.getElementById('A4').onclick = function () { hideastro(); };
+           };
+
+           function hideastro() {
+               document.getElementById('astro').style.display = 'none';
+               document.getElementById('i4').className = "plus";
+               document.getElementById('A4').onclick = function () { showastro(); };
+           };
+   
+   </script>
+    <h4><a id="A4" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showastro();">Astro Match&nbsp;&nbsp;<i id="i4" class="plus"></i></a></h4>
 </center>
+
+<div id="astro" style="display:none;">
+
 <p>
 <b>What is Astro Match?</b>
 <br />
 Astro Match is Real Time Horoscope Matching online with a prospective life partner. You can match your horoscope with anyone you choose to find out if you're compatible as a couple. 
+</p>
 <p>
 <b>How do I do an AstroMatch?</b>
 <br />
 To do an Astro Match we need to have your place, date and time of birth and that of the person you wish to match. If you and your prospective partner have added your horoscope then you can do an instant match.
 </p>
-
 <p>
 <b>I do not have a horoscope. Can I do an AstroMatch?</b>
 <br />
 No. You must first add your horoscope to do an Astro Match.
 </p>
-
 <p>
 <b>How can I avail Astro Match service?</b>
 <br />
 Astro Match is a separate paid package. You would need to pay to use this service even if you are a paid member.
 </p>
-
 <p>
 <b>What is the maximum number ofAstro Matches I can avail?</b>
 <br />
 The number of Astro Matches you can avail depends on the package you select.
 </p>
 
-
+</div>
 <center>
-    <h4 style="color:#0066FF">Videos</h4>
+       <script type="text/javascript">
+           function showvideo() {
+               document.getElementById('videos').style.display = 'block';
+               document.getElementById('i5').className = "minus";
+               document.getElementById('A5').onclick = function () { hidevideo(); };
+           };
+
+           function hidevideo() {
+               document.getElementById('videos').style.display = 'none';
+               document.getElementById('i5').className = "plus";
+               document.getElementById('A5').onclick = function () { showvideo(); };
+           };
+   
+   </script>
+    <h4><a id="A5" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showvideo();">Videos&nbsp;&nbsp;<i id="i5" class="plus"></i></a></h4>
 </center>
+
+<div id="videos" style="display:none;">
 <p>
 <b>How to upload video?</b>
 <br />
@@ -413,7 +524,6 @@ Fax : 033- 2581 0016 (EXT.)
 Or you can e-mail us at profile@sparshhmatrimony.com with your matrimony ID and Password.
 Your video clipping will beadded to your profile in a maximum of 48 hours in free of cost.
 </p>
-
 <p>
 <b>How to delete video? </b>
 <br /> 
@@ -421,30 +531,46 @@ Log in using your Matrimony ID/E-mail ID and Password.
 Click on the Edit Profile section.
 Click on the Edit Video link under Enhance My Profile heading.
 Click on Delete Video link.
-<p></p>
+</p>
+</div>
+
+
 <center>
-    <h4 style="color:#0066FF">Activation/deactivation</h4>
+       <script type="text/javascript">
+           function showact() {
+               document.getElementById('actdiac').style.display = 'block';
+               document.getElementById('i6').className = "minus";
+               document.getElementById('A6').onclick = function () { hideact(); };
+           };
+
+           function hideact() {
+               document.getElementById('actdiac').style.display = 'none';
+               document.getElementById('i6').className = "plus";
+               document.getElementById('A6').onclick = function () { showact(); };
+           };
+   
+   </script>
+    <h4><a id="A6" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showact();">Activation/deactivation&nbsp;&nbsp;<i id="i6" class="plus"></i></a></h4>
 </center>
+
+<div id="actdiac" style="display:none;">
+
 <p>
 <b>What is full profile?</b>
 <br /> 
 It’s the view of your profile as others see it. To take a look at your full profile: Login using your Matrimony/e-mail ID and Password. Click My Profile link.
-<p></p>
-
+</p>
 <p>
 <b>What is view my profile? </b>
 <br /> 
 It is the view of your profile as others see it. To take a look at your full profile: Login using your Matrimony ID/E-mail ID and Password. Click Edit Profile link. In that page, click on View my profile link.
-<p></p>
-
+</p>
 <p>
 <b>What is edit profile? </b>
 <br /> 
 Edit profile is the section of the site where you can make changes and additions toy our profile.
 To go to Edit Profile, login with your Matrimony ID/E-mail ID. Click on the Edit profile link in the top navigation bar in the My Home section.
-
-<p></p>
-
+</p>
 <p>
 <b>What are profile settings?</b>
 <br /> 
@@ -452,60 +578,52 @@ Profile settings are that section of the site where you can change password, dea
 To access profile settings, login with your Matrimony ID/E-mail ID & password
 Click on the Edit Profile link in the top navigation of the My Home page.
 In the Edit Profile page there is a section head called Profile Settings.
-
-<p></p>
-
+</p>
 <p>
 <b>How will I get alerts?</b>
 <br /> 
 You will receive alerts from us through e-mail and SMS. If you wish to unsubscribe to any of the alerts, please deselect the alert.
-<p></p>
-
+</p>
 <p>
 <b>What is mail alert?</b>
 <br /> 
 The alerts from us through e-mail are mail alerts. You will get two types of mail alerts - Daily Match Watch and weekly Photo Match Watch. Besides those you will also get products and feature promotions. In addition to the above mailers, you will receive e-mail notifications when ever a member sends you an Express Interest or a Personalized Message and also when a member accepts or declines your Express Interest or Personalized Message. The moment you delete your profile from SPARSHH matrimony you will stop receiving all alerts.
-<p></p>
-
+</p>
 <p>
 <b>What is mobile alert and when will I receive a mobile alert?</b>
 <br /> 
 Mobile alert is an SMS alert. You will receive an SMS alert when a member sends you a Personalized Message and when a member has received and accepted your Express Interest.
-<p></p>
-
+</p>
 <p>
 <b>How to Manage Mail alerts? </b>
 <br /> 
 Login using your Matrimony ID/E-mail ID and Password.
 Click on the Edit Profile link in the top navigation of the My Home section.
 In the Edit Profile page Click Manage Mail alerts link. You can select the mail alerts you wish to receive.
-
-<p></p>
-
-
+</p>
 <p>
 <b>Who can get mobile alerts? </b>
 <br /> 
 Both free and paid members can avail this service. This service is available only in India. 
-<p></p>
+</p>
 
 <p>
 <b>What is Match Watch? </b>
 <br /> 
 Match Watch is a list of the latest members who match your preference, mailed to your inbox of the e-mail ID that you provide in your profile. You can also view an archive of the Match Watch e-mails in case you have missed or deleted them accidentally.
-<p></p>
+</p>
 
 <p>
 <b>I am not receiving matches of my choice/preference in my Match Watch mailers. Can I change the results to my liking? </b>
 <br /> 
 Match Watch is prepared based on your partner preference. You can change your partner preference such that you receive profiles according to your choice.
-<p></p>
+</p>
 
 <p>
 <b>How can I view the Match Watch e-mails that I have missed? </b>
 <br /> 
 All your Match Watch e-mails will be stored in the Daily Match Watch Archive in the My Home section. You can select the date of the Match Watch e-mail you would like to view.
-<p></p>
+</p>
 
 <p>
 <b>I am not receiving Match Watch e-mails in my inbox. How can I subscribe/unsubscribe to my Match Watch e-mails? </b>
@@ -602,10 +720,29 @@ Login to your account. In the My Home page, click on the Edit Profile link.  In 
 This link is provided in case you wish to temporarily put your partner search on hold. On deactivation, your  profile will be hidden from our members and you will not be able to contact any member until you activate your profile.
 
 <p></p>
+</div>
+
+
+
 <center>
-    <h4 style="color:#0066FF">Modify Profile</h4>
+       <script type="text/javascript">
+           function showmod() {
+               document.getElementById('mod_profile').style.display = 'block';
+               document.getElementById('i7').className = "minus";
+               document.getElementById('A7').onclick = function () { hidemod(); };
+           };
+
+           function hidemod() {
+               document.getElementById('mod_profile').style.display = 'none';
+               document.getElementById('i7').className = "plus";
+               document.getElementById('A7').onclick = function () { showmod(); };
+           };
+   
+   </script>
+    <h4><a id="A7" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showmod();">Modify Profile&nbsp;&nbsp;<i id="i7" class="plus"></i></a></h4>
 </center>
 
+<div id="mod_profile" style="display:none;">
 <p>
 <b>How do I modify my profile? </b>
 <br /> 
@@ -657,10 +794,28 @@ Also see our terms of use/service agreement for more details of what type of con
 Not conforming to any of the above can lead to your profile being rejected.
 
 <p></p>
-
+</div>
 <center>
-    <h4 style="color:#0066FF">Login Details</h4>
+       <script type="text/javascript">
+           function showlogin() {
+               document.getElementById('login_div').style.display = 'block';
+               document.getElementById('i8').className = "minus";
+               document.getElementById('A8').onclick = function () { hidelogin(); };
+           };
+
+           function hidelogin() {
+               document.getElementById('login_div').style.display = 'none';
+               document.getElementById('i8').className = "plus";
+               document.getElementById('A8').onclick = function () { showlogin(); };
+           };
+   
+   </script>
+    <h4><a id="A8" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showlogin();">Login Details&nbsp;&nbsp;<i id="i8" class="plus"></i></a></h4>
 </center>
+
+
+<div id="login_div" style="display:none;">
+
 <p>
 <b>How do I log in? </b>
 <br />
@@ -710,10 +865,26 @@ The E-mail ID you are using to login must be the same one with which you had reg
 <br /> 
 Every Matrimony ID is unique and is allocated by the system. You cannot choose your own Matrimony ID since it is system generated and cannot be changed under any circumstance.
 <p></p>
-
+</div>
 <center>
-    <h4 style="color:#0066FF">My Home</h4>
+ <script type="text/javascript">
+     function showhome() {
+         document.getElementById('home_div').style.display = 'block';
+         document.getElementById('i9').className = "minus";
+         document.getElementById('A9').onclick = function () { hidehome(); };
+     };
+
+     function hidehome() {
+         document.getElementById('home_div').style.display = 'none';
+         document.getElementById('i9').className = "plus";
+         document.getElementById('A9').onclick = function () { showhome(); };
+     };
+   
+   </script>
+    <h4><a id="A9" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showhome();">My Home&nbsp;&nbsp;<i id="i9" class="plus"></i></a></h4>
 </center>
+
+<div id="home_div" style="display:none;">
 
 <p>
 <b>What are Suitable Matches? </b>
@@ -811,9 +982,26 @@ Not yet listened –These are Voice messages that you have sent to members that 
 Declined voice messages –These are Voice messages that you have sent to members that have been declined.
 
 <p></p>
+</div>
 <center>
-    <h4 style="color:#0066FF">Search Profiles</h4>
+<script type="text/javascript">
+    function showsearch() {
+        document.getElementById('search_profile').style.display = 'block';
+        document.getElementById('i10').className = "minus";
+        document.getElementById('A10').onclick = function () { hidesearch(); };
+    };
+
+    function hidesearch() {
+        document.getElementById('search_profile').style.display = 'none';
+        document.getElementById('i10').className = "plus";
+        document.getElementById('A10').onclick = function () { showsearch(); };
+    };
+   
+   </script>
+    <h4><a id="A10" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showsearch();">Search Profiles&nbsp;&nbsp;<i id="i10" class="plus"></i></a></h4>
 </center>
+<div id="search_profile" style="display:none;">
+
 <p>
 <br /> There are various types of search by which you can searches for your life partner. Please see below to make best use of our search options.
 <p></p>
@@ -889,10 +1077,25 @@ Please check your search criteria when you receive this message. If you are sear
 If you have used date options in the search, please check the dates entered. For Example, in the "When Posted" option ensure that you have not entered a future date by mistake.
 
 <p></p>
-
+</div>
 <center>
-    <h4 style="color:#0066FF">Short-list Profiles</h4>
+<script type="text/javascript">
+    function showlist() {
+        document.getElementById('short_list').style.display = 'block';
+        document.getElementById('i11').className = "minus";
+        document.getElementById('A11').onclick = function () { hidelist(); };
+    };
+
+    function hidelist() {
+        document.getElementById('short_list').style.display = 'none';
+        document.getElementById('i11').className = "plus";
+        document.getElementById('A11').onclick = function () { showlist(); };
+    };
+   
+   </script>
+    <h4><a id="A11" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showlist();">Short-list Profiles&nbsp;&nbsp;<i id="i11" class="plus"></i></a></h4>
 </center>
+<div id="short_list" style="display:none;">
 <p>
 <b>How do I short-list profiles? </b>
 <br /> 
@@ -947,12 +1150,33 @@ To view the profiles you have blocked, login to your account, in the My Home pag
 To remove profiles from your block list, select the profile and click on the Unblock link.
 
 <p></p>
+</div>
+
+
 <center>
     <h4 style="color:#0066FF">Ways to Contact</h4>
+    <hr />
 </center>
 <center>
-    <h4 style="color:#0066FF">Express Interest</h4>
+<script type="text/javascript">
+    function showinterest() {
+        document.getElementById('express_interest_div').style.display = 'block';
+        document.getElementById('i12').className = "minus";
+        document.getElementById('A12').onclick = function () { hideinterest(); };
+    };
+
+    function hideinterest() {
+        document.getElementById('express_interest_div').style.display = 'none';
+        document.getElementById('i12').className = "plus";
+        document.getElementById('A12').onclick = function () { showinterest(); };
+    };
+   
+   </script>
+    <h4><a id="A12" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showinterest();">Express Interest&nbsp;&nbsp;<i id="i12" class="plus"></i></a></h4>
 </center>
+
+<div id="express_interest_div" style="display:none;">
+
 <p>
 <b>What is Express Interest? </b>
 <br />
@@ -979,10 +1203,26 @@ You will be notified via e-mail when a member accepts/declines your interest. Yo
 <br /> 
 No. Only an automated message expressing your interest will be sent to the member without revealing your contact information.
 <p></p>
+</div>
 <center>
-    <h4 style="color:#0066FF">Personalized Messages</h4>
+<script type="text/javascript">
+    function showmsg() {
+        document.getElementById('msg_div').style.display = 'block';
+        document.getElementById('i13').className = "minus";
+        document.getElementById('A13').onclick = function () { hidemsg(); };
+    };
+
+    function hidemsg() {
+        document.getElementById('msg_div').style.display = 'none';
+        document.getElementById('i13').className = "plus";
+        document.getElementById('A13').onclick = function () { showmsg(); };
+    };
+   
+   </script>
+   <h4><a id="A13" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showmsg();">Personalized Messages&nbsp;&nbsp;<i id="i13" class="plus"></i></a></h4>
 </center>
 
+<div id="msg_div" style="display:none;">
 <p>
 <b>How do I send personalized messages to a member who has accepted my interest? </b>
 <br /> 
@@ -990,10 +1230,28 @@ You can send personalized messages to a member who has accepted your interest by
 Click here to upgrade your profile to Sparshh Combo / Premium Super / Premium Plus / Premium membership plan now.
 
 <p></p>
-
+</div>
 <center>
-    <h4 style="color:#0066FF">Chat</h4>
+<script type="text/javascript">
+    function showchat() {
+        document.getElementById('chat_div').style.display = 'block';
+        document.getElementById('i14').className = "minus";
+        document.getElementById('A14').onclick = function () { hidechat(); };
+    };
+
+    function hidechat() {
+        document.getElementById('chat_div').style.display = 'none';
+        document.getElementById('i14').className = "plus";
+        document.getElementById('A14').onclick = function () { showchat(); };
+    };
+   
+   </script>
+   <h4><a id="A14" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showchat();">Chat&nbsp;&nbsp;<i id="i14" class="plus"></i></a></h4>
 </center>
+
+<div id="chat_div" style="display:none;">
+
+
 <p>
 <b>How do I chat? </b>
 <br /> 
@@ -1015,10 +1273,25 @@ Click on the Search link in the top navigation bar. Choose Members Online. You c
 Also while using other search tools, in the search results page, there will be an indication to CHAT with the member if the member is online. You can initiate chat if you are a paid member.
 
 <p></p>
+</div>
 <center>
-    <h4 style="color:#0066FF">Phone Numbers</h4>
-</center>
+<script type="text/javascript">
+    function shownumber() {
+        document.getElementById('number_div').style.display = 'block';
+        document.getElementById('i15').className = "minus";
+        document.getElementById('A15').onclick = function () { hidenumber(); };
+    };
 
+    function hidenumber() {
+        document.getElementById('number_div').style.display = 'none';
+        document.getElementById('i15').className = "plus";
+        document.getElementById('A15').onclick = function () { shownumber(); };
+    };
+   
+   </script>
+   <h4><a id="A15" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="shownumber();">Phone Numbers&nbsp;&nbsp;<i id="i15" class="plus"></i></a></h4>
+</center>
+<div id="number_div" style="display:none;">
 <p>
 <b>Phone Verification </b>
 <br /> 
@@ -1041,13 +1314,29 @@ In the phone verification page, click on Hide Phone Number link to hide your pho
 <br /> 
 Log in to your account. In the My Home page, under Views, click on the link "members who viewed my phone number."
 <p></p>
-
+</div>
 <center>
     <h4 style="color:#0066FF">Offline Memberships</h4>
+    <hr />
 </center>
 <center>
-    <h4 style="color:#0066FF">Regarding SPARSHH Privilege and Elite Packages</h4>
+<script type="text/javascript">
+    function showpackage() {
+        document.getElementById('package_div').style.display = 'block';
+        document.getElementById('i16').className = "minus";
+        document.getElementById('A16').onclick = function () { hidepackage(); };
+    };
+
+    function hidepackage() {
+        document.getElementById('package_div').style.display = 'none';
+        document.getElementById('i16').className = "plus";
+        document.getElementById('A16').onclick = function () { showpackage(); };
+    };
+   
+   </script>
+   <h4><a id="A16" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showpackage();">Regarding SPARSHH Privilege and Elite Packages&nbsp;&nbsp;<i id="i16" class="plus"></i></a></h4>
 </center>
+<div id="package_div" style="display:none;">
 <p>
 <b>Within how much time can I receive the stipulated guaranteed responses?  </b>
 <br /> 
@@ -1139,10 +1428,26 @@ The company maintains high level of confidentiality of its members and can not d
 <br /> 
 As we maintain professionalism the agreement what would be prepared during your membership with us will be kept as per the rules and regulation. Therefore, it will never be forgotten before the expiry date of the membership duration. However we will continue to celebrate our each member in different occasions to build a long term healthy relationship with SPARSHH.
 <p></p>
+</div>
 
 <center>
-    <h4 style="color:#0066FF">Online Memberships</h4>
+<script type="text/javascript">
+    function showpmembers() {
+        document.getElementById('memebers_div').style.display = 'block';
+        document.getElementById('i17').className = "minus";
+        document.getElementById('A17').onclick = function () { hidememebers(); };
+    };
+
+    function hidememebers() {
+        document.getElementById('memebers_div').style.display = 'none';
+        document.getElementById('i17').className = "plus";
+        document.getElementById('A17').onclick = function () { showpmembers(); };
+    };
+   
+   </script>
+   <h4><a id="A17" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showpmembers();">Online Memberships&nbsp;&nbsp;<i id="i17" class="plus"></i></a></h4>
 </center>
+<div id="memebers_div" style="display:none;">
 <p>
 <b>I'm not able to make the online payment with my card even though it's a valid one. Why? </b>
 <br /> 
@@ -1183,17 +1488,52 @@ You can send a cheque/DD/MO along with your Matrimony ID to any of our addresses
 <br /> 
 We will upgrade your profile once we receive your payment. If you have made the payment and your profile is still not upgraded, kindly contact our  office or send an e-mail to info@sparshhmatrimony.com along with your payment details.
 <p></p>
+</div>
+
+
 <center>
-    <h4 style="color:#0066FF">Pay at Banks</h4>
+<script type="text/javascript">
+    function showbanks() {
+        document.getElementById('banks_div').style.display = 'block';
+        document.getElementById('i18').className = "minus";
+        document.getElementById('A18').onclick = function () { hidebanks(); };
+    };
+
+    function hidebanks() {
+        document.getElementById('banks_div').style.display = 'none';
+        document.getElementById('i18').className = "plus";
+        document.getElementById('A18').onclick = function () { showbanks(); };
+    };
+   
+   </script>
+   <h4><a id="A18" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showbanks();">Pay at Banks&nbsp;&nbsp;<i id="i18" class="plus"></i></a></h4>
 </center>
+<div id="banks_div" style="display:none;">
 <p>
 <b>HDFC Bank </b>
 <br /> 
 You can now also make payments through HDFC Bank. Pay in favour of SPARSHH.COM through: HDFC Bank A/c no – 0014 763 0000 434.
 <p></p>
+</div>
+
 <center>
-    <h4 style="color:#0066FF">Miscellaneous</h4>
+<script type="text/javascript">
+    function showmisc() {
+        document.getElementById('misc_div').style.display = 'block';
+        document.getElementById('i22').className = "minus";
+        document.getElementById('A22').onclick = function () { hidemisc(); };
+    };
+
+    function hidemisc() {
+        document.getElementById('misc_div').style.display = 'none';
+        document.getElementById('i22').className = "plus";
+        document.getElementById('A22').onclick = function () { showmisc(); };
+    };
+   
+   </script>
+   <h4><a id="A22" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showmisc();">Miscellaneous&nbsp;&nbsp;<i id="i22" class="plus"></i></a></h4>
 </center>
+<div id="misc_div" style="display:none;">
 <p>
 <b>Can I contact the Referee? </b>
 <br /> 
@@ -1225,10 +1565,26 @@ Click Contact us link to find out about our offices and other contact details.
 <br /> 
 If you are looking for dating/friendship other than matrimony, you are probably looking into the wrong site! www.sparshhmatrimony.com  provides only matrimony-related services. Our site only invites people who are looking forward to a serious commitment of getting married.
 <p></p>
+</div>
 
 <center>
-    <h4 style="color:#0066FF">Profile Highlighter</h4>
+<script type="text/javascript">
+    function showprofilehighlight() {
+        document.getElementById('profile_highlight_div').style.display = 'block';
+        document.getElementById('i19').className = "minus";
+        document.getElementById('A19').onclick = function () { hideprofilehighlight(); };
+    };
+
+    function hideprofilehighlight() {
+        document.getElementById('profile_highlight_div').style.display = 'none';
+        document.getElementById('i19').className = "plus";
+        document.getElementById('A19').onclick = function () { showprofilehighlight(); };
+    };
+   
+   </script>
+   <h4><a id="A19" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showprofilehighlight();">Profile Highlighter&nbsp;&nbsp;<i id="i19" class="plus"></i></a></h4>
 </center>
+<div id="profile_highlight_div" style="display:none;">
 <p>
 <b>What is Profile Highlighter? </b>
 <br /> 
@@ -1241,10 +1597,25 @@ Profile Highlighter is a feature you can use to give your profile better visibil
 <br /> 
 Profile Highlighter features your profile on the 'My Home' page of prospects matching you and also features your profile at the top of search results of members looking for someone like you.
 <p></p>
-
+</div>
 <center>
-    <h4 style="color:#0066FF">Matrimony Booster</h4>
+<script type="text/javascript">
+    function showm() {
+        document.getElementById('matrimony_booster_div').style.display = 'block';
+        document.getElementById('i20').className = "minus";
+        document.getElementById('A20').onclick = function () { hidem(); };
+    };
+
+    function hidem() {
+        document.getElementById('matrimony_booster_div').style.display = 'none';
+        document.getElementById('i20').className = "plus";
+        document.getElementById('A20').onclick = function () { showm(); };
+    };
+   
+   </script>
+   <h4><a id="A20" style="text-decoration:none;color:#0066FF" href="javascript:void(0);"  onclick="showm();">Matrimony Booster&nbsp;&nbsp;<i id="i20" class="plus"></i></a></h4>
 </center>
+<div id="matrimony_booster_div" style="display:none;">
 <p>
 <b>What is Matrimony Booster? </b>
 <br /> 
@@ -1285,36 +1656,7 @@ If the results for Prospects’ Criteria exceed 250 members, we will select 250 
 <br /> 
 You can choose to send your profile to the number of members on the results for your Prospects' Criteria or broaden the Prospects' Criteria to get more number of matching profiles.
 <p></p>
-
-<center>
-    <h4 style="color:#0066FF">Astro Match</h4>
-</center>
-<p>
-<b>What is Astro Match? </b>
-<br /> 
-Astro Match is a feature that gives you real time horoscope matching results instantly.
-<p></p>
-
-
-<p>
-<b>What is the use of Astro Match? </b>
-<br /> 
-AS it is a tradition in India to match horoscopes, this feature enables you to check your compatibility with members you like.
-<p></p>
-
-
-<p>
-<b>How many Astro Matches can I do at a time? </b>
-<br /> 
-You can do as many Astro Matches at a time depending on the number of matches available to your profile at that time.
-<p></p>
-
-
-<p>
-<b>How is the compatibility checked with Astro Match? </b>
-<br /> 
-Partner compatibility is checked based on Birth Stars, Papasamya, Kunjadosham and Dasasandhi.
-<p></p>
+</div>
  </div>
  <div class="column size-5">
   <%--The new registration Form--%>

@@ -50,7 +50,7 @@
     </div>
    <div class="form_inner_wrap">
         <div class="frm-divider"></div>
-        <p>96/1,Rishi Bankim Road,Ground floor,Ward No.-25,Block a ,Nandapally,PO.Naihati,Dist-24pgs(N),pin-743165,West Bengal,India(Near Naihati Anandabazar)</p>
+        <p>96/1,Rishi Bankim Road,Ground floor,<br/>Ward No.-25,Block a,Nandapally,<br/>PO.Naihati,Dist-24pgs(N),pin-743165,<br/>West Bengal,India(Near Naihati Anandabazar)</p>
         <p>&nbsp;&nbsp;Contact Number: +91-33-6501 6001/2/3/4/5</p>
         <p>&nbsp;&nbsp;Help Number: +91-33-2581 0061</p>
         <p>&nbsp;&nbsp;Fax Number: +91-33-2581 0061</p>

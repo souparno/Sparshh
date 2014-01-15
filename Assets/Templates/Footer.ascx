@@ -14,8 +14,8 @@
      </div>
      <div class="light-box column size-5" id="Accolates" style="top:20px; " >
      <center><h5><span style="color:#A21D20;">SPARSHH ACCOLADES</span></h5></center>
-      <div class="column size-4"><asp:Image ID="Image1" runat="server" ImageUrl="~/image/Certificate.jpg" CssClass="footer-img" /></div>
-      <div class="column size-8">
+      <div class="column size-6"><asp:Image ID="Image1" runat="server" ImageUrl="~/Assets/images/1. Just Dial Certificate Dec, 2013.jpg" CssClass="footer-img" /></div>
+      <div class="column size-6">
       <p>We claim our self as the true service providers in the matrimonial world which is further certified by Just Dial.com as the best service provider among all matrimonial ventures and we are privileged with the Service with Excellence Certificate from Mr. Amitabh Bacchan, brand ambassador of Just Dial.com</p>
       <p>We claim our self anchored and secured service provider for you as we undertake thorough verifications of the final matches by renowned detective agency only because we value your life which is imperial for us and each decision related to it counts on seriously.</p>
       </div>
@@ -158,6 +158,9 @@
              <p style="margin-top: 0px;"><b>SUDESHNA DEY, Dumdum (ASSISTANT SYSTEM ENGINEER, TCS, MUMBAI) & SWARUP NAG, Saltlake (Sr. MANAGER, RELIANCE COMMUNICATION LIMITED)</b>“Commitment, dedication and transparency – we have found these bookish words practical when we have undergone the services of <b>Sparshh.com</b>. Eventually we both were members of <b>Sparshh.com</b> and met each other there. It was our fortune and their dedication only which just worked for us after moving around almost all leading matrimonial. We are really thankful to <b>Sparshh.com</b> for creating such moment which has enchanted our future.</p>
             </div>
             </div>
+             <center><a href="Clients_n_Delights.aspx" style="color:Blue;">Read More</a></center>
+            
+
           </div>
      </div>
     
@@ -202,4 +205,3 @@ E-mail : info@sparshhhmatrimony.com
     </div>
    
    </div>
-   <div class="row size-12" style="background-color:Black;height:24px;margin-bottom:0px;"></div>
