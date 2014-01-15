@@ -45,11 +45,12 @@
 <head runat="server">
     <title>SparshhMatrimony.com</title>
 
+<%--<link href="Assets/Style/Default.css" rel="stylesheet" type="text/css" />
+<link href="Assets/Style/Grid.css" rel="stylesheet" type="text/css" />--%>
 
-<link href="Assets/Style/Grid.css" rel="stylesheet" type="text/css" />
+<link href="Assets/Style/lime.css" rel="Stylesheet" type="text/css" />
 <link href="Assets/Style/Navigation.css" rel="stylesheet" type="text/css" />
 <link href="Assets/Style/Panel.css" rel="stylesheet" type="text/css" />
-<link href="Assets/Style/Default.css" rel="stylesheet" type="text/css" />
 <link href="Assets/Style/Button.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
  .reg_input_txt {
