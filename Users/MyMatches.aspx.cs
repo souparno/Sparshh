@@ -1149,6 +1149,17 @@ public partial class Users_MyMatches : System.Web.UI.Page
         da.Fill(dt);
         Fill_GridSearchResult(dt);
     }
+
+    // declaring a class structure to Deserialize json 
+    class OnlineUsers
+    {
+        public string UserId;
+        public string UserName;
+        public string TimeStamp;
+    }
+
+
+
     //--End of all RefineSearch Events--->
     private void Fill_GridSearchResult(DataTable dt)
     {
@@ -1196,7 +1207,7 @@ public partial class Users_MyMatches : System.Web.UI.Page
         path = Server.MapPath("../Assets/cache/");
         string json = File.ReadAllText(path + "cache.txt");
         JavaScriptSerializer js = new JavaScriptSerializer();
-        Dictionary<string, string> onlineusers = js.Deserialize<Dictionary<string, string>>(json);
+        List<OnlineUsers> onlineusers = js.Deserialize<List<OnlineUsers>>(json);
 
 
         var query = from t17 in
@@ -1353,7 +1364,7 @@ public partial class Users_MyMatches : System.Web.UI.Page
 
                          }).AsEnumerable()
                     join t18 in onlineusers
-                    on t17.usr_id equals t18.Key into table
+                    on t17.usr_id equals t18.UserId into table
                     from p in table.DefaultIfEmpty()
                     select new
                     {
@@ -1368,7 +1379,7 @@ public partial class Users_MyMatches : System.Web.UI.Page
                         Income=t17.Income,
                         Country=t17.Country,
                         ProfilePic=t17.ProfilePic,
-                        attandance=p.Key!=null? "green.gif":"",
+                        attandance=p.UserId!=null? "green.gif":"",
                     };
 
 
