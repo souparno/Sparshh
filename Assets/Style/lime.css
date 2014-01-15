@@ -1,0 +1,93 @@
+﻿html{
+ font-size:62.5%;
+}
+body {
+    background-color: #F6F6F6;
+    color: #333333;
+    font-family: Oxygen,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+	margin:0px;
+	padding:0px;
+}
+
+.left
+{
+    float:left;
+}
+.right
+{
+    float:right;
+}
+.clear
+{
+    clear:both;
+}
+
+
+.row{
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+}
+
+.row:before,.row:after{
+	content: " ";
+	display: table;
+}
+.row:after 
+{
+  clear: both;
+}
+
+.column{
+ float:left;
+}
+
+.size-12{
+  width:99.9998%;
+}
+
+.size-11{
+ width:91.6664%;
+}
+
+.size-10{
+	width:83.3331%
+}
+
+.size-9{
+	width:74.9998%;
+}
+
+.size-8{
+	width:66.6665%;
+}
+
+.size-7{
+	width:58.3332%;
+}
+
+.size-6{
+	width:49.9999%
+}
+
+.size-5{
+	width:41.6665%;
+}
+
+.size-4{
+	width:33.3332%;
+}
+
+.size-3{
+	width:24.9999%;
+}
+
+.size-2{
+	width:16.6666%;
+}
+
+.size-1{
+	width:8.3333%;
+}
