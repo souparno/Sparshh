@@ -107,14 +107,10 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="content" Runat="Server">
 
 <div class="row size-12">
- <div class="column size-12">
- <div class="panel-3">
 
-
-<div class="row size-12">
- <div class="column size-3">
-
- <%
+<div class="column size-2">
+  <div class="panel-3" style="margin-top:40px;">
+     <%
      string userid = Convert.ToString(Session["UserId"]);
      string _connection = System.Configuration.ConfigurationManager.ConnectionStrings["constring"].ConnectionString;
      SqlConnection con = new SqlConnection(_connection);
@@ -125,23 +121,109 @@
      con.Close();
      
  %>
-  <img src='Pictures/<% Response.Write(profile_pic);  %>' style="width:auto;height:50%;border:1px solid black;" alt="" />
-
- </div>
- <div class="column size-9">
- <div class="row size-6">
- <h3>User Code: <% Response.Write(userid); %></h3>
- 
- </div>
- <div class="row size-6" style="margin-top:70px;">
+ <center><img src='Pictures/<% Response.Write(profile_pic);  %>' style="width:100%;height:auto;border:1px solid black;" alt="" /></center>
+  </div>
+  <div class="clear"></div>
+  <center>
+    <h3 style="font-size:14px;">User Code: <% Response.Write(userid); %></h3>
   <a class="panel-7" href="MyPictures.aspx"><b>Upload Pictures</b></a>
- </div>
- </div>
+  </center>
+</div>
+<div class="column size-10">
+<div class="container">
+ <div class="reg_frm_wrap" style="margin-top:40px;">
+    <div style="background-color:#834DAB;padding-top:2px;text-align:left;">
+     <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li><a href="" class="panel-active-tab" >Register</a></li>
+      <li><a href="" class="panel-inactive-tab">Search</a></li>
+      <li><a href="" class="panel-inactive-tab">Upgrade</a></li>  
+     </ul>
+    <div style="clear:both"></div>
+    </div>
+   <div class="form_inner_wrap">
+        <div class="frm-divider"></div>
+        <strong><label>Profile Posted By</label></strong>
+        <select id="ddl_profile_posted_by" name="ddl_profile_posted_by" class="reg_select_box" runat="server"></select>
+        <span style="color:Red;">*</span>    
+        <div class="frm-divider"></div>
+        <strong><label>Full Name</label></strong> 
+        <input type="text" id="txt_name" name="txt_name" class="reg_input_txt" runat="server"/>
+        <span style="color:Red;">*</span> 
+        <div class="frm-divider"></div>
+        <strong><label>Gender</label></strong> 
+           <input type="radio" value="Male"    id="Gender_Male"  name="radio_gender" runat="server" /><label style="float:none;">Male</label>
+           <input type="radio" value="Fe-Male" id="Gender_Female" name="radio_gender" runat="server" /><label style="float:none;">Female</label>
+          <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Date Of Birth</label></strong> 
+        <select class="reg_select_box" style="width:60px;" id="ddl_dob_day" name="ddl_dob_day" runat="server"></select>
+        <select class="reg_select_box" style="width:60px;" id="ddl_dob_month" name="ddl_dob_month" runat="server"></select>
+        <select class="reg_select_box" style="width:80px;" id="ddl_dob_year" name="ddl_dob_year" runat="server"></select>
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Religion</label></strong> 
+        <select id="ddl_religion" name="ddl_religion" onchange="form1.submit();document.getElementById('background-overlay').style.display = 'block';document.getElementById('RequestLoaderImg').style.display = 'block';" class="reg_select_box" runat="server"></select> 
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Mother Tongue</label></strong> 
+        <select class="reg_select_box" id="ddl_mother_tongue" name="ddl_mother_tongue" runat="server"></select>
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Caste</label></strong> 
+        <select id="ddl_Caste" name="ddl_Caste" class="reg_select_box" runat="server">
+            <option value='0'>--Select Caste</option>
+        </select>
+        <div class="frm-divider"></div>
+        <strong><label>Country Living In</label></strong> 
+        <select id="ddl_country" name="ddl_country" class="reg_select_box" runat="server"></select>
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Marial Status</label></strong> 
+        <select class="reg_select_box" runat="server" id="ddl_marital_status"></select>
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>No. Of Children</label></strong> 
+        <select id="ddl_no_of_children" runat="server" class="reg_select_box"></select>
+        <div class="frm-divider"></div>
+        <strong><label>Children Staying With</label></strong> 
+        <select id="ddl_children_staying_with" runat="server" class="reg_select_box"></select>
+        <div class="frm-divider"></div>
+        <strong><label>Mobile Number</label></strong> 
+        <input type="text" name="txt_mobile_no" id="txt_mobile_no" maxlength="10" class="reg_input_txt" runat="server" />
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Email</label></strong> 
+        <input type="text" id="txt_email" name="txt_email" class="reg_input_txt" runat="server" />
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <strong><label>Password</label></strong> 
+        <input type="password" class="reg_input_txt" id="txt_password" name="txt_password" runat="server"/>
+        <span style="color:Red;">*</span> 
+        <div class="frm-divider"></div>
+        <strong><label>Confirm Password</label></strong> 
+        <input type="password" class="reg_input_txt" id="txt_confirm_password" name="txt_confirm_password" runat="server"/> 
+        <span style="color:Red;">*</span>
+        <div class="frm-divider"></div>
+        <center>
+        <input type="checkbox" name="term_cndtn_acpt" id="term_cndtn_acpt" runat="server" /><strong><label style="float:none;"> I agree to the <a href="PtrivacyPolicy.aspx"  style="color:#834DAB;text-decoration:none;">Privacy Policy</a> and <a href="TnC.aspx" style="color:#834DAB;text-decoration:none;">T&C </a> </label></strong>
+        </center>
+        <div class="frm-divider"></div>
+        <center>
+         <a href="ProfileSecurityAssured.aspx">
+          <img src="Assets/images/hp-secure-icon-small.gif" alt="" style="border:none;cursor:pointer;" />
+          <label style="float:none;cursor:pointer;">Profile Security Assured</label>
+         </a>
+        </center>
+        <div class="frm-divider"></div>
+        <div style="border-radius: 0 0 5px 5px;background-color:#834DAB;margin-left:-18px;margin-right:-18px;margin-bottom:-20px;padding:10px;">
+        </div>
+   </div>
+  </div>
+</div>
+</div>
+  
 </div>
 
- </div>
- </div>
-</div>
 <div class="row size-12">
 <div class="column size-12">
   <div class="panel-3">
@@ -1128,6 +1210,5 @@
   </div>
  </div>
 </div>
-
 </asp:Content>
 

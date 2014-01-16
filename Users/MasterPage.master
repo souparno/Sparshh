@@ -1,5 +1,4 @@
 ﻿<%@ Master Language="C#" %>
-<%@ Register Src="~/Assets/Templates/Footer.ascx" TagPrefix="UC" TagName="Footer" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ Import Namespace="System"  %>
 <%@ Import Namespace="System.Linq"  %>
@@ -40,120 +39,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
 <title>SparshhMatrimony.com</title>
-<link href="../Assets/Style/Grid.css" rel="stylesheet" type="text/css" />
+
+<link href="../Assets/Style/lime.css" rel="Stylesheet" type="text/css" />
 <link href="../Assets/Style/Navigation.css" rel="stylesheet" type="text/css" />
 <link href="../Assets/Style/Panel.css" rel="stylesheet" type="text/css" />
-<link href="../Assets/Style/Default.css" rel="stylesheet" type="text/css" />
 <link href="../Assets/Style/Button.css" rel="stylesheet" type="text/css" />
-
-<style type="text/css">
-    
-    a
-    {
-        text-decoration:none;
-    }
-    .panel-1 {
-    background: none repeat scroll 0 0 #F2F2F2;
-    border-color: #D9D9D9;
-    border-style: solid;
-    border-width: 1px;
-    margin-bottom: 1.25em;
-    padding:1.25em;
-    text-align:center;
-}
-          .panel-3 {
-    background: none repeat scroll 0 0 #FFF;
-    border-color: #D9D9D9;
-    border-style: solid;
-    border-width: 1px;
-    margin-bottom: 1.25em;
-	margin-top:1.25em;
-    padding:1.25em; 
-}
-    .panel-5
-{
-    background: none repeat scroll 0 0 #F2F2F2;
-    border-bottom: 1px solid #BCBCBC;
-    border-top: 1px solid #BCBCBC;
-    padding: 6px 0 6px 10px;
-    text-align:center;
-    font-weight:bold;
-}
- .reg_input_txt {
-    border: 1px solid #834DAB;
-    border-radius: 3px;
-    color: #666666;
-    height: 24px;
-    line-height: 24px;
-    padding: 2px 3px;
-    width: 217px;
-}
- 
-.reg_select_box {
-    border: 1px solid #834DAB;
-    border-radius: 3px;
-    color: #666666;
-    height: 30px;
-    line-height: 24px;
-    padding: 4px 3px 3px 0;
-    width: 225px;
-} 
-.frm-divider{
-	clear:both;
-	padding:1px;
-}
-label {
-    color: #666666;
-    float: left;
-    font-size: 14px;
-    line-height: 30px;
-    width: 150px;
-}
-     .footer-img
-     {
-         width:100%;
-         height:auto;
-         border: 2px solid #FAFAFC
-     }
-     
-     .background-overlay
-     {
-            display:none;
-            position: fixed;
-            top: 0%;
-            left: 0%;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            -moz-opacity: 0.8;
-            opacity:.80;
-            filter: alpha(opacity=80);
-            z-index:5000;
-        }
-        
-        
-   .light-box
-   {
-       top:50%; 
-       position:fixed;
-       border:1px solid Orange;
-       background-color:White;
-       padding:10px; 
-       margin:0 auto;
-       display:none;
-       z-index:6000;
-   }     
-     
-</style>
-
-
-
-
-
-
-
-
-
 
 <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
 </head>
@@ -166,8 +56,8 @@ label {
 
 <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
 
-<%--The next version of header--%>
-<div class="row size-12" style="position:fixed;margin-bottom:0px;z-index:4000;">
+<!--START OF HEADER-->
+<div class="row size-12" style="position:fixed;z-index:4000;">
 <div class="row size-12" style="background-color:#FAFAFC;border-bottom: 1px solid #CCCCCC !important;box-shadow: 0 0 9px 0 #490F76 !important;margin-bottom:0px;margin-top:0px;padding-bottom:5px;height:80px;">
   <div class="column size-12">
   <a href="Profile.aspx">
@@ -178,35 +68,50 @@ label {
  </div>
  <asp:ContentPlaceHolder id="Navigation" runat="server"></asp:ContentPlaceHolder>
  </div>
-<%--End Of the next version of header--%>
-
 <!--END OF HEADEDR--> 
 
 <!--START OF CONTENT-->
- <div class="row size-12" style="margin-bottom:0px;">
-  <div class="column size-12" style="margin-top:112px;padding:0px;">
+ <div class="row size-12">
+  <div class="column size-10" style="margin-top:112px;padding:0px;">
+   <div class="container">
     <asp:ContentPlaceHolder id="content" runat="server"></asp:ContentPlaceHolder>
+   </div>
   </div>
  </div>
  <!--END OF CONTENT-->
  
  
 <!--START OF FOOTER-->
- <UC:Footer ID="Footer1" runat='server' />
+<div class="row size-12" style="background: none repeat scroll 0 0 #F0F0F0;margin: 0 auto;padding: 0 8px;">
+             <div class="row" style="width:750px;">
+				<div class="left" style="color: #999999;font-size: 11px;margin: 0 0 0 10px;padding: 12px 0;text-align: left;"><span>1996-2014 Sparshh Matrimony - A Revolution in Matrimony&trade;</span></div>
+				<div class="right" style="color: #999999;font-size: 11px;margin: 0 0 0 10px;padding: 12px 0;text-align: left;">Passionately created by - Sparshh Team</div>
+             </div>
+		</div>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="../Home.aspx" class="active" >Home</a></li>
+           <li><a href="../AboutUs.aspx">About Us</a></li>
+           <li><a href="../Packages.aspx">Packages</a></li>
+           <li><a href="../Clients_n_Delights.aspx">Client Delights</a></li>
+           <li><a href="../FAQ.aspx">FAQ</a></li>
+           <li><a href="../BusinessEnquiry.aspx">Business Enquiry</a></li>
+           <li><a href="../AdvertiseWithUs.aspx">Advertise With Us</a></li>
+           <li><a href="/">Career</a></li>
+           <li><a href="../ContactUs.aspx">Contact Us</a></li>
+          </ul>
+  </div>
+</div>
  <!--END OF FOOTER-->
 
  <%--Chat footer--%>
 <div style="background-color: #FFFFFF;border: 1px solid #999999;bottom: 30px;height:300px;position:fixed;right: 11px;width: 200px;">
  <div style="background-color: #336699;color: #FFFFFF;font-weight: bold;font-size:10px;padding-bottom: 3px;padding-top: 3px;width: 100%;">&nbsp;&nbsp;Online Members</div>
  <div id="online-buddies" style="overflow: auto;width:100%;padding-left:5px; word-wrap: break-word;">
-<%--  <a style='color: #336699;text-decoration: none;font-size:10px;font-weight:900;'>User 1</a><hr />
-    <a style="color: #336699;text-decoration: none;font-size:10px;font-weight:900;">User 2</a>
-  <hr />
-    <a style="color: #336699;text-decoration: none;font-size:10px;font-weight:900;">User 3</a>
-  <hr />--%>
  </div>
 </div>
-<div style="background-color: #FFFFFF;border: 1px solid #999999;bottom: 30px;max-height: 500px;min-height: 150px;position:fixed;right: 220px; width: 200px;"></div>
+<%--<div style="background-color: #FFFFFF;border: 1px solid #999999;bottom: 30px;max-height: 500px;min-height: 150px;position:fixed;right: 220px; width: 200px;"></div>--%>
 <div class="row size-12" style="background-color: #336699;border-top: 1px solid #CCCCCC;bottom: 0;height:30px;position:fixed;z-index:10000;margin-bottom:0px;"></div>
  <%--End of the chat footer--%>
 
@@ -216,7 +121,7 @@ label {
 </html>
 <script type="text/javascript" src="../Assets/cache/js/ajax.js"></script>
 <script type="text/javascript" src="../Assets/cache/js/chat.js"></script>
-<script type="text/javascript">
+<%--<script type="text/javascript">
 
 
 
@@ -315,4 +220,4 @@ label {
         }
     }
 
-</script>
+</script>--%>
