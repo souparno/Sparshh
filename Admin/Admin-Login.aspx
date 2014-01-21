@@ -12,11 +12,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Admin Login</title>
-    <link href="../style/Grid.css" rel="Stylesheet" type="text/css" />
-    <link href="../style/InlineList.css" rel="Stylesheet" type="text/css" />
-    <link href="../style/Panel.css" rel="Stylesheet" type="text/css" />
-    <link href="../style/style.css" rel="Stylesheet" type="text/css" />
-    <link href="../style/Text.css" rel="Stylesheet" type="text/css" />
     <style type="text/css">
      .text-select
      {
@@ -31,9 +26,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="row size-5" style="margin-top:20%;">
-     <div class="column size-12 panel-1">
-           <table>
+    <center style="margin-top:120px;">
+    <table>
             <tr>
              <td>UserId</td>
              <td><input type="text" class="text-select" name="txt_uid" /></td>
@@ -45,12 +39,11 @@
             <tr>
              <td colspan="2">
               <hr />
-              <button class="panel-7" runat="server" onserverclick="LogIn_Click">Login</button>
+              <center><button runat="server" onserverclick="LogIn_Click">Login</button></center>
              </td>
             </tr>
            </table>
-     </div>
-    </div>
+    </center>
     </form>
 </body>
 </html>
@@ -75,7 +68,7 @@
         if (user_code != null && user_code != "")
         {
             Session["UserId"] = user_code;
-            Response.Redirect("~/Admin/ViewService.aspx");
+            Response.Redirect("~/Admin/Admin-Home.aspx");
         }
 
     }
