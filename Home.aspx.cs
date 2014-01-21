@@ -74,9 +74,6 @@ public partial class Home : System.Web.UI.Page
         ddl_children_staying_with.DataValueField = "Key";
         ddl_children_staying_with.DataBind();
     }
-
-
-
     private void FillProfileCreatedBy()
     {
         DataSet ds = new DataSet();
@@ -494,27 +491,6 @@ public partial class Home : System.Web.UI.Page
         }
 
     }
-    //protected void LogIn_Click(object sender, EventArgs e)
-    //{
-    //    string email = Request.Form["txt_email_login"];
-    //    string password = Request.Form["txt_password_login"];
-    //    SqlConnection con = new SqlConnection(_connection);
-    //    string sql = "select usr_id from usr_details where usr_email='"+email+"' and usr_password='"+password+"';";
-    //    SqlCommand cmd = new SqlCommand(sql, con);
-
-
-    //    con.Open();
-    //    string user_code = Convert.ToString(cmd.ExecuteScalar());
-    //    con.Close();
-
-
-    //    if (user_code != null && user_code!="")
-    //    {
-    //        Session["UserId"] = user_code;
-    //        Response.Redirect("~/Users/Profile.aspx");
-    //    }
-
-    //}
     public string get_user_code()
     {
         string user_code = "";

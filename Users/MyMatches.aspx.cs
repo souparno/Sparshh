@@ -1368,19 +1368,23 @@ public partial class Users_MyMatches : System.Web.UI.Page
                     from p in table.DefaultIfEmpty()
                     select new
                     {
-                        usr_id=t17.usr_id,
-                        Name=t17.Name,
-                        MotherTongue=t17.MotherTongue,
-                        Religion=t17.Religion,
-                        Height=t17.Height,
-                        Caste=t17.Caste,
-                        Education=t17.Education,
-                        Occupation=t17.Occupation,
-                        Income=t17.Income,
-                        Country=t17.Country,
-                        ProfilePic=t17.ProfilePic,
-                        attandance=p.UserId!=null? "green.gif":"",
+                        usr_id = t17.usr_id,
+                        Name = t17.Name,
+                        MotherTongue = t17.MotherTongue,
+                        Religion = t17.Religion,
+                        Height = t17.Height,
+                        Caste = t17.Caste,
+                        Education = t17.Education,
+                        Occupation = t17.Occupation,
+                        Income = t17.Income,
+                        Country = t17.Country,
+                        ProfilePic = t17.ProfilePic,
+                        attandance = p == null ? "" : "green.gif",
                     };
+
+
+   
+
 
 
         Grd_Search_Result.DataSource = query;

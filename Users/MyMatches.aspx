@@ -473,10 +473,8 @@ To:
            <ItemTemplate>
              <div class='row panel-1' style='padding:10px;margin-bottom:0px;'>
               <div class='column size-3' style='padding-left:0px;'>
-               <img src="Pictures/<%# Eval("ProfilePic") %>" style='width:100%;height:auto;border:1px solid black;' alt='' />
+               <img src="<%# Eval("ProfilePic") %>" style='width:100%;height:auto;border:1px solid black;' alt='' />
                <hr />
-
-               <a href="ViewProfile.aspx?ProfileView=<%# Eval("usr_id")  %>" style="font-size:x-small;color:Black"><i class="handsup"></i>&nbsp;&nbsp;VIEW PROFILE</a>
               </div>
               <div class='column size-9'>
 
@@ -527,31 +525,28 @@ To:
                
               </div>
              </div>
-             <div class='row panel-1 size-12' style='padding:10px;'>
+             <div class='row size-12  panel-1' style='padding:10px;'>
+             <div class="column size-3">
+              <a href="ViewProfile.aspx?ProfileView=<%# Eval("usr_id")  %>" style="font-size:x-small;color:Black">VIEW PROFILE</a>
+             </div>
              <div class="column size-3" style="border-right:1px solid #D9D9D9;">
-              <a href='javascript:void(0)' onclick="" class="eye-open" id="A2"></a>
-              <br />
               <a href="javascript:void(0)" style="font-size:x-small;color:Black;">VIEW CONTACT</a>
              </div>
              <div class="column size-3" style="border-right:1px solid #D9D9D9;">
-              <a href='javascript:void(0)' onclick="" class="bookmark" id="A1"></a>
-              <br />
               <a href="javascript:void(0)" style="font-size:x-small;color:Black;">SHORT LIST</a>
              </div>
              <div class="column size-3" style="border-right:1px solid #D9D9D9;">
               <a href="MyMatches.aspx?ExpressInterestProfileId=<%#Eval("usr_id") %>&&ExpressInterestProfileName=<%#Eval("Name") %>" style="font-size:x-small;color:Black;">
-               <i class="thumbsup"></i>
-               <br />
-               SEND INTEREST
+               EXPRESS INTEREST
               </a>
              </div>
-             <div class="column size-3">
+             <%--<div class="column size-3">
               <a href="javascript:void(0)" onclick="msgbox_display_on('<%# Eval("usr_id") %>')" style="font-size:x-small;color:Black;">
                <i class="message"></i>
                <br />
                MESSAGE
               </a>
-             </div>
+             </div>--%>
             </div>
 
            </ItemTemplate>

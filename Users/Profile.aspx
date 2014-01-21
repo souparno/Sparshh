@@ -121,7 +121,7 @@
      con.Close();
      
  %>
- <center><img src='Pictures/<% Response.Write(profile_pic);  %>' style="width:100%;height:auto;border:1px solid black;" alt="" /></center>
+ <center><img src='<% Response.Write(profile_pic);%>' style="width:100%;height:auto;border:1px solid black;" alt="" /></center>
   </div>
   <div class="clear"></div>
   <center>
@@ -131,143 +131,19 @@
 </div>
 <div class="column size-10">
 <div class="container">
- <div class="reg_frm_wrap" style="margin-top:40px;">
-    <div style="background-color:#834DAB;padding-top:2px;text-align:left;">
-     <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
-      <li><a href="" class="panel-active-tab" >Register</a></li>
-      <li><a href="" class="panel-inactive-tab">Search</a></li>
-      <li><a href="" class="panel-inactive-tab">Upgrade</a></li>  
+ <div style="margin-top:40px;">
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;" >About Me</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-active-tab"   style="font-size:13px;">Basic Information</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;">Education n Occupation</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;">Religion Attributes</a></li>  
+      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;">Physical Attributes</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;">Contact Information</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;">Family Details</a></li>
      </ul>
     <div style="clear:both"></div>
-    </div>
    <div class="form_inner_wrap">
-        <div class="frm-divider"></div>
-        <strong><label>Profile Posted By</label></strong>
-        <select id="ddl_profile_posted_by" name="ddl_profile_posted_by" class="reg_select_box" runat="server"></select>
-        <span style="color:Red;">*</span>    
-        <div class="frm-divider"></div>
-        <strong><label>Full Name</label></strong> 
-        <input type="text" id="txt_name" name="txt_name" class="reg_input_txt" runat="server"/>
-        <span style="color:Red;">*</span> 
-        <div class="frm-divider"></div>
-        <strong><label>Gender</label></strong> 
-           <input type="radio" value="Male"    id="Gender_Male"  name="radio_gender" runat="server" /><label style="float:none;">Male</label>
-           <input type="radio" value="Fe-Male" id="Gender_Female" name="radio_gender" runat="server" /><label style="float:none;">Female</label>
-          <span style="color:Red;">*</span>
-        <div class="frm-divider"></div>
-        <strong><label>Date Of Birth</label></strong> 
-        <select class="reg_select_box" style="width:60px;" id="ddl_dob_day" name="ddl_dob_day" runat="server"></select>
-        <select class="reg_select_box" style="width:60px;" id="ddl_dob_month" name="ddl_dob_month" runat="server"></select>
-        <select class="reg_select_box" style="width:80px;" id="ddl_dob_year" name="ddl_dob_year" runat="server"></select>
-        <span style="color:Red;">*</span>
-        <div class="frm-divider"></div>
-        <strong><label>Religion</label></strong> 
-        <select id="ddl_religion" name="ddl_religion" onchange="form1.submit();document.getElementById('background-overlay').style.display = 'block';document.getElementById('RequestLoaderImg').style.display = 'block';" class="reg_select_box" runat="server"></select> 
-        <span style="color:Red;">*</span>
-        <div class="frm-divider"></div>
-        <strong><label>Mother Tongue</label></strong> 
-        <select class="reg_select_box" id="ddl_mother_tongue" name="ddl_mother_tongue" runat="server"></select>
-        <span style="color:Red;">*</span>
-        <div class="frm-divider"></div>
-        <strong><label>Caste</label></strong> 
-        <select id="ddl_Caste" name="ddl_Caste" class="reg_select_box" runat="server">
-            <option value='0'>--Select Caste</option>
-        </select>
-        <div class="frm-divider"></div>
-        <strong><label>Country Living In</label></strong> 
-        <select id="ddl_country" name="ddl_country" class="reg_select_box" runat="server"></select>
-        <span style="color:Red;">*</span>
-        <div class="frm-divider"></div>
-        <strong><label>Marial Status</label></strong> 
-        <select class="reg_select_box" runat="server" id="ddl_marital_status"></select>
-        <span style="color:Red;">*</span>
-        <div class="frm-divider"></div>
-        <strong><label>No. Of Children</label></strong> 
-        <select id="ddl_no_of_children" runat="server" class="reg_select_box"></select>
-        <div class="frm-divider"></div>
-        <strong><label>Children Staying With</label></strong> 
-        <select id="ddl_children_staying_with" runat="server" class="reg_select_box"></select>
-        <div class="frm-divider"></div>
-        <strong><label>Mobile Number</label></strong> 
-        <input type="text" name="txt_mobile_no" id="txt_mobile_no" maxlength="10" class="reg_input_txt" runat="server" />
-        <span style="color:Red;">*</span>
-        <div class="frm-divider"></div>
-        <strong><label>Email</label></strong> 
-        <input type="text" id="txt_email" name="txt_email" class="reg_input_txt" runat="server" />
-        <span style="color:Red;">*</span>
-        <div class="frm-divider"></div>
-        <strong><label>Password</label></strong> 
-        <input type="password" class="reg_input_txt" id="txt_password" name="txt_password" runat="server"/>
-        <span style="color:Red;">*</span> 
-        <div class="frm-divider"></div>
-        <strong><label>Confirm Password</label></strong> 
-        <input type="password" class="reg_input_txt" id="txt_confirm_password" name="txt_confirm_password" runat="server"/> 
-        <span style="color:Red;">*</span>
-        <div class="frm-divider"></div>
-        <center>
-        <input type="checkbox" name="term_cndtn_acpt" id="term_cndtn_acpt" runat="server" /><strong><label style="float:none;"> I agree to the <a href="PtrivacyPolicy.aspx"  style="color:#834DAB;text-decoration:none;">Privacy Policy</a> and <a href="TnC.aspx" style="color:#834DAB;text-decoration:none;">T&C </a> </label></strong>
-        </center>
-        <div class="frm-divider"></div>
-        <center>
-         <a href="ProfileSecurityAssured.aspx">
-          <img src="Assets/images/hp-secure-icon-small.gif" alt="" style="border:none;cursor:pointer;" />
-          <label style="float:none;cursor:pointer;">Profile Security Assured</label>
-         </a>
-        </center>
-        <div class="frm-divider"></div>
-        <div style="border-radius: 0 0 5px 5px;background-color:#834DAB;margin-left:-18px;margin-right:-18px;margin-bottom:-20px;padding:10px;">
-        </div>
-   </div>
-  </div>
-</div>
-</div>
-  
-</div>
-
-<div class="row size-12">
-<div class="column size-12">
-  <div class="panel-3">
-      <asp:FormView ID="Frm_About_User" runat="server">
-       <ItemTemplate>
-        <h4 style="margin-top:0px;">
-          About Me
-          <a href="javascript:void(0)" class="panel-7" onclick="document.getElementById('Edit_About_Myself').style.display='block';document.getElementById('black_overlay').style.display='block';">Edit</a>
-        </h4>
-        <table>
-         <tr>
-          <td>About Me:</td>
-          <td>&nbsp;&nbsp;<%# Eval("usr_about")%>
-          </td>
-         </tr>
-        </table>
-
-        <%--Edit Region start for about user--%>
-        <div class="light-content size-7" id="Edit_About_Myself" style="z-index:10000;">
-         <h4>
-          About Me
-          <a id="A2" href="javascript:void(0)" class="panel-7" runat="server" onserverclick="UpdateAboutMe_Click">Update</a>
-           <a href="javascript:void(0)" class="panel-7" onclick="document.getElementById('Edit_About_Myself').style.display='none';document.getElementById('black_overlay').style.display='none';" >Cancel</a>
-         </h4>
-
-         <table>
-         <tr>
-          <td>&nbsp;&nbsp;<textarea class="text-select" rows="100" cols="100" style="width:90%;height:100px;" name="txt_about_me"><%# Eval("usr_about")%></textarea>
-          </td>
-         </tr>
-        </table>
-
-         </div>
-         <%--End of Edit Region for about user--%>
-
-       </ItemTemplate>
-      </asp:FormView>
-  </div>
-</div>
-</div>
-<div class="row size-12">
-<div class="column size-12">
-  <div class="panel-3">
-      <asp:FormView ID="frm_basic_info" runat="server">
+        <asp:FormView ID="frm_basic_info" runat="server">
        <ItemTemplate>
          <h4 style="margin-top:0px;">
           Basic Information
@@ -470,9 +346,54 @@
 
        </ItemTemplate>
       </asp:FormView>
-  </div>
- </div>
+    </div>
+   </div>
 </div>
+</div>
+  
+</div>
+
+<div class="row size-12">
+<div class="column size-12">
+  <div class="panel-3">
+      <asp:FormView ID="Frm_About_User" runat="server">
+       <ItemTemplate>
+        <h4 style="margin-top:0px;">
+          About Me
+          <a href="javascript:void(0)" class="panel-7" onclick="document.getElementById('Edit_About_Myself').style.display='block';document.getElementById('black_overlay').style.display='block';">Edit</a>
+        </h4>
+        <table>
+         <tr>
+          <td>About Me:</td>
+          <td>&nbsp;&nbsp;<%# Eval("usr_about")%>
+          </td>
+         </tr>
+        </table>
+
+        <%--Edit Region start for about user--%>
+        <div class="light-content size-7" id="Edit_About_Myself" style="z-index:10000;">
+         <h4>
+          About Me
+          <a id="A2" href="javascript:void(0)" class="panel-7" runat="server" onserverclick="UpdateAboutMe_Click">Update</a>
+           <a href="javascript:void(0)" class="panel-7" onclick="document.getElementById('Edit_About_Myself').style.display='none';document.getElementById('black_overlay').style.display='none';" >Cancel</a>
+         </h4>
+
+         <table>
+         <tr>
+          <td>&nbsp;&nbsp;<textarea class="text-select" rows="100" cols="100" style="width:90%;height:100px;" name="txt_about_me"><%# Eval("usr_about")%></textarea>
+          </td>
+         </tr>
+        </table>
+
+         </div>
+         <%--End of Edit Region for about user--%>
+
+       </ItemTemplate>
+      </asp:FormView>
+  </div>
+</div>
+</div>
+
 <div class="row size-12">
  <div class="column size-12">
   <div class="panel-3">

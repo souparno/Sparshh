@@ -14,6 +14,18 @@
 <script runat="server">
 
     string _connection = System.Configuration.ConfigurationManager.ConnectionStrings["constring"].ConnectionString;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string sql = "update usr_details set usr_profile_pic='usr_pictures/_default_images/male.jpg' where usr_gender='Male';update usr_details set usr_profile_pic='usr_pictures/_default_images/female.jpg' where usr_gender='Fe-Male';";
+        SqlConnection con = new SqlConnection(_connection);
+        SqlCommand cmd = new SqlCommand(sql, con);
+        con.Open();
+        cmd.ExecuteNonQuery();
+        con.Close();
+    }
+    
+    
     
     protected void LogIn_Click(object sender, EventArgs e)
     {
