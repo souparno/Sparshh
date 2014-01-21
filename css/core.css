@@ -1,0 +1,19 @@
+
+#page {
+    background:none;
+    width:486px;
+    margin:0 auto;
+    padding:0px;
+    text-align:left;
+}
+#page ul{
+	width:486px !important;
+	margin:0px !important;
+	padding:0px !important;
+}
+#page li{
+	/*list-style:none !important;*/
+}
+
+
+

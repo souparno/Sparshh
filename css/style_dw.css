@@ -1,0 +1,95 @@
+/* Flexible Slide-to-top Accordion Style*/
+.st-accordion {
+	width: 100%;
+	margin: 0;
+	height: auto;
+	float: left;
+}
+.st-accordion ul {
+	width:225px !important;
+	padding:0px;
+	list-style:none;
+}
+.st-accordion ul li {
+	width:225px !important;
+	height:28px;
+	margin:0 0 1px 0;
+}
+.st-accordion ul li:first-child {
+	border-top: none;
+}
+.st-accordion ul li a {
+	text-decoration: none !important;
+}
+.st-accordion ul li > a {
+	color: #3db817;
+	height:28px;
+	line-height:28px;
+	font-family: Calibri;
+	font-size: 14px;
+	font-weight:normal;
+	display: block;
+	position: relative;
+	outline: none;
+	text-decoration: none;
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+	padding:0px 0 0px 12px;
+	background:url(../images1/tag_bg.png) repeat;
+	
+}
+.st-accordion ul li > a span {
+	background: transparent url(../images1/down.png) no-repeat center center;
+	text-indent: -9000px;
+	width: 14px;
+	height: 9px;
+	position: absolute;
+	top: 50%;
+	right:5px;
+	margin-top:-4px;
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.st-accordion ul li > a:hover {
+	color: #3db817;
+}
+.st-accordion ul li > a:hover span {
+	opacity: 1;
+	right: 10px;
+}
+.st-accordion ul li.st-open > a {
+	color: #3db817;
+}
+.st-accordion ul li.st-open > a span {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+	right: 10px;
+	opacity: 1;
+}
+.st-content {
+	padding:10px 10px;
+	background:none !important;
+	min-height:100px;
+}
+.st-content p {
+	font-size: 12px;
+	font-family: Calibri;
+	font-style: none;
+	line-height: normal;
+	padding: 0px;
+	margin:0;
+}
+
+@media screen and (max-width: 320px) {
+.st-accordion ul li > a {
+	font-size: 18px;
+}
+}

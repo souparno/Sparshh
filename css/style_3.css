@@ -1,0 +1,103 @@
+.paid_div{ width:762px; height:auto; float:left; background:url(../images1/opa_bg.png) repeat; border:1px solid #5a1313; margin:0 0 0 0px;}
+
+body{ font-family:Arial; float:left; font-weight:normal;}
+.grn_tex{ color:#147410; line-height:18px; font-size:14px; padding:7px 0 0 8px;}
+.all_tx{ font-size:12px; float:left; color:#b9b9b9; line-height:18px; padding:7px 0 0 8px;}
+.arrow_div1{ width:auto; height:15px; float:left; background:url(../images1/arrow.png) no-repeat left; padding:0 0 0 25px; margin:5px 0 0 8px; color:#757575;}
+.dot_line{ color:#4a4a4a; float:left; margin:0 0 0 8px;}
+.form_div{ width:751px; height:30px; padding:0 0 0 10px; margin:8px 0 0 0;}
+.form_tex{ width:190px; float:left; font-size:16px; color:#FFF; padding:4px 0 0 0; }
+.form_box_div{ width:540px; float:left;}
+.form_box{ background:url(../images1/box_1.png) no-repeat; width:315px; height:30px; border:none; color:#CCC; padding:0 0 0 5px;float:left;}
+.form_box1{ background:url(../images1/tex_area.png) no-repeat; width:321px; height:93px; border:none; color:#CCC; padding:3px 0 0 2px;}
+
+option{color:#F93;background:#000;}
+.box_2{ border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background: url('../images1/box_2.png') no-repeat;
+    width:81px; height:30px; float:left; color:#CCC; text-align:center; padding:4px 6px 4px 0;-webkit-appearance: none;
+}
+.box_3{ border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background: url('../images1/12.png') no-repeat;
+    width:326px; height:30px; float:left; color:#CCC; text-align:left; padding:6px 6px 6px 0;-webkit-appearance: none; }
+.box_4{ border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background: url('../images1/box_11.png') no-repeat;
+    width:151px; height:30px; float:left; color:#CCC; text-align:left; padding:4px 6px 4px 0;-webkit-appearance: none;
+}
+.box_5{ border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background: url('../images1/box_5.png') no-repeat;
+    width:171px; height:33px; float:left; color:#CCC; text-align:left; margin:0 0 0 7px; padding:4px 6px 4px 0;-webkit-appearance: none;
+}
+.box_51{ border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background: url('../images1/box_51.png') no-repeat;
+    width:166px; height:33px; float:left; color:#CCC; text-align:left; margin:0 0 0 7px; padding:0 0 0 5px;-webkit-appearance: none;
+}
+.box_6{ border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background: url('../images1/box_5.png') no-repeat;
+    width:171px; height:30px; float:left; color:#CCC; text-align:left; margin:0 0 0 7px; padding:4px 6px 4px 0;-webkit-appearance: none;
+}
+.box_7{ border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background: url('../images1/box_71.png') no-repeat;
+    width:60px; height:30px; float:left; text-align:center; color:#FFF;-webkit-appearance: none;
+}
+.box_8{ border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background: url('../images1/box_8.png') no-repeat;
+    width:142px; height:89px; float:left; padding:4px 6px 4px 0;-webkit-appearance: none;
+}
+.submit{ background:url(../images1/submit.png) no-repeat; width:101px; height:28px; border:none; float:left;}
+.submit_div{ width:110px; height:30px; float:left; margin:8px 0 20px 200px; cursor:pointer;}
+.right_box{ width:204px; height:88px;background:url(../images1/opa_bg.png) repeat; border:1px solid #5a1313; float:left; margin:0 0 20px -18px; font-size:16px; color:#FFF;}
+.right_box3{ width:204px; height:88px;background:url(../images1/opa_bg.png) repeat; border:1px solid #5a1313; float:left; margin:0 0 20px -46px; font-size:16px; color:#FFF;}
+.search_texx{ float: left; margin:10px 0 0 10px;}
+.search_texx1{ float: left; margin:10px 0 0 40px;}
+.s_line{ background:url(../images1/line.png) no-repeat; float:left; margin:8px 0 0 4px; width:194px; height:1px; background:#333;}
+.search_small_box{ background:url(../images1/go_box.png) no-repeat; width:123px; height:23px; margin:13px 0 0 13px; border:none;}
+.search_small_bt{ background:url(../images1/go_bg.png) no-repeat; width:36px; height:24px;border:none; color:#FFF; margin:13px 0 0 1px;}
+.sub1_tex{ font-size:12px; color:#6d6d6d; padding:0 8px; float:left; margin:10px 0 0 0; width:150px; font-weight:normal;}
+.grn_tex1{ color:#147410; line-height:18px; font-size:12px; text-align:center; float:left; padding:15px 0 0 23px; font-family:Arial; font-style:normal; width:160px;}
+.image{ width:122px; height:81px; float:left;  margin:23px 0 0 40px;}
+.sub1_tex1{ font-size:12px; color:#6d6d6d; padding:0 12px; float:left; margin:5px 0 0 0; font-weight:normal; height:140px; overflow:hidden;}
+.tex_123{ text-align:center; color:#FFF; width:150px; font-size:12px; font-weight:normal; float:left; margin:20px 0 0 25px;}
+.tex_124{ text-align:center; color:#ffff00; width:150px; font-size:12px; font-weight:normal; float:left; margin:20px 0 0 25px;}
+.red_texx{ font-size:18px; color:#9c1b1b; float:left; padding:10px 0 0 10px;}
+.grn_tex2{ color:#FFF; line-height:18px; font-size:14px; padding:7px 0 0 8px; float:left;}
+.grn_tex3{ color:#109110; line-height:18px; font-size:14px; padding:7px 0 0 8px; float:left;}
+.paid_button{ list-style:none; margin:20px 0 0 0;}
+.paid_button ul{ list-style:none; margin:0px; padding:0px;}
+.paid_button ul li{ height:26px; float:left;}
+.paid_button ul li a{ background:url(../images1/paid_1.png) repeat-x; text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:14px; color:#000; padding:10px 10px; color:#FFF; margin:0 3px 0 0;}
+.paid_button ul li a:hover{background:url(../images1/paid_2.png) repeat-x; text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:14px; color:#000; padding:10px 10px; color:#FFF;}
+.paid_button li.active a{ background:url(../images1/paid_2.png) repeat-x; text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:14px; color:#000; padding:10px 10px; color:#FFF;}
+.box_8_tex{ font-family:Verdana, Geneva, sans-serif; font-size:12px; float:left; background:url(../images1/arrow_123.png) no-repeat left; color:#FFF;}
+
+/*..........regular search.........................*/
+
+.arrow_5{ background: url(../images1/arrow_123.png) no-repeat; background:none; float:left; margin:2px 0 0 0; width:110px; padding:0 0 5px 10px; color:#FFF; font-size:12px;}
+.add_bt{ background: url(../images1/add_bt.png) no-repeat left; width:72px; height:21px; border:none; color:#FFF; font-weight:normal; font-size:12px; margin:10px 0 0 0;padding:0 0 5px 0; }
+.remove_bt{ background:url(../images1/remuve.png) no-repeat; width:72px; height:21px; float:left; border:none; margin:10px 0 0 0;color:#FFF; font-weight:normal; font-size:12px; padding:0 0 5px 0;}
+.botton_div{ width:120px; height:80px; float:left;}
+.botton_div_1{ width:70px; height:80px; float:left; margin:10px 40px -2px 58px;}
+.search_1{ background:url(../images1/searcH_1.png) no-repeat; width:88px; height:28px; float:left; float:left; font-size:13px; font-weight:normal; color:#FFF; padding:0 0 5px 0; border:none; margin:20px 0 0 310px; }
+.search_2{ background:url(../images1/searcH_1.png) no-repeat; width:88px; height:28px; float:left; font-size:13px; font-weight:normal; color:#FFF; padding:0 0 5px 0; border:none; margin:0 0 0 5px; }
+.save_bt{ background:url(../images1/save_search.png) no-repeat; width:101px; height:28px; border:none; float:left; font-size:13px; font-weight:normal; color:#FFF; padding:0 0 5px 0; margin:20px 0 0 0}
+
+.botton_div_1{ float:left; margin:10px 25px 0 40px;}
+
+
+.tex_wt{ font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#FFF; float:left;padding:0 0 0 3px;}
+.tex_yl{ font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#FF0; float:left; padding:0 0 0 3px;}
