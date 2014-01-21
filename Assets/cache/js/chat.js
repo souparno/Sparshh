@@ -1,86 +1,80 @@
 ﻿/************************************************************************************
-AJAX 
-
 This is a simple chat class implemented with the OOPS in javascript
 Version      : 1.0
 Developed By : Souparno Majumder 
 Copyright    : Go ahead and use this as you wish.  ©2014-2015
 ************************************************************************************/
 
-/***********************************************************************************
-The Argument passed to the SimpleAJAX function is JSON encoded(JAVASCRIPT OBJECT NOTATION)
-Parameters: 
-Arguments :JSON object to hold the following OBJECT VARIABLE
-{
-    UserId                : The UserId of the present User
-    UserName              : The UserName of the present User
-    ShowUsers_HTMLDOM_ID  : The div id where the online users will be shown
-    RegisterUserURL       : The url location where the present logged in user will get registered
-    FetchUserURL          : The url locatioin from where the online users will be fetched
+var UserId = '';
+var UserName = '';
+
+function chat(Argument) {
+    UserId = Argument.UserId;
+    UserName = Argument.UserName;
 }
-***********************************************************************************/
-
-function chat(Arguments) {
 
 
+var AjaxBusy = 0;
+var RequestJobManager = 0;
+var delay = 2;
 
-
-    if (SupportsAjax) {// Checks to asee if the browser supports ajax
-
-        /***************************************************************
-        variable : RequestJobManager
-        Purpose : keeps track of the request to be performed
-
-        variable : AjaxBusy
-        Purpose : Checks to see if there are any ongoing ajax requests to the server
-        ****************************************************************/
-        var RequestJobManager = 0;
-        var AjaxBusy = 0;
-
-
-        function apelAjax() {
-            //Checks to see if there is any ongoing ajax request
-            //0 represents no requests are in process
-            if (AjaxBusy === 0) {
-                if (RequestJobManager == 2) {
-                    RequestJobManager = 0;
-                    new AJAX({
-                        RequestVerb: 'POST',
-                        RequestUrl: '../Assets/cache/cache.php',
-                        Parameters: "userid=" + '<%= Convert.ToString(Session["UserId"]) %>' + "&username=" + '<%= Convert.ToString(Session["UserName"]) %>',
-                        CallbackMethod: success,
-                        readystateCallBackMethod: statechange,
-                        TimeOut: '6'
-                    }).SendHTTPRequest();
-                }
-                else {
-                    new AJAX({
-                        RequestVerb: 'GET',
-                        RequestUrl: '../Assets/cache/cache.txt',
-                        CallbackMethod: onlineusers,
-                        readystateCallBackMethod: statechange,
-                        TimeOut: '6'
-                    }).SendHTTPRequest();
-                }
-                RequestJobManager++;
+    /******************************************************************************************* 
+       self calling function 
+    ********************************************************************************************/
+    function apealAjax() {
+         if (AjaxBusy === 0) {
+            if (RequestJobManager == 0) {
+                AjaxBusy = 1;
+                GetUser();
             }
-            // Iterating the ajax request after every 2 seconds
-            setTimeout('apelAjax()', 1900);
-        };
-        apelAjax();
+            else if (RequestJobManager == delay) {
+                RequestJobManager = -1;
+                AjaxBusy = 1;
+                SetUser();
+            }
+            RequestJobManager++;
+        }
+        setTimeout('apealAjax()', 1900);
+    };
+
+
+    /******************************************************************************************* 
+    Gets the online users form the cache
+    ********************************************************************************************/
+    function GetUser() {
+            new AJAX({
+                RequestVerb: 'GET',
+                RequestUrl: '../Assets/cache/cache.txt',
+                onSuccess: onlineusers,
+                onComplete: requestComplete,
+                TimeOut: '6'
+            }).SendHTTPRequest();
     }
-    else alert("Browser Doesnot Support Ajax");
+
+    /******************************************************************************************* 
+    Updates the present user to the cache
+    ********************************************************************************************/
+    function SetUser() {
+            new AJAX({
+                RequestVerb: 'POST',
+                RequestUrl: '../Assets/cache/cache.php',
+                Parameters: "userid=" + UserId + "&username=" + UserName,
+                onSuccess: UpdateSuccess,
+                onComplete: requestComplete,
+                TimeOut: '6'
+            }).SendHTTPRequest();
+    }
+
 
     /******************************************************************************************* 
     This function gets called on every successful registration of users to the cache
     ********************************************************************************************/
-    function success(param) {
+    function UpdateSuccess(param) {
         var response = JSON.parse(param);
         for (var key in response) {
             if (key === "Error") alert(key + "" + response[key]);
         }
     }
-
     /******************************************************************************************* 
     This function gets called after every successful fetch of online users from the cache
     ********************************************************************************************/
@@ -92,29 +86,9 @@ function chat(Arguments) {
         }
         document.getElementById("online-buddies").innerHTML = users;
     }
-
     /*****************************************************************************************
-    This function checks to see if the ajax is buzy or not and hence declares the AjaxBusy 0/1
-    1 defines the ajax is buzy
-    0 defines the ajax is free
+    This function frees the ajax for the next call to be made
     ******************************************************************************************/
-    function statechange(param) {
-        switch (param) {
-            case 0:
-                AjaxBusy = 1;
-                break;
-            case 1:
-                AjaxBusy = 1;
-                break;
-            case 2:
-                AjaxBusy = 1;
-                break;
-            case 3:
-                AjaxBusy = 1;
-                break;
-            case 4:
-                AjaxBusy = 0;
-                break;
-        }
+    function requestComplete() {
+        AjaxBusy = 0;
     }
-}

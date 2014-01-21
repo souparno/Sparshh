@@ -1,4 +1,6 @@
 <?php
+
+
 // This prevents IE from caching the page. VERY annoying problem.
 header ( "Pragma: no-cache" );
 header ( "Cache-Control: no-cache" );
