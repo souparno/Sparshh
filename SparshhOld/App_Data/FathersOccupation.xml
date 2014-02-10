@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <FathersOccupation>
+    <Key>1</Key>
+    <Value>Employed</Value>
+  </FathersOccupation>
+  <FathersOccupation>
+    <Key>2</Key>
+    <Value>Professional</Value>
+  </FathersOccupation>
+  <FathersOccupation>
+    <Key>3</Key>
+    <Value>Not-Employed</Value>
+  </FathersOccupation>
+  <FathersOccupation>
+    <Key>4</Key>
+    <Value>Business</Value>
+  </FathersOccupation>
+  <FathersOccupation>
+    <Key>5</Key>
+    <Value>Retired</Value>
+  </FathersOccupation>
+  <FathersOccupation>
+    <Key>6</Key>
+    <Value>Expired</Value>
+  </FathersOccupation>
+</DataSet>

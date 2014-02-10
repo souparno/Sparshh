@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <BodyType>
+    <Key>1</Key>
+    <Value>Slim</Value>
+  </BodyType>
+  <BodyType>
+    <Key>2</Key>
+    <Value>Avarage</Value>
+  </BodyType>
+  <BodyType>
+    <Key>3</Key>
+    <Value>Athletic</Value>
+  </BodyType>
+  <BodyType>
+    <Key>4</Key>
+    <Value>Heavy</Value>
+  </BodyType>
+</DataSet>

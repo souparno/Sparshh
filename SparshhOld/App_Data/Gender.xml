@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <Gender>
+    <Key>1</Key>
+    <Value>Male</Value>
+  </Gender>
+  <Gender>
+    <Key>2</Key>
+    <Value>Fe-Male</Value>
+  </Gender>
+</DataSet>

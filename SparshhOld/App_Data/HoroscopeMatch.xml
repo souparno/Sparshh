@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <HoroscopeMatch>
+    <Key>1</Key>
+    <Value>Yes</Value>
+  </HoroscopeMatch>
+  <HoroscopeMatch>
+    <Key>2</Key>
+    <Value>No</Value>
+  </HoroscopeMatch>
+</DataSet>

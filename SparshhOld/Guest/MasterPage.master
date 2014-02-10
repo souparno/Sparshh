@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<%@ Import Namespace="System"  %>
+<%@ Import Namespace="System.Linq"  %>
+<%@ Import Namespace="System.Web"  %>
+<%@ Import Namespace="System.Web.UI.WebControls"  %>
+<%@ Import Namespace="System.Web.Services"  %>
+<%@ Import Namespace="System.Data"  %>
+<%@ Import Namespace="System.Data.SqlClient"  %>
+
+<script runat="server">
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+<style type="text/css">
+ .headerchat{
+    background-color: #336699;
+    width: 100%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-weight: bold;
+    color: #fff;
+}
+.buddies {
+    background-color: #fff ;
+    border: 1px solid #999 ;
+    bottom: 30px ;
+    display: none ;
+    left: 11px ;
+    position: absolute ;
+    width: 200px ;
+    min-height: 150px;
+}
+.messages {
+    background-color: #fff ;
+    border: 1px solid #999 ;
+    bottom: 30px ;
+    display: none ;
+    right:220px;
+    position:fixed;
+    width: 200px ;
+    min-height: 150px;
+    max-height: 500px;
+    font-size:10px;
+    font-weight:bold;
+}
+.gray{
+    color:#aaa;
+}
+.chat{
+    word-wrap:break-word;
+    width: 200px;
+    overflow:auto;
+}
+.username{
+    text-decoration: none;
+    color: #336699;
+}
+.username:hover{
+    text-decoration: none;
+    color: #6699aa;
+}
+.conversation{
+    width:80%;
+    padding: 3px;
+    border-bottom: 1px dotted #999;
+    float: right;
+}
+.conversationpicture{
+    float:left;
+}
+.closecontainer{
+    float: right;
+}
+.close, .close:hover{
+    text-decoration: none;
+    font-weight: bolder;
+    color: #fff;
+}
+.buddycontainer
+{
+    float:left;
+}
+.formchattext
+{
+    font-family:verdana;
+    font-size:10px;
+    border:1px solid #ccc;
+    width:190px;
+}
+</style>
+
+
+
+<title>SparshhMatrimony.com</title>
+<link href="../Assets/Style/lime.css" rel="Stylesheet" type="text/css" />
+<link href="../Assets/Style/Navigation.css" rel="stylesheet" type="text/css" />
+<link href="../Assets/Style/Button.css" rel="stylesheet" type="text/css" />
+
+<asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+<form id="form1" runat="server" style="margin-bottom:0px;">
+
+<div class="background-overlay" id="black_overlay"></div>
+
+<asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+
+<!--START OF HEADER-->
+<div class="row size-12" style="position:fixed;z-index:4000;">
+<div class="row size-12" style="background-color:#FAFAFC;border-bottom: 1px solid #CCCCCC !important;box-shadow: 0 0 9px 0 #490F76 !important;margin-bottom:0px;margin-top:0px;padding-bottom:5px;height:80px;">
+  <div class="column size-12">
+  <a href="Profile.aspx">
+   <img src="../Assets/images/Logo.png" class="left" style="width:220px;height:auto;margin-top:10px;border:none;" alt="" />
+  </a>
+  </div>
+ </div>
+ <asp:ContentPlaceHolder id="Navigation" runat="server"></asp:ContentPlaceHolder>
+ </div>
+<!--END OF HEADEDR--> 
+
+<!--START OF CONTENT-->
+ <div class="row size-12">
+  <div class="column size-10" style="margin-top:112px;padding:0px;">
+   <div class="container">
+    <asp:ContentPlaceHolder id="content" runat="server"></asp:ContentPlaceHolder>
+   </div>
+  </div>
+ </div>
+ <!--END OF CONTENT-->
+ 
+ 
+<!--START OF FOOTER-->
+<div class="row size-12" style="background: none repeat scroll 0 0 #F0F0F0;margin: 0 auto;padding: 0 8px;">
+             <div class="row" style="width:750px;">
+				<div class="left" style="color: #999999;font-size: 11px;margin: 0 0 0 10px;padding: 12px 0;text-align: left;"><span>1996-2014 Sparshh Matrimony - A Revolution in Matrimony&trade;</span></div>
+				<div class="right" style="color: #999999;font-size: 11px;margin: 0 0 0 10px;padding: 12px 0;text-align: left;">Passionately created by - Sparshh Team</div>
+             </div>
+		</div>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="../Home.aspx" class="active" >Home</a></li>
+           <li><a href="../AboutUs.aspx">About Us</a></li>
+           <li><a href="../Packages.aspx">Packages</a></li>
+           <li><a href="../Clients_n_Delights.aspx">Client Delights</a></li>
+           <li><a href="../FAQ.aspx">FAQ</a></li>
+           <li><a href="../BusinessEnquiry.aspx">Business Enquiry</a></li>
+           <li><a href="../AdvertiseWithUs.aspx">Advertise With Us</a></li>
+           <li><a href="/">Career</a></li>
+           <li><a href="../ContactUs.aspx">Contact Us</a></li>
+          </ul>
+  </div>
+</div>
+ <!--END OF FOOTER-->
+    </form>
+</body>
+
+</html>
+

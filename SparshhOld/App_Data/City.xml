@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <City>
+    <Key>1</Key>
+    <Value>Kolkata</Value>
+  </City>
+  <City>
+    <Key>2</Key>
+    <Value>New Delhi</Value>
+  </City>
+  <City>
+    <Key>3</Key>
+    <Value>Bangalore</Value>
+  </City>
+  <City>
+    <Key>4</Key>
+    <Value>Mumbai</Value>
+  </City>
+  <City>
+    <Key>5</Key>
+    <Value>Others</Value>
+  </City>
+</DataSet>

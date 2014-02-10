@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <DrinkingHabit>
+    <Key>1</Key>
+    <Value>Yes</Value>
+  </DrinkingHabit>
+  <DrinkingHabit>
+    <Key>2</Key>
+    <Value>No</Value>
+  </DrinkingHabit>
+  <DrinkingHabit>
+    <Key>3</Key>
+    <Value>Social Drinker</Value>
+  </DrinkingHabit>
+</DataSet>

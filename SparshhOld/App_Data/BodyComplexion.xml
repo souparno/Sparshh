@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <BodyComplexion>
+    <Key>1</Key>
+    <Value>Very Fair</Value>
+  </BodyComplexion>
+  <BodyComplexion>
+    <Key>2</Key>
+    <Value>Fair</Value>
+  </BodyComplexion>
+  <BodyComplexion>
+    <Key>3</Key>
+    <Value>Wheatish</Value>
+  </BodyComplexion>
+  <BodyComplexion>
+    <Key>4</Key>
+    <Value>Dark</Value>
+  </BodyComplexion>
+</DataSet>

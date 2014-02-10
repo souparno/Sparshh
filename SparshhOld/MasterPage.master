@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Import Namespace="System"  %>
+<%@ Import Namespace="System.IO"  %>
+<%@ Import Namespace="System.Linq"  %>
+<%@ Import Namespace="System.Web"  %>
+<%@ Import Namespace="System.Web.UI.WebControls"  %>
+<%@ Import Namespace="System.Web.Services"  %>
+<%@ Import Namespace="System.Data"  %>
+<%@ Import Namespace="System.Data.SqlClient"  %>
+
+
+
+
+
+
+<script runat="server">
+
+    string _connection = System.Configuration.ConfigurationManager.ConnectionStrings["constring"].ConnectionString;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        SqlConnection con = new SqlConnection(_connection);
+        
+        //string sql1 = "IF  NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[off_line_tocken]') AND type in (N'U')) BEGIN CREATE TABLE [dbo].[off_line_tocken](	[tocken_id] [varchar](8) NOT NULL,	[usr_id] [varchar](9) NOT NULL,	[date_to_day] [int] NULL,	[date_to_month] [int] NULL,	[date_to_year] [int] NULL, CONSTRAINT [PK_off_line_tocken] PRIMARY KEY CLUSTERED (	[tocken_id] ASC,	[usr_id] ASC)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]) ON [PRIMARY] END";
+        //SqlCommand cmd1 = new SqlCommand(sql1, con);
+        //con.Open();
+        //cmd1.ExecuteNonQuery();
+        //con.Close();
+
+        //string sql2 = "IF  NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[offline_usr_details]') AND type in (N'U'))BEGIN CREATE TABLE [dbo].[offline_usr_details](	[usr_id] [varchar](9) NOT NULL,	[usr_about] [text] NULL,	[usr_name] [text] NULL,	[usr_gender] [varchar](7) NULL,	[usr_dob_day] [int] NULL,	[usr_dob_month] [int] NULL,	[usr_dob_year] [int] NULL,	[usr_place_of_birth] [text] NULL,	[usr_marital_status] [varchar](3) NULL,	[usr_no_children] [varchar](3) NULL,	[usr_chaildren_staying_with] [varchar](3) NULL,	[usr_diet] [varchar](3) NULL,	[usr_smoking_habit] [varchar](3) NULL,	[usr_drinking_habit] [varchar](3) NULL,	[usr_more_basic_details] [text] NULL,	[usr_body_type] [varchar](3) NULL,	[usr_body_complexion] [varchar](3) NULL,	[usr_physically_chalanged] [varchar](3) NULL,	[usr_height] [varchar](3) NULL,	[usr_weight] [text] NULL,	[usr_blood_group] [varchar](3) NULL,	[usr_more_physical_sttributes] [text] NULL,	[usr_mother_tongue] [varchar](3) NULL,	[usr_religion] [varchar](3) NULL,	[usr_caste] [varchar](3) NULL,	[usr_subcaste] [varchar](3) NULL,	[usr_mangalik] [varchar](3) NULL,	[usr_gotra] [varchar](3) NULL,	[usr_sunsign] [varchar](3) NULL,	[usr_moonsign] [varchar](3) NULL,	[usr_nakshatra] [varchar](3) NULL,	[usr_horoscope_match] [varchar](3) NULL,	[usr_more_religious_details] [text] NULL,	[usr_education_category] [varchar](3) NULL,	[usr_education_details] [text] NULL,	[usr_profession] [varchar](3) NULL,	[usr_professiona_details] [text] NULL,	[usr_incme] [varchar](3) NULL,	[usr_more_occupation_details] [text] NULL,	[usr_family_values] [varchar](3) NULL,	[usr_family_type] [varchar](3) NULL,	[usr_fmaily_status] [varchar](3) NULL,	[usr_family_origin] [text] NULL,	[usr_fathers_occupation] [varchar](3) NULL,	[usr_fathers_occupation_details] [text] NULL,	[usr_mothers_occupation] [varchar](3) NULL,	[usr_mothers_occupation_details] [text] NULL,	[usr_no_brothers] [text] NULL,	[usr_no_brothers_married] [text] NULL,	[usr_no_sisters] [text] NULL,	[usr_no_sisters_married] [text] NULL,	[usr_more_family_details] [text] NULL,	[usr_country] [varchar](3) NULL,	[usr_state] [varchar](3) NULL,	[usr_citizenship] [text] NULL,	[usr_city] [varchar](3) NULL,	[usr_present_address] [text] NULL,	[usr_permanent_address] [text] NULL,	[usr_mobile_number] [text] NULL,	[usr_other_contect] [text] NULL,	[usr_more_contact_details] [text] NULL, CONSTRAINT [PK_offline_usr_details] PRIMARY KEY CLUSTERED (	[usr_id] ASC)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY] END";
+        //SqlCommand cmd2 = new SqlCommand(sql2, con);
+        //con.Open();
+        //cmd2.ExecuteNonQuery();
+        //con.Close();
+
+        //string sql3 = "IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[CreateOfflineMember]') AND type in (N'P', N'PC')) DROP PROCEDURE [dbo].[CreateOfflineMember];";
+        //SqlCommand cmd3 = new SqlCommand(sql3, con);
+        //con.Open();
+        //cmd3.ExecuteNonQuery();
+        //con.Close();
+
+
+        //string path = Server.MapPath("sql/");
+        //string sql4 = File.ReadAllText(path + "procedure_CreateOfflineMember.sql");
+        //SqlCommand cmd4 = new SqlCommand(sql4, con);
+        //con.Open();
+        //cmd4.ExecuteNonQuery();
+        //con.Close();
+        
+        
+    }
+    
+    
+    
+    protected void LogIn_Click(object sender, EventArgs e)
+    {
+        string email = txt_email_login.Value;
+        string password = txt_password_login.Value;
+        SqlConnection con = new SqlConnection(_connection);
+        string sql = "select usr_id,usr_name from usr_details where usr_email='" + email + "' and usr_password='" + password + "';";
+        SqlDataAdapter da = new SqlDataAdapter(sql, con);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+
+        string user_code = Convert.ToString(dt.Rows[0]["usr_id"]);
+        string user_name = Convert.ToString(dt.Rows[0]["usr_name"]);
+
+
+        if (user_code != null && user_code != "")
+        {
+            Session["UserId"] = user_code;
+            Session["UserName"] = user_name;
+            Response.Redirect("~/Users/Profile.aspx");
+        }
+
+    }
+</script>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SparshhMatrimony.com</title>
+
+<link href="Assets/Style/lime.css" rel="Stylesheet" type="text/css" />
+<link href="Assets/Style/Navigation.css" rel="stylesheet" type="text/css" />
+<link href="Assets/Style/Button.css" rel="stylesheet" type="text/css" />
+
+
+<asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+
+
+<%--<div class="master-black-overlay" id="master-black-overlay">
+<div class="row size-4">
+     <div class="master-light-content column size-5" id="master-light-content" >
+      <p>Tel : +91-33-2581-0016 / +91-98748 57993 (Sunday-Friday, 10.00 AM-8 PM) </p>
+      <p>Fax : +91-33-2581-0016 (EXT.) </p>
+      <p>E-mail : info@SPARSHHhmatrimony.com</p>
+      <button type="button" class="panel-7" onclick="document.getElementById('master-black-overlay').style.display='none';document.getElementById('master-light-content').style.display='none';">Close</button>
+     </div>
+</div>
+</div>--%>
+
+
+
+
+<form id="form1" runat="server">
+
+<div class="background-overlay" id="background-overlay"></div>
+<asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+
+<!--START OF HEADER-->
+<div class="row size-12" style="position:fixed;z-index:4000;">
+<div class="row size-12" style="background-color:#FAFAFC;border-bottom: 1px solid #CCCCCC !important;box-shadow: 0 0 9px 0 #490F76 !important;margin-bottom:0px;margin-top:0px;padding-bottom:5px;">
+  <div class="column size-12">
+  <a href="Home.aspx">
+   <img src="Assets/images/Logo.png" class="left" style="width:220px;height:auto;margin-top:10px;border:none;" alt="" />
+  </a>
+   
+   <table class="right" style="margin-bottom:5px;">
+    <tr>
+     <td><center><label>Email Id</label></center></td>
+     <td><center><label>Password</label></center></td>
+    </tr>
+    <tr>
+     <td><input type="text" style="box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;" class="reg_input_txt" name="txt_email_login" id="txt_email_login" runat="server" /></td>
+     <td><input type="password" style="box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;" class="reg_input_txt" name="txt_password_login" id="txt_password_login" runat="server"/></td>
+     <td><button class="purple right" runat="server" onserverclick="LogIn_Click">LogIn</button></td>
+    </tr>
+   </table>
+
+  </div>
+ </div>
+ <asp:ContentPlaceHolder id="Navigation" runat="server"></asp:ContentPlaceHolder>
+ </div>
+<!--END OF HEADER-->
+<!--START OF CONTENT-->
+ <div class="row size-12" style="margin-bottom:0px;">
+  <div class="column size-12" style="margin-top:112px;padding:0px;">
+    <asp:ContentPlaceHolder id="content" runat="server"></asp:ContentPlaceHolder>
+  </div>
+ </div>
+<!--END OF CONTENT-->
+<!-- START OF FOOTER-->
+<div class="row size-12" style="background: none repeat scroll 0 0 #F0F0F0;margin: 0 auto;padding: 0 8px;">
+             <div class="row" style="width:750px;">
+				<div class="left" style="color: #999999;font-size: 11px;margin: 0 0 0 10px;padding: 12px 0;text-align: left;"><span>Sparshh Matrimony - A Revolution in Matrimony&trade;</span></div>
+				<div class="right" style="color: #999999;font-size: 11px;margin: 0 0 0 10px;padding: 12px 0;text-align: left;">Passionately created by - Sparshh Team</div>
+             </div>
+		</div>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="Home.aspx" class="active" >Home</a></li>
+           <li><a href="AboutUs.aspx">About Us</a></li>
+           <li><a href="Packages.aspx">Packages</a></li>
+           <li><a href="Clients_n_Delights.aspx">Client Delights</a></li>
+           <li><a href="FAQ.aspx">FAQ</a></li>
+           <li><a href="BusinessEnquiry.aspx">Business Enquiry</a></li>
+           <li><a href="AdvertiseWithUs.aspx">Advertise With Us</a></li>
+           <li><a href="/">Career</a></li>
+           <li><a href="ContactUs.aspx">Contact Us</a></li>
+          </ul>
+  </div>
+</div>
+<!--END OF FOOTER-->
+
+
+    </form>
+</body>
+</html>

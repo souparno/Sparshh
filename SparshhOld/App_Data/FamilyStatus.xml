@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSet>
+  <FamilyStatus>
+    <Key>1</Key>
+    <Value>Middle Class</Value>
+  </FamilyStatus>
+  <FamilyStatus>
+    <Key>2</Key>
+    <Value>Upper Middle Class</Value>
+  </FamilyStatus>
+  <FamilyStatus>
+    <Key>3</Key>
+    <Value>Rich</Value>
+  </FamilyStatus>
+  <FamilyStatus>
+    <Key>4</Key>
+    <Value>Affluent</Value>
+  </FamilyStatus>
+</DataSet>
