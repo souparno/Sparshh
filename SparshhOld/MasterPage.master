@@ -47,6 +47,58 @@
         //con.Open();
         //cmd4.ExecuteNonQuery();
         //con.Close();
+
+
+        
+        //string sql1 = "IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[off_line_tocken]') AND type in (N'U')) DROP TABLE [dbo].[off_line_tocken];";
+        //SqlCommand cmd1 = new SqlCommand(sql1, con);
+        //con.Open();
+        //cmd1.ExecuteNonQuery();
+        //con.Close();
+
+
+        //string sql2 = "IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[offline_usr_details]') AND type in (N'U')) DROP TABLE [dbo].[offline_usr_details];";
+        //SqlCommand cmd2 = new SqlCommand(sql2, con);
+        //con.Open();
+        //cmd2.ExecuteNonQuery();
+        //con.Close();
+
+        //string sql3 = "IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[offline_usr_pic]') AND type in (N'U')) DROP TABLE [dbo].[offline_usr_pic];";
+        //SqlCommand cmd3 = new SqlCommand(sql3, con);
+        //con.Open();
+        //cmd3.ExecuteNonQuery();
+        //con.Close();
+
+        //string sql4 = "IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[CreateOfflineMember]') AND type in (N'P', N'PC')) DROP PROCEDURE [dbo].[CreateOfflineMember]";
+        //SqlCommand cmd4 = new SqlCommand(sql4, con);
+        //con.Open();
+        //cmd4.ExecuteNonQuery();
+        //con.Close();
+
+        //string path = Server.MapPath("sql/");
+        //string sql5 = File.ReadAllText(path + "tbl_offline_token.sql");
+        //SqlCommand cmd5 = new SqlCommand(sql5, con);
+        //con.Open();
+        //cmd5.ExecuteNonQuery();
+        //con.Close();
+
+        //string sql6 = File.ReadAllText(path + "tbl_offline_usr_details.sql");
+        //SqlCommand cmd6 = new SqlCommand(sql6, con);
+        //con.Open();
+        //cmd6.ExecuteNonQuery();
+        //con.Close();
+
+        //string sql7 = File.ReadAllText(path + "tbl_offline_usr_pic.sql");
+        //SqlCommand cmd7 = new SqlCommand(sql7, con);
+        //con.Open();
+        //cmd7.ExecuteNonQuery();
+        //con.Close();
+
+        //string sql8 = File.ReadAllText(path + "procedure_CreateOfflineMember.sql");
+        //SqlCommand cmd8=new SqlCommand(sql8,con);
+        //con.Open();
+        //cmd8.ExecuteNonQuery();
+        //con.Close();    
         
         
     }

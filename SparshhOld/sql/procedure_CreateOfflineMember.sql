@@ -1,5 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[CreateOfflineMember]
     @usr_id nvarchar(9), 
+    @usr_profile_pic text,
     @usr_about text,
     @usr_name text,
     @usr_gender varchar(7),
@@ -63,6 +64,7 @@
 AS BEGIN
 INSERT INTO offline_usr_details
            ([usr_id]
+           ,[usr_profile_pic]
            ,[usr_about]
            ,[usr_name]
            ,[usr_gender]
@@ -125,6 +127,7 @@ INSERT INTO offline_usr_details
            ,[usr_more_contact_details])
      VALUES
            (@usr_id
+           ,@usr_profile_pic
            ,@usr_about
            ,@usr_name
            ,@usr_gender
@@ -186,4 +189,3 @@ INSERT INTO offline_usr_details
            ,@usr_other_contact
            ,@usr_more_contact_details)
 END
-

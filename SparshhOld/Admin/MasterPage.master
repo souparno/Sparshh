@@ -25,36 +25,48 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="AdminStyle.css" rel="stylesheet" type="text/css" media="screen" />
+    <%--<link href="AdminStyle.css" rel="stylesheet" type="text/css" media="screen" />--%>
+    <link href="../Assets/Style/lime.css" rel="Stylesheet" type="text/css" />
+    <link href="../Assets/Style/Navigation.css" rel="stylesheet" type="text/css" />
+    <link href="../Assets/Style/Button.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <center>
-<div class="top">
-            <div class="top_2">
-                Your IP Address is
-                <span id="lblIP"></span>
-                <span class="wel_tex">Welcome Admin</span></div>
-            <div class="navigation">
-                <ul>
-                    <li class="active"><a href="Admin-Home.aspx"><span class="arroww"></span>Home</a></li>
-                    <li><a href=""><span class="arroww"></span>Approvals</a></li>
-                    <li><a href=""><span class="arroww"></span>All Members</a></li>
-                    <li><a href=""><span class="arroww"></span>Free Members</a></li>
-                    <li><a href=""><span class="arroww"></span>Paid Members</a></li>
-                    <li><a id="logout" href="#" runat="server" onserverclick="LogOut_Click"><span class="arroww"></span>Logout</a></li>
-                </ul>
-            </div>
-        </div>
+<!--START OF HEADER-->
+<div class="row size-12" style="position:fixed;z-index:4000;">
+<div class="row size-12" style="background-color:#FAFAFC;border-bottom: 1px solid #CCCCCC !important;box-shadow: 0 0 9px 0 #490F76 !important;margin-bottom:0px;margin-top:0px;padding-bottom:5px;height:80px;">
+  <div class="column size-12">
+  <a href="Admin-Home.aspx">
+   <img src="../Assets/images/Logo.png" class="left" style="width:220px;height:auto;margin-top:10px;border:none;" alt="" />
+  </a>
+  <button style="margin-top:10px;" class="purple right" runat="server" onserverclick="LogOut_Click">Log Out</button>
+  </div>
+ </div>
+ <asp:ContentPlaceHolder id="Navigation" runat="server"></asp:ContentPlaceHolder>
+ </div>
+<!--END OF HEADEDR--> 
 
-<div class="inner_body">
-<div class="total_div"> Total Profiles :<a style="text-decoration:none;" href="ProfileView.aspx?ViewMode=all" id="lblTotalProfiles"></a></div>
-<div class="clear"></div>
-<table width="100%" cellspacing="0" cellpadding="0" border="0">
-                <tbody><tr>
+<!--START OF CONTENT-->
+ <div class="row size-10">
+  <div class="column size-12" style="margin-top:112px;padding:0px;">
+   <div class="container">
+   <div style="margin-top:40px;">
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="tab_about" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >Member Stat</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap">
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                <tr>
+                 <td colspan="12">
+                  <center><h4>Total Profiles :</h4></center>
+                 </td>
+                </tr>
+                <tr>
                     <td width="18%" align="center">
-                        <img height="42" width="42" alt="" src="../css/images/man.png">
+                        <img height="42" width="42" alt="" src="../css/images/man.png" />
                     </td>
                     <td width="7%">
                         Inactive :
@@ -99,7 +111,7 @@
                 </tr>
                 <tr>
                     <td align="center">
-                        <img height="46" width="42" alt="" src="../css/images/women.png">
+                        <img height="46" width="42" alt="" src="../css/images/women.png" />
                     </td>
                     <td width="7%">
                         Inactive :
@@ -143,13 +155,14 @@
                     </td>
                 </tr>
             </tbody></table>
-<div class="botom_tex"></div>
-<div class="clear"></div>
-        <asp:ContentPlaceHolder id="body" runat="server">
-        
-        </asp:ContentPlaceHolder>
-</div>
- </center>
+    </div>
+   </div>
+    <asp:ContentPlaceHolder id="body" runat="server"></asp:ContentPlaceHolder>
+   </div>
+  </div>
+ </div>
+ <!--END OF CONTENT-->
+
     </form>
 </body>
 </html>

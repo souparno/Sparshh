@@ -110,40 +110,71 @@
 
 <div class="column size-2">
   <div class="panel-3" style="margin-top:40px;">
-     <%
-     string userid = Convert.ToString(Session["UserId"]);
-     string _connection = System.Configuration.ConfigurationManager.ConnectionStrings["constring"].ConnectionString;
-     SqlConnection con = new SqlConnection(_connection);
-     string sql = "select usr_profile_pic from usr_details where usr_id='" + userid + "';";
-     SqlCommand cmd = new SqlCommand(sql, con);
-     con.Open();
-     string profile_pic = Convert.ToString(cmd.ExecuteScalar());
-     con.Close();
-     
- %>
- <center><img src='<% Response.Write(profile_pic);%>' style="width:100%;height:auto;border:1px solid black;" alt="" /></center>
+    <center><img src="" id="usr_pro_pic" runat="server" style="width:100%;height:auto;border:1px solid black;" alt="" /></center>
   </div>
   <div class="clear"></div>
   <center>
-    <h3 style="font-size:14px;">User Code: <% Response.Write(userid); %></h3>
-  <a class="panel-7" href="MyPictures.aspx"><b>Upload Pictures</b></a>
+    <h3 style="font-size:14px;" runat="server" id="header_showUserId"></h3>
   </center>
-</div>
+  
+
+   <div class="row size-12">
+
+      <%
+          string _connection = System.Configuration.ConfigurationManager.ConnectionStrings["constring"].ConnectionString;
+          string sql = "select pic_name from off_line_tocken join offline_usr_pic on off_line_tocken.usr_id=offline_usr_pic.usr_id where tocken_id='" + Request.QueryString["id"] + "';";
+          SqlConnection con = new SqlConnection(_connection);
+          DataTable dt = new DataTable();
+          SqlDataAdapter da = new SqlDataAdapter(sql, con);
+          da.Fill(dt);
+          
+        string picture_folder_name = ConfigurationManager.AppSettings["MemberPictureFolder"];
+        foreach (DataRow dr in dt.Rows)
+        {
+            
+     %>
+        <div class='column size-5' style='text-align:center;margin-bottom:10px;'>
+        <div class="container">
+        <img src='../MemberPictures/<% Response.Write(dr["pic_name"]); %>' style='width:100%;height:auto' alt=''/>
+        </div>
+        </div>
+     <%           
+        }
+            
+     %>
+
+     </div>
+ </div>
 <div class="column size-10">
 <div class="container">
  <div style="margin-top:40px;">
       <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
-      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;" >About Me</a></li>
-      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-active-tab"   style="font-size:13px;">Basic Information</a></li>
-      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;">Education n Occupation</a></li>
-      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;">Religion Attributes</a></li>  
-      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;">Physical Attributes</a></li>
-      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;">Contact Information</a></li>
-      <li style="margin-left:0px;margin-right:0px;"><a href="" class="panel-inactive-tab" style="font-size:13px;">Family Details</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a id="tab_about"          onclick="document.getElementById('div_about_me').style.display = 'block';document.getElementById('div_basic_info').style.display = 'none';document.getElementById('div_physical_attribute').style.display = 'none';document.getElementById('div_religious_attributes').style.display = 'none';document.getElementById('div_education_attributes').style.display = 'none';document.getElementById('div_family_details').style.display = 'none';document.getElementById('div_contact_details').style.display = 'none';document.getElementById('tab_about').className='panel-active-tab';document.getElementById('tab_basic_info').className='panel-inactive-tab';document.getElementById('tab_physical_info').className='panel-inactive-tab';document.getElementById('tab_religion_info').className='panel-inactive-tab';document.getElementById('tab_education_info').className='panel-inactive-tab';document.getElementById('tab_family_info').className='panel-inactive-tab';document.getElementById('tab_contact_info').className='panel-inactive-tab';" href="javascript:void(0);" class="panel-active-tab" style="font-size:13px;" >About Me</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a id="tab_basic_info"     onclick="document.getElementById('div_about_me').style.display = 'none';document.getElementById('div_basic_info').style.display = 'block';document.getElementById('div_physical_attribute').style.display = 'none';document.getElementById('div_religious_attributes').style.display = 'none';document.getElementById('div_education_attributes').style.display = 'none';document.getElementById('div_family_details').style.display = 'none';document.getElementById('div_contact_details').style.display = 'none';document.getElementById('tab_about').className='panel-inactive-tab';document.getElementById('tab_basic_info').className='panel-active-tab';document.getElementById('tab_physical_info').className='panel-inactive-tab';document.getElementById('tab_religion_info').className='panel-inactive-tab';document.getElementById('tab_education_info').className='panel-inactive-tab';document.getElementById('tab_family_info').className='panel-inactive-tab';document.getElementById('tab_contact_info').className='panel-inactive-tab';" href="javascript:void(0);" class="panel-inactive-tab"   style="font-size:13px;">Basic Information</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a id="tab_physical_info"  onclick="document.getElementById('div_about_me').style.display = 'none';document.getElementById('div_basic_info').style.display = 'none';document.getElementById('div_physical_attribute').style.display = 'block';document.getElementById('div_religious_attributes').style.display = 'none';document.getElementById('div_education_attributes').style.display = 'none';document.getElementById('div_family_details').style.display = 'none';document.getElementById('div_contact_details').style.display = 'none';document.getElementById('tab_about').className='panel-inactive-tab';document.getElementById('tab_basic_info').className='panel-inactive-tab';document.getElementById('tab_physical_info').className='panel-active-tab';document.getElementById('tab_religion_info').className='panel-inactive-tab';document.getElementById('tab_education_info').className='panel-inactive-tab';document.getElementById('tab_family_info').className='panel-inactive-tab';document.getElementById('tab_contact_info').className='panel-inactive-tab';" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;">Physical Attributes</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a id="tab_religion_info"  onclick="document.getElementById('div_about_me').style.display = 'none';document.getElementById('div_basic_info').style.display = 'none';document.getElementById('div_physical_attribute').style.display = 'none';document.getElementById('div_religious_attributes').style.display = 'block';document.getElementById('div_education_attributes').style.display = 'none';document.getElementById('div_family_details').style.display = 'none';document.getElementById('div_contact_details').style.display = 'none';document.getElementById('tab_about').className='panel-inactive-tab';document.getElementById('tab_basic_info').className='panel-inactive-tab';document.getElementById('tab_physical_info').className='panel-inactive-tab';document.getElementById('tab_religion_info').className='panel-active-tab';document.getElementById('tab_education_info').className='panel-inactive-tab';document.getElementById('tab_family_info').className='panel-inactive-tab';document.getElementById('tab_contact_info').className='panel-inactive-tab';" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;">Religious Attributes</a></li>  
+      <li style="margin-left:0px;margin-right:0px;"><a id="tab_education_info" onclick="document.getElementById('div_about_me').style.display = 'none';document.getElementById('div_basic_info').style.display = 'none';document.getElementById('div_physical_attribute').style.display = 'none';document.getElementById('div_religious_attributes').style.display = 'none';document.getElementById('div_education_attributes').style.display = 'block';document.getElementById('div_family_details').style.display = 'none';document.getElementById('div_contact_details').style.display = 'none';document.getElementById('tab_about').className='panel-inactive-tab';document.getElementById('tab_basic_info').className='panel-inactive-tab';document.getElementById('tab_physical_info').className='panel-inactive-tab';document.getElementById('tab_religion_info').className='panel-inactive-tab';document.getElementById('tab_education_info').className='panel-active-tab';document.getElementById('tab_family_info').className='panel-inactive-tab';document.getElementById('tab_contact_info').className='panel-inactive-tab';" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;">Education Occupation</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a id="tab_family_info"    onclick="document.getElementById('div_about_me').style.display = 'none';document.getElementById('div_basic_info').style.display = 'none';document.getElementById('div_physical_attribute').style.display = 'none';document.getElementById('div_religious_attributes').style.display = 'none';document.getElementById('div_education_attributes').style.display = 'none';document.getElementById('div_family_details').style.display = 'block';document.getElementById('div_contact_details').style.display = 'none';document.getElementById('tab_about').className='panel-inactive-tab';document.getElementById('tab_basic_info').className='panel-inactive-tab';document.getElementById('tab_physical_info').className='panel-inactive-tab';document.getElementById('tab_religion_info').className='panel-inactive-tab';document.getElementById('tab_education_info').className='panel-inactive-tab';document.getElementById('tab_family_info').className='panel-active-tab';document.getElementById('tab_contact_info').className='panel-inactive-tab';" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;">Family Details</a></li>
+      <li style="margin-left:0px;margin-right:0px;"><a id="tab_contact_info"   onclick="document.getElementById('div_about_me').style.display = 'none';document.getElementById('div_basic_info').style.display = 'none';document.getElementById('div_physical_attribute').style.display = 'none';document.getElementById('div_religious_attributes').style.display = 'none';document.getElementById('div_education_attributes').style.display = 'none';document.getElementById('div_family_details').style.display = 'none';document.getElementById('div_contact_details').style.display = 'block';document.getElementById('tab_about').className='panel-inactive-tab';document.getElementById('tab_basic_info').className='panel-inactive-tab';document.getElementById('tab_physical_info').className='panel-inactive-tab';document.getElementById('tab_religion_info').className='panel-inactive-tab';document.getElementById('tab_education_info').className='panel-inactive-tab';document.getElementById('tab_family_info').className='panel-inactive-tab';document.getElementById('tab_contact_info').className='panel-active-tab';" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;">Contact Details</a></li>
      </ul>
     <div style="clear:both"></div>
    <div class="form_inner_wrap">
-        <asp:FormView ID="frm_basic_info" runat="server">
+        <div id="div_about_me">
+         <asp:FormView ID="Frm_About_User" runat="server">
+       <ItemTemplate>
+        <h4 style="margin-top:0px;">About Me</h4>
+        <table>
+         <tr>
+          <td>About Me:</td>
+          <td>&nbsp;&nbsp;<%# Eval("usr_about")%></td>
+         </tr>
+        </table>
+
+       </ItemTemplate>
+      </asp:FormView>
+        </div>
+        <div id="div_basic_info" style="display:none;">
+         <asp:FormView ID="frm_basic_info" runat="server">
        <ItemTemplate>
          <h4 style="margin-top:0px;">Basic Information</h4>
          <table>
@@ -198,133 +229,9 @@
           </table>
        </ItemTemplate>
       </asp:FormView>
-    </div>
-   </div>
-</div>
-</div>
-  
-</div>
-
-<div class="row size-12">
-<div class="column size-12">
-  <div class="panel-3">
-      <asp:FormView ID="Frm_About_User" runat="server">
-       <ItemTemplate>
-        <h4 style="margin-top:0px;">About Me</h4>
-        <table>
-         <tr>
-          <td>About Me:</td>
-          <td>&nbsp;&nbsp;<%# Eval("usr_about")%>
-          </td>
-         </tr>
-        </table>
-
-       </ItemTemplate>
-      </asp:FormView>
-  </div>
-</div>
-</div>
-
-<div class="row size-12">
- <div class="column size-12">
-  <div class="panel-3">
-
-
-
-<asp:FormView ID="Frm_Education_Occupation" runat="server">
-<ItemTemplate>
-           <h4>
-             Education And Occupation
-             <a href="javascript:void(0)" class="panel-7" onclick="document.getElementById('Edit_Education_Occupation').style.display='block';document.getElementById('black_overlay').style.display='block';" >Edit</a>
-           </h4>
-           <table>
-            <tr>
-             <td>Higest Education</td>
-             <td>:&nbsp;&nbsp;<%# Eval("Education") %></td>
-            </tr>
-            <tr>
-             <td>Education Details:</td>
-             <td>:&nbsp;&nbsp;<%# Eval("Education_details") %></td>
-            </tr>
-            <tr>
-             <td>Occupation:</td>
-             <td>:&nbsp;&nbsp;<%# Eval("Occupation") %></td>
-            </tr>
-            <tr>
-             <td>Occupation Details</td>
-             <td>:&nbsp;&nbsp;<%# Eval("Occupation_details") %></td>
-            </tr>
-            <tr>
-             <td>Annual Income</td>
-             <td>:&nbsp;&nbsp;<%# Eval("Income") %></td>
-            </tr>
-           </table>
-         </ItemTemplate>
-</asp:FormView>
-  </div>
- </div>
-</div>
-<div class="row size-12">
- <div class="column size-12">
-  <div class="panel-3">
-      <asp:FormView ID="Frm_Religious_Attributes" runat="server">
-       <ItemTemplate>
-         
-          <h4>
-             Religious Attributes
-             <a href="javascript:void(0)" class="panel-7" onclick="document.getElementById('edit_religious_attributes').style.display='block';document.getElementById('black_overlay').style.display='block';" >Edit</a>
-          </h4>
-          <table>
-           <tr>
-            <td>Mother Tongue:</td>
-            <td>:&nbsp;&nbsp;<%# Eval("MotherTongue")%></td>
-           </tr>
-           <tr>
-            <td>Religion</td>
-            <td>:&nbsp;&nbsp;<%# Eval("Religion")%></td>
-           </tr>
-           <tr>
-            <td>Caste</td>
-            <td>:&nbsp;&nbsp;<%# Eval("Caste")%></td>
-           </tr>
-           <tr>
-            <td>Sub Caste</td>
-            <td>:&nbsp;&nbsp;<%# Eval("SubCaste") %></td>
-           </tr>
-           <tr>
-            <td>Place Of Birth</td>
-            <td>:&nbsp;&nbsp;<%# Eval("BirthPlace") %></td>
-           </tr>
-           <tr>
-            <td>Mangalik</td>
-            <td>:&nbsp;&nbsp;<%# Eval("Mangalik")%></td>
-           </tr>
-           <tr>
-            <td>Gotra</td>
-            <td>:&nbsp;&nbsp;<%# Eval("Gotra") %></td>
-           </tr>
-           <tr>
-            <td>Nakshatra</td>
-            <td>:&nbsp;&nbsp;<%# Eval("Nakshatra") %></td>
-           </tr>
-           <tr>
-            <td>Sun Sign</td>
-            <td>:&nbsp;&nbsp;<%# Eval("Sunsign") %></td>
-           </tr>
-          </table>
-       </ItemTemplate>
-      </asp:FormView>
-     
-
-  </div>
- </div>
-</div>
-<div class="row size-12">
- <div class="column size-12">
-  <div class="panel-3">
-
-
-      <asp:FormView ID="Frm_Physical_Attributes" runat="server" >
+       </div>
+       <div id="div_physical_attribute" style="display:none;">
+        <asp:FormView ID="Frm_Physical_Attributes" runat="server" >
        <ItemTemplate>
          <h4>Physical Attributes</h4>
           <table>
@@ -359,64 +266,97 @@
           </table>
        </ItemTemplate>
       </asp:FormView>
-
-      
-  </div>
- </div>
-</div>
-<div class="row size-12">
- <div class="column size-12">
-  <div class="panel-3">
-      <asp:FormView ID="Frm_Contact_Information" runat="server">
+       </div>
+       <div id="div_religious_attributes" style="display:none;">
+        <asp:FormView ID="Frm_Religious_Attributes" runat="server">
        <ItemTemplate>
-         <h4>
-           Contact Information
-           <a href="javascript:void(0)" class="panel-7" onclick="document.getElementById('Edit_ContactInformation').style.display='block';document.getElementById('black_overlay').style.display='block';" >Edit</a>
-          </h4>
+          <h4>Religious Attributes</h4>
           <table>
            <tr>
-            <td>Email Id</td>
-            <td>:&nbsp;&nbsp;<%# Eval("usr_email") %></td>
+            <td>Mother Tongue:</td>
+            <td>:&nbsp;&nbsp;<%# Eval("MotherTongue")%></td>
            </tr>
            <tr>
-            <td>Mobile No.</td>
-            <td>:&nbsp;&nbsp;<%# Eval("usr_mobile") %></td>
+            <td>Religion</td>
+            <td>:&nbsp;&nbsp;<%# Eval("Religion")%></td>
            </tr>
            <tr>
-            <td>LandLine No.</td>
-            <td>:&nbsp;&nbsp;<%# Eval("usr_land_no") %></td>
+            <td>Caste</td>
+            <td>:&nbsp;&nbsp;<%# Eval("Caste")%></td>
            </tr>
            <tr>
-            <td>Address</td>
-            <td>:&nbsp;&nbsp;<%# Eval("usr_address") %></td>
+            <td>Sub Caste</td>
+            <td>:&nbsp;&nbsp;<%# Eval("SubCaste") %></td>
            </tr>
            <tr>
-            <td>City</td>
-            <td>:&nbsp;&nbsp;<%# Eval("usr_city")%></td>
+            <td>Chewai Dosham</td>
+            <td>:&nbsp;&nbsp;<%# Eval("Mangalik")%></td>
            </tr>
            <tr>
-            <td>State</td>
-            <td>:&nbsp;&nbsp;<%# Eval("usr_state")%></td>
+            <td>Gotra</td>
+            <td>:&nbsp;&nbsp;<%# Eval("Gotra") %></td>
            </tr>
            <tr>
-            <td>Country</td>
-            <td>:&nbsp;&nbsp;<%# Eval("usr_country")%></td>
+            <td>Sun Sign</td>
+            <td>:&nbsp;&nbsp;<%# Eval("Sunsign") %></td>
+           </tr>
+           <tr>
+            <td>Moon Sign</td>
+            <td>:&nbsp;&nbsp;<%# Eval("MoonSign")%></td>
+           </tr>
+           <tr>
+            <td>Nakshatra</td>
+            <td>:&nbsp;&nbsp;<%# Eval("Nakshatra") %></td>
+           </tr>
+           <tr>
+            <td>Horoscope Match</td>
+            <td>:&nbsp;&nbsp;<%# Eval("HoroscopeMatch")%></td>
+           </tr>
+           <tr>
+            <td>More Details</td>
+            <td>:&nbsp;&nbsp;<%# Eval("more_details")%></td>
            </tr>
           </table>
-          </ItemTemplate>
-          </asp:FormView>
-  </div>
- </div>
-</div>
-<div class="row size-12">
- <div class="column size-12">
-  <div class="panel-3">
-      <asp:FormView ID="Frm_Family_Details" runat="server">
+       </ItemTemplate>
+      </asp:FormView>
+       </div>
+       <div id="div_education_attributes" style="display:none;">
+        <asp:FormView ID="Frm_Education_Occupation" runat="server">
+<ItemTemplate>
+           <h4>Education And Occupation</h4>
+           <table>
+            <tr>
+             <td>Education Category:</td>
+             <td>:&nbsp;&nbsp;<%# Eval("Education") %></td>
+            </tr>
+            <tr>
+             <td>Education Details:</td>
+             <td>:&nbsp;&nbsp;<%# Eval("Education_details") %></td>
+            </tr>
+            <tr>
+             <td>Occupation:</td>
+             <td>:&nbsp;&nbsp;<%# Eval("Occupation") %></td>
+            </tr>
+            <tr>
+             <td>Occupation Details</td>
+             <td>:&nbsp;&nbsp;<%# Eval("Occupation_details") %></td>
+            </tr>
+            <tr>
+             <td>Annual Income</td>
+             <td>:&nbsp;&nbsp;<%# Eval("Income") %></td>
+            </tr>
+            <tr>
+             <td>More Details:</td>
+             <td>:&nbsp;&nbsp;<%# Eval("moreInfo")%></td>
+            </tr>
+           </table>
+         </ItemTemplate>
+</asp:FormView>
+       </div>
+       <div id="div_family_details" style="display:none;">
+       <asp:FormView ID="Frm_Family_Details" runat="server">
        <ItemTemplate>
-         <h4>
-           Family Details
-           <a href="javascript:void(0)" class="panel-7" onclick="document.getElementById('Edit_FamilyDetails').style.display='block';document.getElementById('black_overlay').style.display='block';" >Edit</a>
-          </h4>
+         <h4>Family Details</h4>
           <table>
            <tr>
             <td>Family Values</td>
@@ -428,7 +368,7 @@
            </tr>
            <tr>
             <td>Family Status</td>
-            <td>:&nbsp;&nbsp;</td>
+            <td>:&nbsp;&nbsp;<%# Eval("FamilyStatus")%></td>
            </tr>
            <tr>
             <td>Ancestral Origin</td>
@@ -439,8 +379,16 @@
             <td>:&nbsp;&nbsp;<%# Eval("FathersOccupation")%></td>
            </tr>
            <tr>
+            <td>Fathers Occupation Details</td>
+            <td>:&nbsp;&nbsp;<%# Eval("FathersOccupationDetails")%></td>
+           </tr>
+           <tr>
             <td>Mothers Occupation</td>
             <td>:&nbsp;&nbsp;<%# Eval("MothersOccupation")%></td>
+           </tr>
+           <tr>
+            <td>Mothers Occupation</td>
+            <td>:&nbsp;&nbsp;<%# Eval("MothersOccupationDetails")%></td>
            </tr>
            <tr>
             <td>Brothers</td>
@@ -458,11 +406,67 @@
             <td>Sisters Married</td>
             <td>:&nbsp;&nbsp;<%# Eval("SistersMarried")%></td>
            </tr>
+           <tr>
+            <td>More Details</td>
+            <td>:&nbsp;&nbsp;<%# Eval("MoreDetails")%></td>
+           </tr>
           </table>
           </ItemTemplate>
           </asp:FormView>
-  </div>
- </div>
+       </div>
+       <div id="div_contact_details" style="display:none;">
+        <asp:FormView ID="Frm_Contact_Information" runat="server">
+       <ItemTemplate>
+         <h4>Contact Information</h4>
+          <table>
+           <tr>
+            <td>Country Living In</td>
+            <td>:&nbsp;&nbsp;<%# Eval("usr_country")%></td>
+           </tr>
+           <tr>
+            <td>State</td>
+            <td>:&nbsp;&nbsp;<%# Eval("usr_state")%></td>
+           </tr>
+           <tr>
+            <td>Citizenship</td>
+            <td>:&nbsp;&nbsp;<%# Eval("usr_citizenship")%></td>
+           </tr>
+           <tr>
+            <td>City</td>
+            <td>:&nbsp;&nbsp;<%# Eval("usr_city")%></td>
+           </tr>
+           <tr>
+            <td>Present Address</td>
+            <td>:&nbsp;&nbsp;<%# Eval("usr_present_address")%></td>
+           </tr>
+           <tr>
+            <td>Permanent Address</td>
+            <td>:&nbsp;&nbsp;<%# Eval("usr_permanent_address")%></td>
+           </tr>
+           <tr>
+            <td>Mobile No.</td>
+            <td>:&nbsp;&nbsp;<%# Eval("usr_mobile") %></td>
+           </tr>
+           <tr>
+            <td>Other Contact Number</td>
+            <td>:&nbsp;&nbsp;<%# Eval("usr_other_contact_no")%></td>
+           </tr>
+           <tr>
+            <td>More Details</td>
+            <td>:&nbsp;&nbsp;<%# Eval("usr_more_contact_details")%></td>
+           </tr>
+          </table>
+          </ItemTemplate>
+          </asp:FormView>
+       </div>
+    </div>
+   </div>
 </div>
+</div>
+  
+</div>
+
+
+
 </asp:Content>
 

@@ -127,8 +127,9 @@
         string date_to_day = ddl_date_to_day.Value;
         string date_to_month = ddl_date_to_month.Value;
         string date_to_year = ddl_date_to_year.Value;
+        string token_info = txt_token_info.Value;
 
-        string sql = "insert into off_line_tocken(tocken_id,usr_id,date_to_day,date_to_month,date_to_year) values('"+tocken_id+"','"+usr_id+"','"+date_to_day+"','"+date_to_month+"','"+date_to_year+"')";
+        string sql = "insert into off_line_tocken(tocken_id,usr_id,date_to_day,date_to_month,date_to_year,token_info) values('"+tocken_id+"','"+usr_id+"','"+date_to_day+"','"+date_to_month+"','"+date_to_year+"','"+token_info+"')";
         SqlConnection con = new SqlConnection(_connection);
         SqlCommand cmd = new SqlCommand(sql, con);
         con.Open();
@@ -156,6 +157,7 @@
                             <ul>
                                 <li><a href="Admin-AddOFlineMembers.aspx"><span class="aro"></span>Add Members</a></li>
                                 <li><a href="Admin-ViewOfflineMembers.aspx"><span class="aro"></span>View All Members</a></li>
+                                <li><a href="Admin-MangeOfflineToken.aspx"><span class="aro"></span>Manage Token</a></li>
                             </ul>
                         </div>
                     </div>
@@ -181,6 +183,12 @@
           <select class="reg_select_box" style="width:60px;" id="ddl_date_to_day" runat="server"></select>
           <select class="reg_select_box" style="width:60px;" id="ddl_date_to_month" runat="server"></select>
           <select class="reg_select_box" style="width:80px;" id="ddl_date_to_year" runat="server"></select>
+         </td>
+        </tr>
+        <tr>
+         <td>Token Info</td>
+         <td>
+          <textarea id="txt_token_info" runat="server"></textarea>
          </td>
         </tr>
         <tr>

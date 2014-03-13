@@ -1477,7 +1477,7 @@
                      "SET @usr_family_values ='" + family_value + "' " +
                      "SET @usr_family_type ='" + family_type + "' " +
                      "SET @usr_family_status ='" + FamilyStatus + "' " +
-                     "SET @usr_family_origin ='" + txt_family_origin + "' " +
+                     "SET @usr_family_origin ='" + ancestral_origin + "' " +
                      "SET @usr_fathers_occupation ='" + fathers_occupation + "' " +
                      "SET @usr_fathers_occupation_details ='" + fathers_occupation_details + "' " +
                      "SET @usr_mothers_occupation ='" + mothers_occupation + "' " +
@@ -1563,53 +1563,85 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 
 </asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
+<%--Top Navigation--%>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="" class="active" >Add Offline Members</a></li>
+          </ul>
+  </div>
+</div>
+<%--End Of top Navigation--%>
+</asp:Content>
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
 
-<div style="float: left; width: 341px; height: auto;">
-            <div class="listin_div" id="offline_membership">
-                    <div class="box_top">
-                        <img height="18" width="18" style="margin: 5px 0 0 17px;float: left;" alt="" src="../css/images/box_icon.png" />
-                        <div class="top_tex">Manage OFFline Members</div>
-                    </div>
-                    <div class="box_middle">
-                        <div class="inner">
-                            <ul>
-                                <li><a href="Admin-AddOFlineMembers.aspx"><span class="aro"></span>Add Members</a></li>
-                                <li><a href="Admin-ViewOfflineMembers.aspx"><span class="aro"></span>View All Members</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="box_bottom">
-                    </div>
-                </div>
-</div>
- <div style="float: left; width: 341px; height: auto;margin-left:200px;">
-<table>
 
-        <tr>
-         <td colspan="2"><h4>About Myself</h4><hr /></td>
-        </tr>
-        <tr>
-         <td class="pad" colspan="2" >
-          <textarea class="text-select" style="width:90%;height:100px;" rows="10" cols="10" runat="server" id="txt_about_me">
+<%--Start of the Content Section--%>
+
+<div class="row size-12" style="margin-top:20px;">
+ 
+
+
+ <%--Left Navigation Panel--%>
+ <div class="column size-6">
+  <div class="container">
+   <div>
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="tab_about" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >Manage Offline Members</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap" style="padding-top:10px;">
+                                 <p><a href="Admin-AddOFlineMembers.aspx"><span class="aro"></span>Add Members</a></p>
+                                <p><a href="Admin-ViewOfflineMembers.aspx"><span class="aro"></span>View All Members</a></p>
+                                <p><a href="Admin-MangeOfflineToken.aspx"><span class="aro"></span>Mnage Token</a></p>
+    </div>
+   </div>
+  </div>
+ </div>
+<%-- End of Left Navigation Panel--%>
+
+
+<%--Add Member Panel--%>
+<div class="column size-6">
+ <div class="container">
+
+ <%--About User--%>
+  <div class="row size-12">
+  <div>
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="A1" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >About User</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap" style="padding-top:10px;">
+           <textarea class="reg_select_box" style="width:90%;height:100px;" rows="10" cols="10" runat="server" id="txt_about_me">
           </textarea>
-          <span style="color:Red;">*</span>
-         </td>
-        </tr>
-        <tr>
-         <td colspan="2">
-          <h4>Basic Information</h4>
-          <hr />
-         </td>
-        </tr>
-        <tr>
+          </div>
+   </div>  
+  </div>
+  <%--end about user--%>
+
+
+  <%--Basic Information--%>
+    <div class="row size-12">
+  <div>
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="A2" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >Basic Information</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap" style="padding-top:10px;">
+          <table>
+                   <tr>
          <td>Full Name</td>
          <td><input type="text" id="txt_name" name="txt_name" class="reg_input_txt" runat="server"/></td>
         </tr>
         <tr>
          <td>Gender</td>
          <td>
-           <select id="ddl_gender" runat="server"></select>
+           <select id="ddl_gender" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
@@ -1623,7 +1655,7 @@
         <tr>
          <td>Place Of Birth</td>
          <td>
-          <input type="text" runat="server" id="txt_place_of_birth" name="txt_place_of_birth" />
+          <input class="reg_input_txt" type="text" runat="server" id="txt_place_of_birth" name="txt_place_of_birth" />
          </td>
         </tr>
         <tr>
@@ -1641,83 +1673,105 @@
         <tr>
          <td>Diet</td>
          <td class="pad">
-          <select class="text-select" runat="server" id="ddl_diet"></select>
+          <select  runat="server" id="ddl_diet" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>Smoking Habit</td>
          <td>
-          <select id="ddl_smoking_habit" runat="server"></select>
+          <select id="ddl_smoking_habit" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>Drinking Habit</td>
          <td>
-          <select id="ddl_drinking_habit" runat="server"></select>
+          <select id="ddl_drinking_habit" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>More Details</td>
          <td>
-          <textarea rows="5" cols="30" runat="server" id="txt_basicinfo_more_details"></textarea>
+          <textarea rows="5" cols="30" runat="server" id="txt_basicinfo_more_details" class="reg_input_txt" ></textarea>
          </td>
         </tr>
-        <tr>
-         <td colspan="2"><h4>Physical Attributes</h4>
-          <hr />
-         </td>
-        </tr>
-        <tr>
+          </table>
+          </div>
+   </div>  
+  </div>
+<%--  End of basic information--%>
+
+
+
+  <%--Physical Attributes--%>
+    <div class="row size-12">
+  <div>
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="A3" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >Physical Attributes</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap" style="padding-top:10px;">
+
+   <table>
+    <tr>
          <td>Body Type</td>
          <td>
-          <select id="ddl_body_type" runat="server"></select>
+          <select id="ddl_body_type" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>Body Complexion</td>
          <td>
-          <select id="ddl_body_complexion" runat="server"></select>
+          <select id="ddl_body_complexion" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>Physical Challange</td>
          <td class="pad">
-             <select class="text-select" runat="server" id="ddl_challanged">
+             <select runat="server" id="ddl_challanged" class="reg_select_box">
              </select>
-             <span style="color:Red;">*</span>             
          </td>
         </tr>
         <tr>
          <td>Height</td>
          <td class="pad">
-          <select id="ddl_height" class="text-select" runat="server"></select>
+          <select id="ddl_height"  runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>Weight</td>
-         <td class="pad"><input type="text" class="text-select" runat="server" id="txt_weight"/>(KG)</td>
+         <td class="pad"><input type="text" class="reg_input_txt" runat="server" id="txt_weight"/>(KG)</td>
         </tr>
        <tr>
          <td>Blood Group</td>
          <td class="pad">
-          <select class="text-select" id="ddl_blood_group" runat="server">
+          <select class="reg_select_box" id="ddl_blood_group" runat="server">
           </select>
-          <span style="color:Red;">*</span>
          </td>
         </tr>
         <tr>
          <td>More Details</td>
          <td>
-          <textarea rows="5" cols="30" runat="server" id="txt_physicalattributes_more_details"></textarea>
+          <textarea rows="5" cols="30" runat="server" id="txt_physicalattributes_more_details" class="reg_input_txt"></textarea>
          </td>
         </tr>
-        <tr>
-         <td colspan="2">
-         <h4>Religious Attributes</h4>
-         <hr />
-         </td>
-        </tr>
-         <tr>
+   </table>
+
+          </div>
+   </div>  
+  </div>
+  <%--End of Physical Attributes--%>
+
+
+    <%--Religious Attributes--%>
+    <div class="row size-12">
+  <div>
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="A4" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >Religious Attributes</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap" style="padding-top:10px;">
+    <table>
+     <tr>
          <td>Mother Tongue</td>
          <td>
           <select class="reg_select_box" id="ddl_mother_tongue" name="ddl_mother_tongue" runat="server"></select>
@@ -1740,203 +1794,241 @@
          <tr>
          <td>Sub Caste</td>
          <td class="pad">
-          <input type="text" class="text-select" runat="server" id="txt_subcaste" />
+          <input type="text" class="reg_select_box" runat="server" id="txt_subcaste" />
           <span style="color:Red;">*</span>
          </td>
         </tr>
         <tr>
          <td>Chewai Dosham</td>
          <td class="pad">
-          <select class="text-select" runat="server" id="ddl_mangalik"></select>
+          <select class="reg_select_box" runat="server" id="ddl_mangalik"></select>
          </td>
         </tr>
         <tr>
          <td>Gotra</td>
          <td class="pad">
-          <input type="text" class="text-select" runat="server" id="txt_gotra" />
+          <input type="text" class="reg_input_txt" runat="server" id="txt_gotra" />
          </td>
         </tr>
         <tr>
          <td>Sun Sign</td>
          <td class="pad">
-          <select class="text-select" runat="server" id="ddl_sunsign"></select>
+          <select class="reg_select_box" runat="server" id="ddl_sunsign"></select>
          </td>
         </tr>
         <tr>
          <td>Moon Sign</td>
          <td class="pad">
-          <select class="text-select" runat="server" id="ddl_moon_sign"></select>
+          <select class="reg_select_box" runat="server" id="ddl_moon_sign"></select>
          </td>
         </tr>
         <tr>
          <td>Nakshatra</td>
          <td>
-          <select id="ddl_nakshatra" runat="server"></select>
+          <select id="ddl_nakshatra" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>Horoscope Match</td>
          <td>
-          <select id="ddl_horoscope_match" runat="server"></select>
+          <select id="ddl_horoscope_match" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>More Details</td>
          <td>
-          <textarea rows="5" cols="30" runat="server" id="txt_morereligion_details"></textarea>
+          <textarea rows="5" cols="30" runat="server" id="txt_morereligion_details" class="reg_input_txt"></textarea>
          </td>
         </tr>
-        <tr>
-         <td colspan="2"><h4>Education and Occupational Attributes</h4><hr /></td>
-        </tr>
-        <tr>
+    </table>
+
+          </div>
+   </div>  
+  </div>
+  <%--End of Religious Attributes--%>
+
+
+    <%--Education And Occupation--%>
+    <div class="row size-12">
+  <div>
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="A5" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >Education And Occupation</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap" style="padding-top:10px;">
+   <table>
+    <tr>
          <td>Education Category</td>
          <td class="pad">
-          <select class="text-select" id="ddl_highest_education" runat="server">
+          <select class="reg_select_box" id="ddl_highest_education" runat="server">
           </select>
-          <span style="color:Red;">*</span>
          </td>
         </tr>
         <tr>
          <td>Education Deatils</td>
          <td class="pad">
-          <input type="text" class="text-select" runat="server" id="txt_education_details" />
+          <input type="text" class="reg_input_txt" runat="server" id="txt_education_details" />
          </td>
         </tr>
         <tr>
          <td>Profession</td>
          <td class="pad">
-          <select class="text-select" id="ddl_occupation" runat="server">
+          <select class="reg_select_box" id="ddl_occupation" runat="server">
           </select>
-          <span style="color:Red;">*</span>
          </td>
         </tr>
         <tr>
          <td>Profession Details</td>
          <td class="pad">
-          <input type="text" class="text-select" id="txt_occupation_details" runat="server" />
+          <input type="text" class="reg_input_txt" id="txt_occupation_details" runat="server" />
          </td>
         </tr>
         <tr>
          <td>Income</td>
          <td class="pad">
-          <select class="text-select" id="ddl_income" runat="server"></select>
+          <select class="reg_select_box" id="ddl_income" runat="server"></select>
          </td>
         </tr>
         <tr>
          <td>More Details</td>
          <td>
-          <textarea rows="5" cols="30" runat="server" id="txt_more_education_occupation"></textarea>
+          <textarea rows="5" cols="30" runat="server" id="txt_more_education_occupation" class="reg_input_txt"></textarea>
          </td>
         </tr>
-        <tr>
-         <td colspan="2"><h4>Family Details</h4><hr /></td>
-        </tr>
-        <tr>
+   </table>
+
+          </div>
+   </div>  
+  </div>
+  <%--end of education an doccupation--%>
+
+      <%--Family Details--%>
+    <div class="row size-12">
+  <div>
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="A6" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >Family Details</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap" style="padding-top:10px;">
+    <table>
+     <tr>
          <td>Family Values</td>
          <td class="pad">
-          <select class="text-select" runat="server" id="ddl_family_values"></select>
+          <select class="reg_select_box" runat="server" id="ddl_family_values"></select>
          </td>
         </tr>
         <tr>
          <td>Family Type</td>
          <td class="pad">
-            <select class=" text-select" runat="server" id="ddl_family_type"></select>
+            <select class="reg_select_box" runat="server" id="ddl_family_type"></select>
          </td>
         </tr>
         <tr>
          <td>Family Status</td>
          <td>
-          <select class=" text-select" runat="server" id="ddl_family_status"></select>
+          <select class="reg_select_box" runat="server" id="ddl_family_status"></select>
          </td>
         </tr>
         <tr>
          <td>Family Origin</td>
-         <td class="pad"><input type="text" class="text-select" runat="server" id="txt_family_origin" /></td>
+         <td class="pad"><input type="text" class="reg_input_txt" runat="server" id="txt_family_origin" /></td>
         </tr>
         <tr>
        <td>Fathers Occupation</td>
          <td class="pad">
-           <select id="ddl_fathers_occupation" runat="server"></select>
+           <select id="ddl_fathers_occupation" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>FathersOccupation Details</td>
          <td>
-          <textarea rows="5" cols="30" runat="server" id="txt_fathers_occupation_details"></textarea>
+          <textarea rows="5" cols="30" runat="server" id="txt_fathers_occupation_details" class="reg_input_txt"></textarea>
          </td>
         </tr>
         <tr>
          <td>Mothers Occupation</td>
          <td class="pad">
-         <select id="ddl_MothersOccupation" runat="server"></select>
+         <select id="ddl_MothersOccupation" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
          <tr>
          <td>Mothers Occupation Details</td>
          <td>
-          <textarea rows="5" cols="30" runat="server" id="txt_mothers_occupation_details"></textarea>
+          <textarea rows="5" cols="30" runat="server" id="txt_mothers_occupation_details" class="reg_input_txt"></textarea>
          </td>
         </tr>
         <tr>
          <td>No. Of Brotheres</td>
-         <td><input type="text" runat="server" id="txt_no_brothers" /></td>
+         <td><input type="text" runat="server" id="txt_no_brothers" class="reg_input_txt" /></td>
         </tr>
         <tr>
          <td>No. of brothers Married</td>
          <td>
-          <input type="text" runat="server" id="txt_married_brothers_no" />
+          <input type="text" runat="server" id="txt_married_brothers_no" class="reg_input_txt" />
          </td>
         </tr>
         <tr>
          <td>No. of Sisters</td>
-         <td><input type="text" runat="server" id="txt_no_sisters" /></td>
+         <td><input type="text" runat="server" id="txt_no_sisters" class="reg_input_txt" /></td>
         </tr>
         <tr>
          <td>No. of sisters Married</td>
-         <td><input type="text" runat="server" id="txt_no_sisters_married" /></td>
+         <td><input type="text" runat="server" id="txt_no_sisters_married" class="reg_input_txt" /></td>
         </tr>
         <tr>
         <td>More family Details</td>
          <td>
-          <textarea runat="server" id="txt_more_famili_details" rows="5" cols="30"></textarea>
+          <textarea runat="server" id="txt_more_famili_details" rows="5" cols="30" class="reg_input_txt"></textarea>
          </td>
         </tr>
-        <tr>
-         <td colspan="2"><h4>Contact Details</h4><hr /></td>
-        </tr>
-        <tr>
+    </table>
+
+          </div>
+   </div>  
+  </div>
+  <%--End of family Details--%>
+
+        <%--Contact Details--%>
+    <div class="row size-12">
+  <div>
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="A7" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >Contact Details</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap" style="padding-top:10px;">
+    <table>
+     <tr>
          <td>Country Living In</td>
-         <td><select id="ddl_country" name="ddl_country" class="reg_select_box" runat="server"></select></td>
+         <td><select id="ddl_country" name="ddl_country" class="reg_select_box" runat="server" ></select></td>
         </tr>
         <tr>
          <td>State</td>
          <td>
-          <select id="ddl_state" runat="server"></select>
+          <select id="ddl_state" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>Citizenship</td>
          <td>
-         <input type="text" id="txt_citizenship" runat="server" />
+         <input type="text" id="txt_citizenship" runat="server" class="reg_input_txt"/>
         </td>
         </tr>
         <tr>
          <td>City</td>
          <td>
-          <select id="ddl_city" runat="server"></select>
+          <select id="ddl_city" runat="server" class="reg_select_box"></select>
          </td>
         </tr>
         <tr>
          <td>Present Address</td>
          <td>
-          <textarea cols="30" rows="5" runat="server" id="txt_present_address"></textarea>
+          <textarea cols="30" rows="5" runat="server" id="txt_present_address" class="reg_input_txt"></textarea>
          </td>
         </tr>
         <tr>
          <td>Permanent Address</td>
          <td>
-          <textarea cols="30" rows="5" runat="server" id="txt_permanent_address"></textarea>
+          <textarea cols="30" rows="5" runat="server" id="txt_permanent_address" class="reg_input_txt"></textarea>
          </td>
         </tr>
         <tr>
@@ -1946,30 +2038,49 @@
         <tr>
          <td>Other Contact Number</td>
          <td>
-          <input type="text" runat="server" id="txt_other_contact" />
+          <input type="text" runat="server" id="txt_other_contact" class="reg_input_txt" />
          </td>
         </tr>
         <tr>
          <td>More Details</td>
          <td>
-          <textarea rows="5" cols="30" runat="server" id="txt_contact_info_more_details">
+          <textarea rows="5" cols="30" runat="server" id="txt_contact_info_more_details" class="reg_input_txt">
           </textarea>
          </td>
         </tr>
-        <tr>
-        <td colspan="2"><h4>Select Profile Picture</h4><hr /></td>
-       </tr>
-       <tr>
-         <td colspan="2"><input type="file" id="picture_uploader" runat="server" /></td>
-       </tr>
-        <tr>
-         <td colspan="2">
-          <hr />
-          <button id="Button1" runat="server" onserverclick="Register_Click">Register</button>
-         </td>
-        </tr>
-      </table>
+    </table>
+
+          </div>
+   </div>  
+  </div>
+     <%--End of Contact Details--%>
+
+     <%--Upload Profile Picture--%>
+    <div class="row size-12">
+  <div>
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="A8" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >Upload Profile Picture</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap" style="padding-top:10px;">
+<input type="file" id="picture_uploader" runat="server" />
+
+
+          </div>
+   </div>  
+  </div>
+
+  <center><button id="Button1" runat="server" onserverclick="Register_Click" class="purple">Register</button></center>
+
+
+ </div>
+</div>
+<%--End Of Add Member Panel--%>
+
 
 </div>
+
+<%--End of the Content Section--%>
+
 </asp:Content>
 

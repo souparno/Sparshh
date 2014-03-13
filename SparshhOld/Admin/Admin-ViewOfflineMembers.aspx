@@ -58,20 +58,14 @@
         ds.ReadXml(path);
         DataTable Country = ds.Tables["Country"];
 
+        string picture_folder_name = ConfigurationManager.AppSettings["MemberPictureFolder"];
 
-
-        string sql = "select usr_id,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_education_category,usr_profession,usr_incme,usr_country from offline_usr_details;";
+        string sql = "select usr_id,usr_profile_pic,usr_name,usr_mother_tongue,usr_religion,usr_height,usr_caste,usr_education_category,usr_profession,usr_incme,usr_country from offline_usr_details;";
         SqlConnection con = new SqlConnection(_connection);
         SqlDataAdapter da = new SqlDataAdapter(sql, con);
         DataTable dt = new DataTable();
         da.Fill(dt);
-        
 
-        ////getting the online users id from the cache
-        //path = Server.MapPath("../Assets/cache/");
-        //string json = File.ReadAllText(path + "cache.txt");
-        //JavaScriptSerializer js = new JavaScriptSerializer();
-        //List<OnlineUsers> onlineusers = js.Deserialize<List<OnlineUsers>>(json);
 
 
         var query = from t15 in
@@ -104,7 +98,7 @@
                                                                                      Occupation = t1.Field<string>("usr_profession"),
                                                                                      Income = t1.Field<string>("usr_incme"),
                                                                                      Country = t1.Field<string>("usr_country"),
-                                                                                     ProfilePic = "",
+                                                                                     ProfilePic = "../" + picture_folder_name + "/" + t1.Field<string>("usr_profile_pic"),
                                                                                  }).AsEnumerable()
                                                                          join t4 in Religion.AsEnumerable()
                                                                          on t3.Religion equals t4.Field<string>("Key") into table
@@ -241,49 +235,61 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
-<div style="float: left; width: 341px; height: auto;">
-            <div class="listin_div" id="offline_membership">
-                    <div class="box_top">
-                        <img height="18" width="18" style="margin: 5px 0 0 17px;float: left;" alt="" src="../css/images/box_icon.png" />
-                        <div class="top_tex">Manage OFFline Members</div>
-                    </div>
-                    <div class="box_middle">
-                        <div class="inner">
-                            <ul>
-                                <li><a href="Admin-AddOFlineMembers.aspx"><span class="aro"></span>Add Members</a></li>
-                                <li><a href="Admin-ViewOfflineMembers.aspx"><span class="aro"></span>View All Members</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="box_bottom">
-                    </div>
-                </div>
+<asp:Content ID="Content3" ContentPlaceHolderID="Navigation" Runat="Server">
+<%--Top Navigation--%>
+<div class="row size-12" style=" background: none repeat scroll 0 0 #E8E8E8;margin-bottom:0px;">
+ <div class="column size-12">
+          <ul class="nav inline-nav">
+           <li><a href="" class="active" >View Offline Members</a></li>
+          </ul>
+  </div>
 </div>
-<div style="float: left; width: 341px; height: auto;margin-left:200px;">
+<%--End Of top Navigation--%>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
+<div class="row size-12" style="margin-top:20px;">
+ 
 
 
-    <asp:GridView
-       ID="Grd_Search_Result" 
+ <%--Left Navigation Panel--%>
+ <div class="column size-6">
+  <div class="container">
+   <div>
+      <ul class="nav inline-nav" style="padding-bottom:0px;text-align:left;">
+      <li style="margin-left:0px;margin-right:0px;"><a id="tab_about" href="javascript:void(0);" class="panel-inactive-tab" style="font-size:13px;" >Manage Offline Members</a></li>
+     </ul>
+    <div style="clear:both"></div>
+   <div class="form_inner_wrap" style="padding-top:10px;">
+                                 <p><a href="Admin-AddOFlineMembers.aspx"><span class="aro"></span>Add Members</a></p>
+                                <p><a href="Admin-ViewOfflineMembers.aspx"><span class="aro"></span>View All Members</a></p>
+                                <p><a href="Admin-MangeOfflineToken.aspx"><span class="aro"></span>Mnage Token</a></p>
+    </div>
+   </div>
+  </div>
+ </div>
+<%-- End of Left Navigation Panel--%>
+
+
+<%--Offline Members Grid--%>
+<div class="column size-6">
+ <div class="container">
+  <asp:GridView ID="Grd_Search_Result" 
        runat="server"
        GridLines="None"
        AutoGenerateColumns="false"
        Width="100%">
-    <Columns>
-     <asp:TemplateField>
-      <ItemTemplate>
-                     <div class="listin_div" style="width:500px;">
-                    <div class="box_top" style="width:100%">
-                        <div class="top_tex"></div>
-                    </div>
-                    <div class="box_middle"style="width:100%">
-                        <div class="inner">
+        <Columns>
+         <asp:TemplateField>
+           <ItemTemplate>
 
-                        <table style="width:100%">
-                         <tr>
-                          <td><img src="Offline-MemberPictures/_default_images/male.jpg" style="height:auto; width:100%;" alt="" /></td>
-                          <td>
-                           <table>
+           <div class="row size-12" style="margin-bottom:10px;">
+             <div class='row size-12 panel-3' style='padding:10px;margin-bottom:0px;'>
+              <div class='column size-3' style='padding-left:0px;'>
+               <img src="<%#Eval("ProfilePic")%>" style="height:auto; width:100%;" alt="" />
+               <hr />
+              </div>
+              <div class='column size-9'>
+               <table width="100%">
                             <tr>
                              <td>User Name</td>
                              <td>:&nbsp;&nbsp;<%#Eval("Name") %>(<%#Eval("usr_id") %>)</td>
@@ -321,29 +327,32 @@
                              <td>:&nbsp;&nbsp;<%#Eval("Country") %></td>
                             </tr>
                            </table>
-                          </td>
-                         </tr>
-                        </table>
-                        <table>
-                         <tr>
-                          <td><a href="">Edit Profile</a></td>
-                          <td></td>
-                          <td><a href="Admin-CreateToken.aspx?uid=<%#Eval("usr_id") %>">Create Token</a></td>
-                         </tr>
-                        </table>
-                        </div>
-                    </div>
-                    <div class="box_bottom">
-                    </div>
-                </div>
-      </ItemTemplate>
-     </asp:TemplateField>
-    </Columns>
-    </asp:GridView>
+               
+              </div>
+             </div>
+             <div class='row size-12  panel-1' style='padding:10px;'>
+             <div class="column" style="border-right:1px solid #D9D9D9;width:24%;">
+              <a href="javascript:void(0)" style="font-size:x-small;color:Black">VIEW PROFILE</a>
+             </div>
+             <div class="column" style="border-right:1px solid #D9D9D9;width:24%;">
+              <a href="Admin-EditOfflineMember.aspx?uid=<%#Eval("usr_id") %>" style="font-size:x-small;color:Black;">EDIT PROFILE</a>
+             </div>
+             <div class="column" style="border-right:1px solid #D9D9D9;width:24%;">
+              <a href="javascript:void(0)" style="font-size:x-small;color:Black;">DELETE PROFILE</a>
+             </div>
+             <div class="column" style="width:24%;">
+              <a href="Admin-CreateToken.aspx?uid=<%#Eval("usr_id") %>" style="font-size:x-small;color:Black;">CREATE TOKEN</a>
+             </div>
+            </div>
+            </div>
 
-
-
-
+           </ItemTemplate>
+         </asp:TemplateField>
+        </Columns>
+       </asp:GridView>
+ </div>
+</div>
+<%--End of Grid--%>
 </div>
 </asp:Content>
 
